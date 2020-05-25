@@ -1,18 +1,28 @@
 import React, { Component } from "react";
-import { StyleSheet, StatusBar, View, Platform, Image, Text, Colors } from "react-native";
+import { StatusBar, View, Image } from "react-native";
 import BGP from "./Picture/backgroundpic.jpg";
-
-const STATUS_BAR_HEIGHT = Platform.OS === "ios" ? 20 : StatusBar.currentHeight;
 
 class App extends Component {
   render() {
     return (
       <View style={{ flex: 1 }}>
         <StatusBar barStyle="light-content" />
-        <Image source={BGP}
-        style={{
-            flex:0.192
-        }}/>
+        <Image
+          source={BGP}
+          style={{
+            flex: 0.192
+          }}
+        />
+        <View
+          style={{
+            flex: 0.2,
+            marginLeft: 16,
+            marginRight: 16,
+            backgroundColor: "red",
+            borderRadius: 24,
+            marginTop: -50
+          }}
+        />
       </View>
     );
   }
