@@ -3,12 +3,13 @@ import {View, Text} from 'react-native';
 import Login from "./component/Login";
 import Header from "./component/Header";
 
+
 class index extends Component {
   render() {
     return (
       <View>
         <Header />
-        {/*<Login />*/}
+        <Login />
       </View>
     );
   }
