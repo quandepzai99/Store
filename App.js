@@ -17,5 +17,4 @@ class App extends Component {
     );
   }
 }
-Lungta
 export default App;
