@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "ios-8-plus": "react-native run-ios --simulator=\"iPhone 8 Plus\"",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
