@@ -10,12 +10,16 @@ export default class Login extends Component {
     return (
       <View style={styles.container}>
         <View style={styles.trans}>
-          <Text >Nhập số điện thoại</Text>
-          <Text >dich </Text>
+          <Text style={styles.text1}>Nhập số điện thoại</Text>
+          <Translate/>
+        </View>
+        <View style={styles.textView}>
+          <Text style={styles.text2}>số điện thoại</Text>
         </View>
         <TextInput
+          placeholder={'0901234567'}
           style={styles.input}
-          keyboardType = 'numeric'
+          keyboardType='numeric'
           maxLength={10}
         />
 
@@ -49,6 +53,14 @@ const styles = StyleSheet.create({
     paddingHorizontal: 30
   },
   input: {
+    fontFamily: "Roboto",
+    fontSize: 24,
+    fontWeight: "normal",
+    fontStyle: "normal",
+    lineHeight: 24,
+    letterSpacing: 0,
+    textAlign: "left",
+    color: colors.white,
     height: 60,
     borderColor: colors.blueyGrey,
     borderWidth: 1,
@@ -90,5 +102,32 @@ const styles = StyleSheet.create({
   },
   icon: {
     margin: 16,
+  },
+  text1: {
+    fontFamily: "Roboto",
+    fontSize: 17,
+    fontWeight: "bold",
+    fontStyle: "normal",
+    lineHeight: 24,
+    letterSpacing: 0,
+    textAlign: "center",
+  },
+  textView: {
+    bottom: -55,
+    backgroundColor: '#fff',
+    zIndex: 1,
+    marginLeft: 40,
+    marginRight: 220
+  },
+  text2: {
+    fontFamily: "Roboto",
+    fontSize: 15,
+    fontWeight: "normal",
+    fontStyle: "normal",
+    lineHeight: 24,
+    letterSpacing: 0,
+    textAlign: "left",
+    color: colors.blueyGrey,
+    padding: 5
   }
 })

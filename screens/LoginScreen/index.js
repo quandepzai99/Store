@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {View, Text, StatusBar} from 'react-native';
 import Login from "./component/Login";
 import Header from "./component/Header";
+import Chat from "./component/Chat";
 
 
 class index extends Component {
@@ -11,6 +12,7 @@ class index extends Component {
         <StatusBar barStyle={'light-content'}/>
         <Header />
         <Login />
+        <Chat />
       </View>
     );
   }

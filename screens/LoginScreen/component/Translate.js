@@ -1,24 +1,59 @@
 import React, {Component} from 'react';
-import {View, Switch, StyleSheet, Text} from 'react-native';
-import {RNTextSwitch} from "react-native-text-switch";
+import {View, TouchableOpacity, StyleSheet, Text} from 'react-native';
+import {colors} from '../../../Styles';
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
 
 export default class Translate extends Component {
+  state = {
+    active: false
+  }
+
+  handleSwitchToggle = () => {
+    this.setState({
+      active: !this.state.active
+    })
+  }
   render() {
+
+    const styles = StyleSheet.create({
+      container: {
+        flexDirection: 'row',
+        backgroundColor: '#c7c1c1',
+        borderRadius: 24
+      },
+      toggle: {
+        alignItems: 'center',
+        margin: 4,
+        width: 35,
+        height: 18,
+        borderRadius: 24,
+        marginRight: 35,
+        backgroundColor: colors.paleGreyFour,
+        left: this.state.active ? 35 : 0
+      },
+      label: {
+        fontFamily: "Roboto",
+        fontSize: 13,
+        fontWeight: "normal",
+        fontStyle: "normal",
+        lineHeight: 20,
+        letterSpacing: 0,
+        textAlign: "center",
+        color: colors.velvet
+      }
+    })
     return (
-      <View>
-        <RNTextSwitch  style={{ width: 200, height: 100 }}/>
+      <View style={styles.container}>
+        <TouchableOpacity
+          style={styles.toggle}
+          onPress={() => this.handleSwitchToggle()}
+        >
+          <Text style={styles.label}>{this.state.active ? 'EN' : 'VN'}</Text>
+        </TouchableOpacity>
+
       </View>
     );
   }
 }
 
-const styles = StyleSheet.create({
 
-})
