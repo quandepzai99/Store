@@ -1,16 +1,32 @@
 import React, {Component} from 'react';
-import {View, Text, StyleSheet, TextInput} from 'react-native';
+import {View, Text, StyleSheet, TextInput, TouchableOpacity} from 'react-native';
+import {colors} from "../../../Styles";
+import AntDesign from 'react-native-vector-icons/AntDesign'
+import Translate from "./Translate";
 
 export default class Login extends Component {
+
   render() {
     return (
       <View style={styles.container}>
         <View style={styles.trans}>
           <Text >Nhập số điện thoại</Text>
-          <Text >Nhập số </Text>
+          <Text >dich </Text>
         </View>
-        <TextInput style={styles.input}/>
+        <TextInput
+          style={styles.input}
+          keyboardType = 'numeric'
+          maxLength={10}
+        />
+
+
+        <TouchableOpacity style={styles.ellipse529}>
+          <View style={styles.ellipse531}>
+            <AntDesign name={'arrowright'} size={28} color={colors.blueyGrey} style={styles.icon}/>
+          </View>
+        </TouchableOpacity>
       </View>
+
     );
   }
 }
@@ -34,10 +50,45 @@ const styles = StyleSheet.create({
   },
   input: {
     height: 60,
-    borderColor: 'gray',
+    borderColor: colors.blueyGrey,
     borderWidth: 1,
     marginTop: 40,
+    borderRadius: 12,
     marginBottom: 76,
-    rginHorizontal: 16
+    borderStyle: "solid",
+    marginHorizontal: 16
+  },
+  ellipse529: {
+    marginTop: -40,
+    top: 35,
+    alignItems: 'center',
+    marginLeft: 140,
+    marginRight: 140,
+    borderRadius: 40,
+    backgroundColor: "#ffffff",
+    shadowColor: "rgba(0, 0, 0, 0.16)",
+    shadowOffset: {
+      width: 0,
+      height: 3
+    },
+    shadowRadius: 6,
+    shadowOpacity: 1,
+    elevation: 4,
+  },
+  ellipse531: {
+    margin: 10,
+    backgroundColor: "#ffffff",
+    borderRadius: 30,
+    shadowColor: "rgba(0, 0, 0, 0.16)",
+    shadowOffset: {
+      width: 0,
+      height: 3
+    },
+    shadowRadius: 6,
+    shadowOpacity: 1,
+    elevation: 4,
+  },
+  icon: {
+    margin: 16,
   }
 })
