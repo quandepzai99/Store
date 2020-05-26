@@ -9,7 +9,7 @@ export default class Login extends Component {
           <Text >Nhập số điện thoại</Text>
           <Text >Nhập số </Text>
         </View>
-        <TextInput style={{height: 60, borderColor: 'gray', borderWidth: 1, marginTop: 40, marginBottom: 76, marginHorizontal: 16}}/>
+        <TextInput style={styles.input}/>
       </View>
     );
   }
@@ -31,5 +31,13 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     paddingHorizontal: 30
+  },
+  input: {
+    height: 60,
+    borderColor: 'gray',
+    borderWidth: 1,
+    marginTop: 40,
+    marginBottom: 76,
+    rginHorizontal: 16
   }
 })
