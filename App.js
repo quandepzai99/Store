@@ -1,31 +1,161 @@
-import React, { Component } from "react";
-import { StatusBar, View, Image } from "react-native";
-import BGP from "./Picture/BG.png";
-import Pincode from "react-native-smooth-pincode-input"
+import React from "react";
+import { View, Text, StatusBar, TextInput } from "react-native";
+import HeaderChangePass from "./screens/ChangePasswordScreen/Components/StylesSheet/Header";
+import styles from "./screens/ChangePasswordScreen/Components/StylesSheet/StyleSheet";
+import AntDesign from "react-native-vector-icons/AntDesign";
 
-class App extends Component {
-  render() {
-    return (
-      <View style={{ flex: 1 }}>
-        <StatusBar barStyle="light-content" />
-        <Image
-          source={BGP}
-          style={{
-            flex: 0.192
-          }}
-        />
+export default function ChangePass() {
+  return (
+    <View>
+      <HeaderChangePass />
+      <StatusBar barStyle={"light-content"} />
+      <View style={styles.successChanged}>
         <View
           style={{
-            flex: 0.2,
+            zIndex: 1,
+            marginRight: 200
+          }}>
+          <Text
+            style={{
+              marginLeft: 32,
+              marginTop: 26,
+              textAlign: "left",
+              backgroundColor: "white"
+            }}>
+            Nhập mật khẩu hiện tại
+          </Text>
+        </View>
+        <View
+          style={{
             marginLeft: 16,
             marginRight: 16,
-            backgroundColor: "red",
+            backgroundColor: "#ffffff",
+            shadowColor: "#000",
+            shadowOpacity: 0.1,
+            marginTop: -5,
             borderRadius: 24,
-            marginTop: -50
-          }}
-        />
+            zIndex: 0,
+            flexDirection: "row"
+          }}>
+          <TextInput
+            style={{
+              borderRadius: 20,
+              borderWidth: 1,
+              backgroundColor: "#ffffff",
+              width: 28,
+              height: 28,
+              borderStyle: "solid",
+              borderColor: "grey",
+              marginTop: 18,
+              marginBottom: 14,
+              marginLeft: 51,
+              alignItems: "center"
+            }}
+            keyboardType={"phone-pad"}
+            autoFocus={true}
+          />
+          <TextInput
+            style={{
+              borderRadius: 20,
+              borderWidth: 1,
+              backgroundColor: "#ffffff",
+              width: 28,
+              height: 28,
+              borderStyle: "solid",
+              borderColor: "grey",
+              marginTop: 18,
+              marginLeft: 18,
+              marginBottom: 14,
+              alignItems: "center"
+            }}
+            keyboardType={"phone-pad"}
+          />
+          <TextInput
+            style={{
+              borderRadius: 20,
+              borderWidth: 1,
+              backgroundColor: "#ffffff",
+              width: 28,
+              height: 28,
+              borderStyle: "solid",
+              borderColor: "grey",
+              marginTop: 18,
+              marginLeft: 18,
+              marginBottom: 14,
+              alignItems: "center"
+            }}
+            keyboardType={"phone-pad"}
+          />
+          <TextInput
+            style={{
+              borderRadius: 20,
+              borderWidth: 1,
+              backgroundColor: "#ffffff",
+              width: 28,
+              height: 28,
+              borderStyle: "solid",
+              borderColor: "grey",
+              marginTop: 18,
+              marginLeft: 18,
+              marginBottom: 14,
+              alignItems: "center"
+            }}
+            keyboardType={"phone-pad"}
+          />
+          <TextInput
+            style={{
+              borderRadius: 20,
+              borderWidth: 1,
+              backgroundColor: "#ffffff",
+              width: 28,
+              height: 28,
+              borderStyle: "solid",
+              borderColor: "grey",
+              marginTop: 18,
+              marginLeft: 18,
+              marginBottom: 14,
+              alignItems: "center"
+            }}
+            keyboardType={"phone-pad"}
+          />
+          <TextInput
+            style={{
+              borderRadius: 20,
+              borderWidth: 1,
+              backgroundColor: "#ffffff",
+              width: 28,
+              height: 28,
+              borderStyle: "solid",
+              borderColor: "grey",
+              marginTop: 18,
+              marginLeft: 18,
+              marginBottom: 14,
+              alignItems: "center"
+            }}
+            keyboardType={"phone-pad"}
+          />
+        </View>
       </View>
-    );
-  }
+      <View
+        style={{
+          marginTop: 26,
+          flexDirection: "row",
+          justifyContent: "center"
+        }}>
+        <AntDesign name={"left"} size={15} color={"gray"} />
+        <Text
+          style={{
+            fontSize: 15,
+            fontWeight: "normal",
+            fontStyle: "normal",
+            lineHeight: 16,
+            letterSpacing: 0,
+            textAlign: "center",
+            color: "gray"
+          }}>
+          Quay lại
+        </Text>
+      </View>
+    </View>
+  );
 }
-export default App;
