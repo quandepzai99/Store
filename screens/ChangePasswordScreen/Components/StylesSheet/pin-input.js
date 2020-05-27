@@ -1,8 +1,9 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import SmoothPinCodeInput from "react-native-smooth-pincode-input";
+import colors from "../../../../colors"
 
-export default class App extends React.Component {
+export default class PinInput extends React.Component {
   state = {
     code: "",
     password: ""
@@ -10,7 +11,7 @@ export default class App extends React.Component {
   pinInput = React.createRef();
 
   _checkCode = code => {
-    if (code != "1234") {
+    if (code != "123456") {
       this.pinInput.current.shake().then(() => this.setState({ code: "" }));
     }
   };
@@ -19,105 +20,21 @@ export default class App extends React.Component {
     const { code, password } = this.state;
     return (
       <View style={styles.container}>
-        {/* default */}
         <View style={styles.section}>
-          <Text style={styles.title}>Default</Text>
-          <SmoothPinCodeInput
-            ref={this.pinInput}
-            value={code}
-            onTextChange={code => this.setState({ code })}
-            onFulfill={this._checkCode}
-            onBackspace={() => console.log("No more back.")}
-          />
-        </View>
-
-        {/* password */}
-        <View style={styles.section}>
-          <Text style={styles.title}>Password</Text>
           <SmoothPinCodeInput
             password
-            mask="﹡"
-            cellSize={36}
-            codeLength={8}
+            mask= <View style={{
+                width: 20,
+              height: 20,
+              borderRadius: 34,
+              backgroundColor : 'rgb(114, 13, 93)'
+          }} />
+            cellSize={28}
+            codeLength={6}
             value={password}
             onTextChange={password => this.setState({ password })}
-          />
-        </View>
-
-        {/* underline */}
-        <View style={styles.section}>
-          <Text style={styles.title}>Underline</Text>
-          <SmoothPinCodeInput
-            cellStyle={{
-              borderBottomWidth: 2,
-              borderColor: "gray"
-            }}
-            cellStyleFocused={{
-              borderColor: "black"
-            }}
-            value={code}
-            onTextChange={code => this.setState({ code })}
-          />
-        </View>
-
-        {/* customized */}
-        <View style={styles.section}>
-          <Text style={styles.title}>Customized</Text>
-          <SmoothPinCodeInput
-            placeholder="⭑"
-            cellStyle={{
-              borderWidth: 2,
-              borderRadius: 24,
-              borderColor: "orange",
-              backgroundColor: "gold"
-            }}
-            cellStyleFocused={{
-              borderColor: "darkorange",
-              backgroundColor: "orange"
-            }}
-            textStyle={{
-              fontSize: 24,
-              color: "salmon"
-            }}
-            textStyleFocused={{
-              color: "crimson"
-            }}
-            value={code}
-            onTextChange={code => this.setState({ code })}
-          />
-        </View>
-
-        {/* Custom placeholder & mask */}
-        <View style={styles.section}>
-          <Text style={styles.title}>Custom Placeholder</Text>
-          <SmoothPinCodeInput
-            placeholder={
-              <View
-                style={{
-                  width: 10,
-                  height: 10,
-                  borderRadius: 25,
-                  opacity: 0.3,
-                  backgroundColor: "blue"
-                }}
-              />
-            }
-            mask={
-              <View
-                style={{
-                  width: 10,
-                  height: 10,
-                  borderRadius: 25,
-                  backgroundColor: "blue"
-                }}
-              />
-            }
-            maskDelay={1000}
-            password={true}
-            cellStyle={null}
-            cellStyleFocused={null}
-            value={code}
-            onTextChange={code => this.setState({ code })}
+            cellStyle={styles.cellStyle}
+            autoFocus={true}
           />
         </View>
       </View>
@@ -140,5 +57,12 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "bold",
     marginBottom: 8
+  },
+  cellStyle: {
+      borderRadius : 24,
+      borderColor : "black",
+      borderWidth: 1,
+      marginLeft : 12
+
   }
 });
