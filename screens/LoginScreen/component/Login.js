@@ -22,8 +22,6 @@ export default class Login extends Component {
           keyboardType='numeric'
           maxLength={10}
         />
-
-
         <TouchableOpacity style={styles.ellipse529}>
           <View style={styles.ellipse531}>
             <AntDesign name={'arrowright'} size={28} color={colors.blueyGrey} style={styles.icon}/>
@@ -53,14 +51,13 @@ const styles = StyleSheet.create({
     paddingHorizontal: 30
   },
   input: {
-    fontFamily: "Roboto",
     fontSize: 24,
     fontWeight: "normal",
     fontStyle: "normal",
     lineHeight: 24,
     letterSpacing: 0,
     textAlign: "left",
-    color: colors.white,
+    color: colors.greyishBrown,
     height: 60,
     borderColor: colors.blueyGrey,
     borderWidth: 1,
@@ -72,7 +69,7 @@ const styles = StyleSheet.create({
   },
   ellipse529: {
     marginTop: -40,
-    top: 35,
+    top: 30,
     alignItems: 'center',
     marginLeft: 140,
     marginRight: 140,
