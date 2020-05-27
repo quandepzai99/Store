@@ -4,7 +4,7 @@ import HeaderChangePass from "./screens/ChangePasswordScreen/Components/StylesSh
 import styles from "./screens/ChangePasswordScreen/Components/StylesSheet/StyleSheet";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import { gray } from "color-name";
-import PinInput from "react-native-smooth-pincode-input";
+
 export default function ChangePass() {
   return (
     <View>
@@ -36,23 +36,24 @@ export default function ChangePass() {
             marginTop: -5,
             borderRadius: 24,
             zIndex: 0,
-            flexDirection: "row",
-              alignSelf: "center",
-              marginBottom: 24
+            flexDirection: "row"
           }}>
-          <PinInput
-              codeLength={6}
-            cellStyle={{
-              borderWidth: 2,
-              borderRadius: 24,
-              borderColor: "black",
-                width : 28,
-                height: 28,
-                marginTop:18,
-                marginBottom:14,
-                marginLeft: 16
+          <TextInput
+            style={{
+              borderRadius: 20,
+              borderWidth: 1,
+              backgroundColor: "#ffffff",
+              width: 28,
+              height: 28,
+              borderStyle: "solid",
+              borderColor: "grey",
+              marginTop: 18,
+              marginBottom: 14,
+              marginLeft: 51,
+              alignItems: "center"
             }}
-              keyboardType={"phone-pad"}
+            keyboardType={"phone-pad"}
+            autoFocus={true}
           />
         </View>
       </View>
