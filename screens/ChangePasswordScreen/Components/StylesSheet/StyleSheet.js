@@ -27,9 +27,11 @@ const screenResetPw = StyleSheet.create({
     color: "#ffffff",
     justifyContent: "center"
   },
-  successChanged: {
-    marginLeft: 16,
+  viewBlock2: {
+    marginLeft: 12,
     marginRight: 16,
+    paddingBottom: 25,
+    paddingTop: 25,
     backgroundColor: "#ffffff",
     shadowColor: "#000",
     shadowOffset: {
@@ -59,6 +61,45 @@ const screenResetPw = StyleSheet.create({
     paddingBottom: 17,
     width: "100%",
     backgroundColor: "rgba(142,22,117,1)"
+  },
+  viewBlock2box1: {
+    marginLeft: 16,
+    marginRight: 16,
+    backgroundColor: "white",
+    shadowColor: "#000",
+    shadowOpacity: 0.1,
+    marginTop: -5,
+    borderRadius: 12,
+    flexDirection: "row",
+    alignSelf: "center",
+    marginBottom: 24,
+    borderWidth: 1,
+    borderStyle: "solid"
+  },
+  textblock2box1: {
+    marginLeft: 32,
+    textAlign: "left",
+    backgroundColor: "white",
+    fontSize: 15
+  },
+  viewBlock2box2: {
+    marginLeft: 16,
+    marginRight: 16,
+    backgroundColor: "#ffffff",
+    marginTop: -5,
+    flexDirection: "row",
+    borderColor: "grey",
+    borderRadius: 12,
+    borderStyle: "solid",
+    borderWidth: 1
+  },
+  textblock2box2: {
+    paddingRight: 2,
+    marginLeft: 16,
+    paddingTop: 0,
+    textAlign: "left",
+    backgroundColor: "white",
+    fontSize: 15
   }
 });
 

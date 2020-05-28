@@ -10,37 +10,35 @@ export default function ChangePass() {
     <View>
       <HeaderChangePass />
       <StatusBar barStyle={"light-content"} />
-      <View style={styles.successChanged}>
+      <View style={styles.viewBlock2}>
         <View
           style={{
             zIndex: 1,
-            marginRight: 200
+            marginRight: 240
           }}>
           <Text
-            style={{
-              marginLeft: 32,
-              marginTop: 26,
-              textAlign: "left",
-              backgroundColor: "white"
-            }}>
-            Nhập mật khẩu hiện tại
+            style={styles.textblock2box1}>
+            Nhập mật khẩu
           </Text>
         </View>
-        <View
-          style={{
-            marginLeft: 16,
-            marginRight: 16,
-            backgroundColor: "#ffffff",
-            shadowColor: "#000",
-            shadowOpacity: 0.1,
-            marginTop: -5,
-            borderRadius: 24,
-            zIndex: 0,
-            flexDirection: "row",
-            alignSelf: "center",
-            marginBottom: 24
-          }}>
+        <View style={styles.viewBlock2box1}>
           <PinInput />
+        </View>
+          <View style={{
+              zIndex: 1,
+              marginRight: 220,
+              marginLeft:16
+          }}>
+              <Text
+                  style={styles.textblock2box2}>
+                  Xác nhận mật khẩu
+              </Text>
+          </View>
+
+        <View style={styles.viewBlock2box2}>
+
+          <PinInput />
+
         </View>
       </View>
       <View
@@ -56,7 +54,6 @@ export default function ChangePass() {
             fontWeight: "normal",
             fontStyle: "normal",
             lineHeight: 16,
-            letterSpacing: 0,
             textAlign: "center",
             color: "gray"
           }}>
