@@ -6,6 +6,7 @@ import Chat from "./component/Chat";
 import Test from "./component/Test";
 class index extends Component {
   render() {
+
     return (
       <View>
         <Header />

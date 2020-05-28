@@ -1,12 +1,19 @@
 import React, {Component} from 'react';
-import {View, Text, StyleSheet, TextInput, TouchableOpacity} from 'react-native';
+import {View, Text, StyleSheet, TextInput, TouchableOpacity, Button} from 'react-native';
 import {colors} from "../../../Styles";
 import AntDesign from 'react-native-vector-icons/AntDesign'
 import Translate from "./Translate";
+import index from "../../PasswordScreen";
+
 
 export default class Login extends Component {
 
+  continue = () => {
+    this.state.navigation.navigate('PasswordScreen')
+  }
+
   render() {
+ //    const {navigate} = this.props.navigation;
     return (
       <View style={styles.container}>
         <View style={styles.trans}>
@@ -22,11 +29,7 @@ export default class Login extends Component {
           keyboardType='numeric'
           maxLength={10}
         />
-        <TouchableOpacity style={styles.ellipse529}>
-          <View style={styles.ellipse531}>
-            <AntDesign name={'arrowright'} size={28} color={colors.blueyGrey} style={styles.icon}/>
-          </View>
-        </TouchableOpacity>
+
       </View>
 
     );
@@ -67,39 +70,7 @@ const styles = StyleSheet.create({
     borderStyle: "solid",
     marginHorizontal: 16
   },
-  ellipse529: {
-    marginTop: -40,
-    top: 30,
-    alignItems: 'center',
-    marginLeft: 140,
-    marginRight: 140,
-    borderRadius: 40,
-    backgroundColor: "#ffffff",
-    shadowColor: "rgba(0, 0, 0, 0.16)",
-    shadowOffset: {
-      width: 0,
-      height: 3
-    },
-    shadowRadius: 6,
-    shadowOpacity: 1,
-    elevation: 4,
-  },
-  ellipse531: {
-    margin: 10,
-    backgroundColor: "#ffffff",
-    borderRadius: 30,
-    shadowColor: "rgba(0, 0, 0, 0.16)",
-    shadowOffset: {
-      width: 0,
-      height: 3
-    },
-    shadowRadius: 6,
-    shadowOpacity: 1,
-    elevation: 4,
-  },
-  icon: {
-    margin: 16,
-  },
+
   text1: {
     fontFamily: "Roboto",
     fontSize: 17,
