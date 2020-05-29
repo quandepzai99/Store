@@ -1,6 +1,4 @@
 import { StyleSheet } from "react-native";
-import colors from "../../../../colors"
-import {gray} from 'color-name';
 
 const screenResetPw = StyleSheet.create({
   container: {

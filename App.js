@@ -21,7 +21,8 @@ export default function ChangePass() {
             Nhập mật khẩu
           </Text>
         </View>
-        <View style={styles.viewBlock2box1}>
+        <View style={styles.viewBlock2box1}
+        autofocus={true}>
           <PinInput />
         </View>
           <View style={{

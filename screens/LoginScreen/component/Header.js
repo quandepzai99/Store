@@ -23,7 +23,7 @@ export default class HeaderChangePass extends Component {
             color: "#ffffff",
             justifyContent: "center"
           }}>
-          Đổi mật khẩu
+          Đặt lại mật khẩu
         </Text>
       </ImageBackground>
     );
