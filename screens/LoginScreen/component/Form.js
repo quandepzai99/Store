@@ -3,17 +3,47 @@ import {View, Text, StyleSheet, TextInput, TouchableOpacity, Button} from 'react
 import {colors} from "../../../Styles";
 import AntDesign from 'react-native-vector-icons/AntDesign'
 import Translate from "./Translate";
-import index from "../../PasswordScreen";
 
 
-export default class Login extends Component {
+export default class Form extends Component {
 
-  continue = () => {
-    this.state.navigation.navigate('PasswordScreen')
+  colorButton = ['#fff']
+
+  constructor(props) {
+    super(props);
+    this.continue = this.continue.bind(this);
+    this.state = {
+      Reds: colors.blueyGrey,
+
+    }
+  }
+  static navigationOptions = {
+    title: 'Great',
+    // other configurations
+  }
+
+  continue = (navigate) =>  {
+    console.log(this.props);
+    // this.props.navigation.navigate('PinCode');
+   this.props.navigation.navigate('PinCode')
+  }
+
+  handleKeyup = (event) => {
+    // console.log(event.nativeEvent.text)
+    let colors = event.nativeEvent.text;
+    if (colors.length > 0){
+      this.setState({
+        Reds: 'rgb(114, 13, 93)'
+      })
+    }else {
+      this.setState({
+        Reds: colors.blueyGrey
+      })
+    }
   }
 
   render() {
- //    const {navigate} = this.props.navigation;
+
     return (
       <View style={styles.container}>
         <View style={styles.trans}>
@@ -24,12 +54,20 @@ export default class Login extends Component {
           <Text style={styles.text2}>số điện thoại</Text>
         </View>
         <TextInput
+          onChange={this.handleKeyup}
           placeholder={'0901234567'}
           style={styles.input}
           keyboardType='numeric'
           maxLength={10}
         />
-
+        <TouchableOpacity
+          onPress={this.continue}
+          style={[styles.ellipse529, {backgroundColor: this.state.Reds }]  }
+        >
+          <View style={styles.ellipse531}>
+            <AntDesign name={'arrowright'} size={28} color={this.state.Reds} style={styles.icon}/>
+          </View>
+        </TouchableOpacity>
       </View>
 
     );
@@ -38,6 +76,7 @@ export default class Login extends Component {
 
 const styles = StyleSheet.create({
   container: {
+    position: 'relative',
     backgroundColor: '#fff',
     marginHorizontal: 16,
     borderRadius: 24,
@@ -97,5 +136,40 @@ const styles = StyleSheet.create({
     textAlign: "left",
     color: colors.blueyGrey,
     padding: 5
-  }
+  },
+  ellipse529: {
+    position: 'absolute',
+    bottom: -40,
+    left: '50%',
+    alignItems: 'center',
+    marginLeft: -40,
+    marginRight: 140,
+    borderRadius: 40,
+    backgroundColor: "#ffffff",
+    shadowColor: "rgba(0, 0, 0, 0.16)",
+    shadowOffset: {
+      width: 0,
+      height: 3
+    },
+    shadowRadius: 6,
+    shadowOpacity: 1,
+    elevation: 4,
+  },
+  ellipse531: {
+    margin: 10,
+    backgroundColor: "#ffffff",
+    borderRadius: 30,
+    shadowColor: "rgba(0, 0, 0, 0.16)",
+    shadowOffset: {
+      width: 0,
+      height: 3
+    },
+    shadowRadius: 6,
+    shadowOpacity: 1,
+    elevation: 4,
+  },
+  icon: {
+    margin: 16,
+
+  },
 })

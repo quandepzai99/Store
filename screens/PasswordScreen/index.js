@@ -1,18 +1,20 @@
 import React, {Component} from 'react';
 import {View, Text, StatusBar} from 'react-native';
 import Header from '../PasswordScreen/component/Header'
-import Password from "./component/Password";
+import Form from "./component/Form";
 import Chat from "./component/Chat";
-import Test from "./component/Test";
+// import Test from "./component/Test";
+
+
 class index extends Component {
   render() {
 
     return (
       <View>
         <Header />
-        <Password />
+        <Form />
         <Chat />
-        {/*<Test />*/}
+
       </View>
     );
   }

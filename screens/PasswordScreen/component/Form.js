@@ -5,7 +5,7 @@ import images from "../../../Common/images";
 import PinInput from "react-native-pin-code";
 import SmoothPinCodeInput from "react-native-smooth-pincode-input";
 
-export default class Password extends Component {
+export default class Form extends Component {
   state = {
     code: '',
     password: ''
@@ -48,6 +48,7 @@ export default class Password extends Component {
             color: 'crimson'
           }}
           value={code}
+          maskDelay={1000}
           password={true}
           codeLength={6}
           onTextChange={code => this.setState({ code })}

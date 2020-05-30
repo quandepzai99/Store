@@ -13,7 +13,7 @@ export default class App extends Component {
       <NavigationContainer >
         <Stack.Navigator headerMode="none">
           <Stack.Screen name={'Telephone'} component={LoginScreen} />
-          <Stack.Screen name={'PasswordScreen'} component={PasswordScreen} />
+          <Stack.Screen name={'PinCode'} component={PasswordScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     );
