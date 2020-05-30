@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Text, StatusBar} from 'react-native';
+import {View, StatusBar} from 'react-native';
 import Header from '../PasswordScreen/component/Header'
 import Form from "./component/Form";
 import Chat from "./component/Chat";
@@ -11,6 +11,7 @@ class index extends Component {
 
     return (
       <View>
+        <StatusBar barStyle={'light-content'}/>
         <Header />
         <Form />
         <Chat />
