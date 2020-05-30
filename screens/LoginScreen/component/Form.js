@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Text, StyleSheet, TextInput, TouchableOpacity, Button} from 'react-native';
+import {View, Text, StyleSheet, TextInput, TouchableOpacity} from 'react-native';
 import {colors} from "../../../Styles";
 import AntDesign from 'react-native-vector-icons/AntDesign'
 import Translate from "./Translate";
@@ -17,12 +17,9 @@ export default class Form extends Component {
 
     }
   }
-  static navigationOptions = {
-    title: 'Great',
-    // other configurations
-  }
 
-  continue = (navigate) =>  {
+
+  continue = () =>  {
     console.log(this.props);
     // this.props.navigation.navigate('PinCode');
    this.props.navigation.navigate('PinCode')
