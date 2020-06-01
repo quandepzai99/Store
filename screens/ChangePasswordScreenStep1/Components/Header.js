@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Text, ImageBackground } from "react-native";
-import background from "../../../Images/BG.png";
+import background from "../../../Picture/BG.png";
 
 export default class HeaderChangePass extends Component {
   render() {
