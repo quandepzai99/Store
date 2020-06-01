@@ -3,14 +3,9 @@ import {View, Text, StatusBar, TouchableOpacity, StyleSheet} from 'react-native'
 import Form from "./component/Form";
 import Header from "./component/Header";
 import Chat from "./component/Chat";
-import AntDesign from "react-native-vector-icons/AntDesign";
-import {colors} from "../../Styles";
 
 
 class index extends Component {
-  continue = () => {
-    this.props.navigation.navigate('PinCode')
-}
   render() {
     return (
       <View>
@@ -25,4 +20,4 @@ class index extends Component {
 
 export default index;
 
-const styles = StyleSheet.create({})
+

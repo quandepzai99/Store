@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {View, Text, StyleSheet, TouchableOpacity, Image} from 'react-native';
 import {colors} from "../../../Styles";
 import images from "../../../Common/images";
-import PinInput from "react-native-pin-code";
 import SmoothPinCodeInput from "react-native-smooth-pincode-input";
 
 export default class Form extends Component {
@@ -55,8 +54,10 @@ export default class Form extends Component {
         />
         <View style={styles.box}>
           <Text style={styles.text2}>Bạn quên mật khẩu?</Text>
-          <Image source={images.sigleout} style={{marginLeft: 100, top: 3, right: 10}}/>
-          <Text style={styles.text3}>Đăng xuất</Text>
+          <TouchableOpacity style={styles.btSignOut}>
+            <Image source={images.sigleout} style={{top: 3, right: 5}}/>
+            <Text style={styles.text3}>Đăng xuất</Text>
+          </TouchableOpacity>
         </View>
         <View style={styles.box2}>
           <Text style={styles.text4}>Xác định khuôn mặt</Text>
@@ -78,9 +79,6 @@ const styles = StyleSheet.create({
     shadowRadius: 2.62,
     elevation: 4,
   },
-  input: {
-
-  },
   text1: {
     marginTop: 32,
     fontFamily: "Roboto",
@@ -94,17 +92,22 @@ const styles = StyleSheet.create({
   box: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginHorizontal: 16,
-    marginTop: 38
+    marginTop: 38,
+
+  },
+  btSignOut: {
+    flexDirection: 'row',
+    left: 50
   },
   text2: {
+    right: 50,
     fontFamily: "Roboto",
     fontSize: 14,
     fontWeight: "normal",
     fontStyle: "normal",
     lineHeight: 24,
     letterSpacing: 0,
-    textAlign: "left",
+
     color: colors.deepSkyBlue
   },
   text3: {
