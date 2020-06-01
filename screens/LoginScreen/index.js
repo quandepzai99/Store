@@ -7,7 +7,6 @@ import AntDesign from "react-native-vector-icons/AntDesign";
 import {colors} from "../../Styles";
 
 
-
 class index extends Component {
   continue = () => {
     this.props.navigation.navigate('PinCode')
@@ -19,7 +18,6 @@ class index extends Component {
         <Header />
         <Form />
         <Chat />
-
       </View>
     );
   }
@@ -27,6 +25,4 @@ class index extends Component {
 
 export default index;
 
-const styles = StyleSheet.create({
-
-})
+const styles = StyleSheet.create({})

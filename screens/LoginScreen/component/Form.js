@@ -3,7 +3,14 @@ import {View, Text, StyleSheet, TextInput, TouchableOpacity} from 'react-native'
 import {colors} from "../../../Styles";
 import AntDesign from 'react-native-vector-icons/AntDesign'
 import Translate from "./Translate";
+import App from "../../../App";
+import {navigationRef} from "../../RootNavigation";
 
+// const navigationRef = React.createRef();
+
+function navigate(name) {
+  navigationRef.current && navigationRef.current.navigate(name);
+}
 
 export default class Form extends Component {
 
@@ -11,18 +18,9 @@ export default class Form extends Component {
 
   constructor(props) {
     super(props);
-    this.continue = this.continue.bind(this);
     this.state = {
       Reds: colors.blueyGrey,
-
     }
-  }
-
-
-  continue = () =>  {
-    console.log(this.props);
-    // this.props.navigation.navigate('PinCode');
-   this.props.navigation.navigate('PinCode')
   }
 
   handleKeyup = (event) => {
@@ -40,16 +38,13 @@ export default class Form extends Component {
   }
 
   render() {
-
     return (
       <View style={styles.container}>
         <View style={styles.trans}>
           <Text style={styles.text1}>Nhập số điện thoại</Text>
           <Translate/>
         </View>
-        <View style={styles.textView}>
-          <Text style={styles.text2}>số điện thoại</Text>
-        </View>
+        <Text style={styles.text2}>số điện thoại</Text>
         <TextInput
           onChange={this.handleKeyup}
           placeholder={'0901234567'}
@@ -58,8 +53,8 @@ export default class Form extends Component {
           maxLength={10}
         />
         <TouchableOpacity
-          onPress={this.continue}
-          style={[styles.ellipse529, {backgroundColor: this.state.Reds }]  }
+          onPress={() => navigate('PinCode')}
+          style={[styles.ellipse529, {backgroundColor: this.state.Reds }]}
         >
           <View style={styles.ellipse531}>
             <AntDesign name={'arrowright'} size={28} color={this.state.Reds} style={styles.icon}/>
@@ -116,23 +111,19 @@ const styles = StyleSheet.create({
     letterSpacing: 0,
     textAlign: "center",
   },
-  textView: {
-    bottom: -55,
-    backgroundColor: '#fff',
-    zIndex: 1,
-    marginLeft: 40,
-    marginRight: 220
-  },
   text2: {
+    top: 50,
+    left: 45,
+    marginRight: 260,
+    zIndex: 1,
+    backgroundColor: '#fff',
     fontFamily: "Roboto",
     fontSize: 15,
     fontWeight: "normal",
     fontStyle: "normal",
     lineHeight: 24,
     letterSpacing: 0,
-    textAlign: "left",
     color: colors.blueyGrey,
-    padding: 5
   },
   ellipse529: {
     position: 'absolute',
@@ -167,6 +158,5 @@ const styles = StyleSheet.create({
   },
   icon: {
     margin: 16,
-
   },
 })

@@ -17,10 +17,10 @@ export default class Chat extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 70,
+    bottom: -60,
     marginRight: 16,
     marginLeft: 300,
-    borderRadius: 50,
+    borderRadius: 40,
     backgroundColor: "rgba(114, 13, 93, 0.1)",
     shadowColor: "rgba(22, 60, 132, 0.16)",
     shadowOffset: {
