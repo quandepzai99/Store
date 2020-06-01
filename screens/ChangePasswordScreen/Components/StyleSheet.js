@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
-import colors from "../../../../colors"
-import {gray} from 'color-name';
+import colors from "../../../colors";
+import { gray } from "color-name";
 
 const screenResetPw = StyleSheet.create({
   container: {
@@ -67,19 +67,21 @@ const screenResetPw = StyleSheet.create({
   viewBlock2box1: {
     marginLeft: 16,
     marginRight: 16,
-    backgroundColor: "white",
+    backgroundColor: "#ffffff",
     marginTop: -5,
-    borderRadius: 0,
+    borderRadius: 12,
     flexDirection: "row",
     marginBottom: 24,
     borderWidth: 1,
     borderColor: "grey"
   },
   textblock2box1: {
+    zIndex: 1,
     marginLeft: 32,
     textAlign: "left",
-    backgroundColor: "white",
-    fontSize: 15
+    backgroundColor: "#ffffff",
+    fontSize: 15,
+    marginRight: 240
   },
   viewBlock2box2: {
     marginLeft: 16,
@@ -87,17 +89,18 @@ const screenResetPw = StyleSheet.create({
     backgroundColor: "#ffffff",
     marginTop: -5,
     flexDirection: "row",
-    borderColor : "grey",
-    borderRadius: 0,
+    borderColor: "grey",
+    borderRadius: 12,
     borderWidth: 1
   },
   textblock2box2: {
-    paddingRight: 2,
+    zIndex: 1,
     marginLeft: 16,
     paddingTop: 0,
     textAlign: "left",
     backgroundColor: "white",
-    fontSize: 15
+    fontSize: 15,
+    marginRight: 230
   }
 });
 
