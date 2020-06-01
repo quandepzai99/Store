@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { StatusBar, View, Image } from "react-native";
-import BGP from "./Picture/backgroundpic.jpg";
+import BGP from "./Picture/BG.png";
 
 class App extends Component {
   render() {
