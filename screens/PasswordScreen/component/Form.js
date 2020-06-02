@@ -18,7 +18,7 @@ export default class Form extends Component {
     }
   }
   render() {
-    const { code, password } = this.state;
+    const { code } = this.state;
     return (
       <View style={styles.container}>
         <Text style={styles.text1}>Nhập mật khẩu</Text>
@@ -53,7 +53,7 @@ export default class Form extends Component {
           onTextChange={code => this.setState({ code })}
         />
         <View style={styles.box}>
-          <Text style={styles.text2}>Bạn quên mật khẩu?</Text>
+          <Text style={styles.text2}>Đặt lại mật khẩu</Text>
           <TouchableOpacity style={styles.btSignOut}>
             <Image source={images.sigleout} style={{top: 3, right: 5}}/>
             <Text style={styles.text3}>Đăng xuất</Text>
@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
   },
   btSignOut: {
     flexDirection: 'row',
-    left: 50
+    left: 60
   },
   text2: {
     right: 50,
