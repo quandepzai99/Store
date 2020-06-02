@@ -106,9 +106,11 @@ const styles = StyleSheet.create({
   },
   btSignOut: {
     flexDirection: "row",
+    padding: 10,
     left: 50
   },
   text2: {
+    padding: 10,
     right: 50,
     fontSize: 14,
     fontWeight: "normal",

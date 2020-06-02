@@ -28,7 +28,12 @@ export default function index() {
           marginTop: 26
         }}
         onPress={() => navigate("PinCode")}>
-        <AntDesign name={"left"} size={15} color={"gray"} />
+        <AntDesign name={"left"} size={15} color={"gray"}
+        style={{
+            paddingTop : 10,
+            paddingBottom : 10,
+            paddingLeft : 10
+        }}/>
         <Text
           style={{
             fontSize: 15,

@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     borderRadius: 12,
-    borderColor: "gray",
+    borderColor: "rgb(230,236,240)",
     borderWidth: 1
   },
   section: {
