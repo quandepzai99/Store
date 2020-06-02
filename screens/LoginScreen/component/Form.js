@@ -9,7 +9,6 @@ import {
 import { colors } from "../../../Styles";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import Translate from "./Translate";
-import App from "../../../App";
 import { navigationRef } from "../../RootNavigation";
 
 // const navigationRef = React.createRef();
@@ -54,8 +53,9 @@ export default class Form extends Component {
           onChange={this.handleKeyup}
           placeholder={"0901234567"}
           style={styles.input}
-          keyboardType="numeric"
+          keyboardType="phone-pad"
           maxLength={10}
+          autoFocus={true}
         />
         <TouchableOpacity
           onPress={() => navigate("PinCode")}

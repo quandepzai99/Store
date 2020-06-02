@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
-import {View, TouchableOpacity, Text, StyleSheet, Image} from 'react-native';
-import {colors} from "../../../Styles";
+import React, { Component } from "react";
+import { View, TouchableOpacity, StyleSheet, Image } from "react-native";
+import { colors } from "../../../Styles";
 import images from "../../../Common/images";
 
 export default class Chat extends Component {
@@ -9,7 +9,7 @@ export default class Chat extends Component {
       <View>
         <TouchableOpacity style={styles.container}>
           <View style={styles.ellipse608}>
-            <Image source={images.chat} style={styles.chat}/>
+            <Image source={images.chat} style={styles.chat} />
           </View>
         </TouchableOpacity>
       </View>
@@ -19,10 +19,14 @@ export default class Chat extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 70,
+    marginTop: 50,
     marginRight: 16,
-    marginLeft: 300,
-    borderRadius: 50,
+    width: 76,
+    height: 76,
+    alignItems: "center",
+    alignSelf: "flex-end",
+    justifyContent: "center",
+    borderRadius: 40,
     backgroundColor: "rgba(114, 13, 93, 0.1)",
     shadowColor: "rgba(22, 60, 132, 0.16)",
     shadowOffset: {
@@ -31,11 +35,13 @@ const styles = StyleSheet.create({
     },
     shadowRadius: 10,
     shadowOpacity: 0.2,
-    elevation: 1,
+    elevation: 1
   },
 
   ellipse608: {
-    alignItems: 'center',
+    alignItems: "center",
+    alignSelf: "center",
+    justifyContent: "center",
     margin: 8,
     borderRadius: 30,
     backgroundColor: "#ffffff",
@@ -46,4 +52,4 @@ const styles = StyleSheet.create({
   chat: {
     margin: 14
   }
-})
+});

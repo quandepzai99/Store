@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, TouchableOpacity, Text, StyleSheet, Image} from 'react-native';
+import {View, TouchableOpacity, StyleSheet, Image} from 'react-native';
 import {colors} from "../../../Styles";
 import images from "../../../Common/images";
 
@@ -18,8 +18,11 @@ export default class Chat extends Component {
 const styles = StyleSheet.create({
   container: {
     bottom: -60,
+    width : 76,
+    height : 76,
+    justifyContent: "center",
     marginRight: 16,
-    marginLeft: 300,
+    alignSelf : "flex-end",
     borderRadius: 40,
     backgroundColor: "rgba(114, 13, 93, 0.1)",
     shadowColor: "rgba(22, 60, 132, 0.16)",
@@ -44,4 +47,4 @@ const styles = StyleSheet.create({
   chat: {
     margin: 14
   }
-})
+});
