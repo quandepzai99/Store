@@ -74,7 +74,7 @@ const screenResetPw = StyleSheet.create({
     borderColor: "grey"
   },
   textblock2box1: {
-    marginLeft: 32,
+    left: 32,
     textAlign: "left",
     backgroundColor: "white",
     fontSize: 15
