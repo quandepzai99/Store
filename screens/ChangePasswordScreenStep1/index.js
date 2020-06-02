@@ -1,9 +1,14 @@
 import React from "react";
-import { View, Text, StatusBar } from "react-native";
+import { View, Text, StatusBar, TouchableOpacity } from "react-native";
 import HeaderChangePass from "./Components/Header";
 import styles from "./Components/StyleSheet";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import PinInput from "./Components/pin-input";
+import { navigationRef } from "../RootNavigation";
+
+function navigate(name) {
+  navigationRef.current && navigationRef.current.navigate(name);
+}
 
 export default function index() {
   return (
@@ -11,18 +16,18 @@ export default function index() {
       <HeaderChangePass />
       <StatusBar barStyle={"light-content"} />
       <View style={styles.viewBlock2}>
-
-          <Text style={styles.textblock2box1}>Nhập mật khẩu hiện tại</Text>
+        <Text style={styles.textblock2box1}>Nhập mật khẩu hiện tại</Text>
         <View style={styles.viewBlock2box1} autofocus={true}>
           <PinInput />
         </View>
       </View>
-      <View
+      <TouchableOpacity
         style={{
-          marginTop: 26,
           flexDirection: "row",
-          justifyContent: "center"
-        }}>
+          justifyContent: "center",
+          marginTop: 26
+        }}
+        onPress={() => navigate("PinCode")}>
         <AntDesign name={"left"} size={15} color={"gray"} />
         <Text
           style={{
@@ -37,7 +42,7 @@ export default function index() {
           {" "}
           Quay lai
         </Text>
-      </View>
+      </TouchableOpacity>
     </View>
   );
 }

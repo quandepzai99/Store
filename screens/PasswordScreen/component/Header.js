@@ -15,7 +15,6 @@ export default class Header extends Component {
 const styles = StyleSheet.create({
   text: {
     marginHorizontal: 30,
-    fontFamily: "Roboto",
     fontSize: 32,
     marginTop: 70,
     fontWeight: "bold",

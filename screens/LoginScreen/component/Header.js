@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {StyleSheet, View, Text, ImageBackground, StatusBar} from 'react-native';
+import {StyleSheet, Text, ImageBackground} from 'react-native';
 import images from '../../../Common/images'
 
 export default class Header extends Component {
@@ -16,7 +16,6 @@ export default class Header extends Component {
 const styles = StyleSheet.create({
   text: {
     marginHorizontal: 30,
-    fontFamily: "Roboto",
     fontSize: 32,
     marginTop: 70,
     fontWeight: "bold",
