@@ -75,9 +75,10 @@ const screenResetPw = StyleSheet.create({
         flexDirection: "row"
     },
     textblock2box1: {
-        zIndex :1,
         left: 32,
-        marginRight : 190,
+        top: 10,
+        position: 'absolute',
+        zIndex: 1,
         textAlign: "left",
         backgroundColor: "white",
         fontSize: 15

@@ -119,9 +119,9 @@ const styles = StyleSheet.create({
     textAlign: "center"
   },
   text2: {
-    top: 50,
-    left: 45,
-    marginRight: 260,
+    position: 'absolute',
+    left: 32,
+    top: 85,
     zIndex: 1,
     backgroundColor: "#fff",
     fontSize: 15,
