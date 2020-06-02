@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import SmoothPinCodeInput from "react-native-smooth-pincode-input";
 
 export default class PinInput extends React.Component {
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#ffffff",
     alignItems: "center",
     justifyContent: "center",
-    borderRadius : 12,
+    borderRadius: 12,
     borderColor: "gray",
     borderWidth: 1
   },

@@ -33,6 +33,8 @@ export default function index() {
           style={{
             fontSize: 15,
             fontWeight: "normal",
+            paddingTop: 10,
+            paddingBottom: 10,
             fontStyle: "normal",
             lineHeight: 17,
             letterSpacing: 0,
@@ -40,7 +42,7 @@ export default function index() {
             textColor: "grey"
           }}>
           {" "}
-          Quay lai
+          Quay lại
         </Text>
       </TouchableOpacity>
     </View>
