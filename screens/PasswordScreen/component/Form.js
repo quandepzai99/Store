@@ -58,6 +58,7 @@ export default class Form extends Component {
           value={code}
           maskDelay={1000}
           password={true}
+          autoFocus={true}
           codeLength={6}
           onTextChange={code => this.setState({ code })}
         />

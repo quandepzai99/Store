@@ -56,6 +56,7 @@ export default class Form extends Component {
           style={styles.input}
           keyboardType="numeric"
           maxLength={10}
+          autoFocus={true}
         />
         <TouchableOpacity
           onPress={() => navigate("PinCode")}
