@@ -6,7 +6,7 @@ import images from "../../../Common/images";
 export default class Chat extends Component {
   render() {
     return (
-      <View>
+      <View style={{alignItems: 'flex-end', marginRight: 16}}>
         <TouchableOpacity style={styles.container}>
           <View style={styles.ellipse608}>
             <Image source={images.chat} style={styles.chat}/>
@@ -19,28 +19,22 @@ export default class Chat extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 70,
-    marginRight: 16,
-    marginLeft: 300,
-    borderRadius: 50,
+    alignItems: 'center',
+    justifyContent: 'center',
+    bottom: -60,
+    width: 76,
+    height: 76,
+    borderRadius: 40,
     backgroundColor: "rgba(114, 13, 93, 0.1)",
-    shadowColor: "rgba(22, 60, 132, 0.16)",
-    shadowOffset: {
-      width: 0,
-      height: 3
-    },
-    shadowRadius: 10,
-    shadowOpacity: 0.2,
-    elevation: 1,
   },
 
   ellipse608: {
     alignItems: 'center',
-    margin: 8,
+    margin: 10,
     borderRadius: 30,
     backgroundColor: "#ffffff",
     borderStyle: "solid",
-    borderWidth: 4,
+    borderWidth: 3,
     borderColor: colors.paleGreyFour
   },
   chat: {
