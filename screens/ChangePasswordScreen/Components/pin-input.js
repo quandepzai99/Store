@@ -16,7 +16,7 @@ export default class PinInput extends React.Component {
   };
 
   render() {
-    const { code, password } = this.state;
+    const { password } = this.state;
     return (
       <View style={styles.container}>
         <View style={styles.section}>

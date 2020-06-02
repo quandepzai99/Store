@@ -32,7 +32,6 @@ export default class Translate extends Component {
         left: this.state.active ? 35 : 0
       },
       label: {
-        fontFamily: "Roboto",
         fontSize: 13,
         fontWeight: "normal",
         fontStyle: "normal",
