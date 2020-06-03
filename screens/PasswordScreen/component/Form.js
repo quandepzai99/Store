@@ -111,6 +111,7 @@ const styles = StyleSheet.create({
     left: 50
   },
   text2: {
+    marginLeft : 10,
     padding: 10,
     right: 50,
     fontSize: 14,
@@ -122,6 +123,7 @@ const styles = StyleSheet.create({
     color: colors.deepSkyBlue
   },
   text3: {
+    marginRight : 10,
     fontSize: 15,
     fontWeight: "normal",
     fontStyle: "normal",
