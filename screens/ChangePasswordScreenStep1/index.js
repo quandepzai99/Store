@@ -11,9 +11,9 @@ function navigate(name) {
 }
 
 export default function index() {
-  const [isHidden, setIsHidden] = useState(false);
+  const [isShow, setIsHidden] = useState(false);
 
-  console.log("Is Hidden:", isHidden);
+  console.log("Is Hidden:", isShow);
   console.log("Set Hidden:", setIsHidden);
 
   return (
@@ -30,11 +30,13 @@ export default function index() {
             keyboardType="phone-pad"
           />
         </View>
-        <Text style={styles.textblock2box2}>Xác nhận mật khẩu</Text>
-        {isHidden ? (
-          <View style={styles.viewBlock2box2}>
-            <PinInput onFulfill={() => {}} />
-          </View>
+        {isShow ? (
+          <>
+            <Text style={styles.textblock2box2}>Xác nhận mật khẩu</Text>
+            <View style={styles.viewBlock2box2}>
+              <PinInput onFulfill={() => {}} />
+            </View>
+          </>
         ) : (
           <View />
         )}
