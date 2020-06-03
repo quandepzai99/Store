@@ -6,6 +6,7 @@ import PasswordScreen from "./screens/PasswordScreen";
 import { navigationRef } from "./screens/RootNavigation";
 import ChangePasswordsScreen from "./screens/ChangePasswordScreen";
 import ChangePasswordsScreenStep1 from "./screens/ChangePasswordScreenStep1";
+import Inbox from "./screens/HelpScreen/Inbox";
 
 // const navigationRef = React.createRef();
 
@@ -20,6 +21,7 @@ export default class App extends Component {
           <Stack.Screen name={"PinCode"} component={PasswordScreen} />
           <Stack.Screen name={"PinCode1"} component={ChangePasswordsScreenStep1}/>
           <Stack.Screen name={"PinCode2"} component={ChangePasswordsScreen} />
+          <Stack.Screen name={"Chats"} component={Inbox} />
         </Stack.Navigator>
       </NavigationContainer>
     );

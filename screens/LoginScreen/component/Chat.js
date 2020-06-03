@@ -2,12 +2,21 @@ import React, {Component} from 'react';
 import {View, TouchableOpacity, Text, StyleSheet, Image} from 'react-native';
 import {colors} from "../../../Styles";
 import images from "../../../Common/images";
+import {navigationRef} from "../../RootNavigation";
+
+function navigate(name) {
+  navigationRef.current && navigationRef.current.navigate(name);
+}
 
 export default class Chat extends Component {
+
+  // continue = () => {
+  //   this.props.navigation.navigate('Chats')
+  // }
   render() {
     return (
       <View style={{alignItems: 'flex-end', marginRight: 16}}>
-        <TouchableOpacity style={styles.container}>
+        <TouchableOpacity style={styles.container} onPress={() => navigate('Chats')}>
           <View style={styles.ellipse608}>
             <Image source={images.chat} style={styles.chat}/>
           </View>

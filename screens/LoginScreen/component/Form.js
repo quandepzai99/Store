@@ -36,7 +36,7 @@ export default class Form extends Component {
       });
     } else {
       this.setState({
-        Reds: colors.blueyGrey
+        Reds: 'white'
       });
     }
   };
@@ -133,13 +133,14 @@ const styles = StyleSheet.create({
   },
   ellipse529: {
     position: "absolute",
+    justifyContent: 'center',
     bottom: -40,
     left: "50%",
     alignItems: "center",
     marginLeft: -40,
     marginRight: 140,
     borderRadius: 40,
-    backgroundColor: "#ffffff",
+
     shadowColor: "rgba(0, 0, 0, 0.16)",
     shadowOffset: {
       width: 0,

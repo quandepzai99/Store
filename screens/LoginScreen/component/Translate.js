@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, TouchableOpacity, StyleSheet, Text, Animated} from 'react-native';
+import {View, TouchableOpacity, StyleSheet, Text} from 'react-native';
 import {colors} from '../../../Styles';
 
 
@@ -49,7 +49,6 @@ export default class Translate extends Component {
         >
           <Text style={styles.label}>{this.state.active ? 'EN' : 'VN'}</Text>
         </TouchableOpacity>
-
       </View>
     );
   }
