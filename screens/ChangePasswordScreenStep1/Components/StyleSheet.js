@@ -110,6 +110,7 @@ const screenResetPw = StyleSheet.create({
     lineHeight: 17,
     letterSpacing: 0,
     textAlign: "center",
+    marginLeft : -5,
     color: "grey"
   }
 });
