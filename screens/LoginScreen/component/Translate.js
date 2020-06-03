@@ -29,7 +29,7 @@ export default class Translate extends Component {
         borderRadius: 24,
         marginRight: 35,
         backgroundColor: colors.paleGreyFour,
-        left: this.state.active ? 35 : 0
+        left: this.state.active ? 30 : 0
       },
       label: {
         fontSize: 13,
