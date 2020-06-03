@@ -17,6 +17,7 @@ export default class PinInput extends React.Component {
 
   render() {
     const { code, password } = this.state;
+
     return (
       <View style={styles.container}>
         <View style={styles.section}>
@@ -33,7 +34,7 @@ export default class PinInput extends React.Component {
             cellSize={28}
             codeLength={6}
             value={password}
-            onTextChange={password => this.setState({ password })}
+            onTextChange={this.onTextChange}
             cellStyle={styles.cellStyle}
             autoFocus={true}
           />
@@ -41,6 +42,17 @@ export default class PinInput extends React.Component {
       </View>
     );
   }
+
+  onTextChange = text => {
+    const { onFulfill } = this.props;
+    const callback = text.length >= 6 ? onFulfill : () => {};
+    this.setState(
+      {
+        password: text
+      },
+      callback
+    );
+  };
 }
 
 const styles = StyleSheet.create({

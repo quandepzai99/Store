@@ -28,7 +28,7 @@ const screenResetPw = StyleSheet.create({
     justifyContent: "center"
   },
   viewBlock2: {
-    marginLeft: 12,
+    marginLeft: 16,
     marginRight: 16,
     paddingBottom: 25,
     paddingTop: 25,
@@ -67,11 +67,7 @@ const screenResetPw = StyleSheet.create({
     marginRight: 16,
     marginTop: -5,
     borderRadius: 24,
-    backgroundColor: "blue",
-    shadowColor: "#ffffff",
-    shadowRadius: 20,
-    borderColor: "black",
-    shadowOpacity: 1,
+    borderColor: "grey",
     flexDirection: "row"
   },
   textblock2box1: {
@@ -84,22 +80,22 @@ const screenResetPw = StyleSheet.create({
     fontSize: 15
   },
   viewBlock2box2: {
+
     marginLeft: 16,
     marginRight: 16,
-    backgroundColor: "#ffffff",
-    marginTop: -5,
-    flexDirection: "row",
+    marginTop: 24,
+    borderRadius: 24,
     borderColor: "grey",
-    borderRadius: 0,
-    borderWidth: 1
+    flexDirection: "row"
   },
   textblock2box2: {
-    paddingRight: 2,
-    marginLeft: 16,
-    paddingTop: 0,
+    left : 32,
+    bottom: 79,
+    position: 'absolute',
     textAlign: "left",
     backgroundColor: "white",
-    fontSize: 15
+    fontSize: 15,
+    zIndex: 1
   },
   goBackButton: {
     fontSize: 15,

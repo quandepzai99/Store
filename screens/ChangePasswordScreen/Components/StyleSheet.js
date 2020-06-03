@@ -28,7 +28,7 @@ const screenResetPw = StyleSheet.create({
     justifyContent: "center"
   },
   viewBlock2: {
-    marginLeft: 12,
+    marginLeft: 16,
     marginRight: 16,
     paddingBottom: 25,
     paddingTop: 25,
