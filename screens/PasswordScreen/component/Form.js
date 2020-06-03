@@ -63,7 +63,8 @@ export default class Form extends Component {
           onTextChange={code => this.setState({ code })}
         />
         <View style={styles.box}>
-          <TouchableOpacity onPress={() => navigate("PinCode1")}>
+          <TouchableOpacity onPress={() => navigate("PinCode1")}
+          style={{marginLeft: 10}}>
             <Text style={styles.text2}>Bạn quên mật khẩu?</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.btSignOut}>
@@ -103,15 +104,18 @@ const styles = StyleSheet.create({
   box: {
     flexDirection: "row",
     justifyContent: "space-between",
-    marginTop: 38
+    marginTop: 38,
+
   },
   btSignOut: {
+    marginRight: 16,
     flexDirection: "row",
     padding: 10,
-    left: 50
+    left: 50,
+
   },
   text2: {
-    marginLeft : 10,
+    marginLeft : 15,
     padding: 10,
     right: 50,
     fontSize: 14,

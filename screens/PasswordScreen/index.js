@@ -11,11 +11,11 @@ class index extends Component {
 
     return (
       <View>
-        <StatusBar barStyle={'light-content'}/>
+        <StatusBar barStyle={'light-content'} />
         <Header />
         <Form />
         <Chat />
-
+        {/*<Test />*/}
       </View>
     );
   }
