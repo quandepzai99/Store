@@ -10,7 +10,6 @@ function navigate(name) {
 
 export default class Chat extends Component {
 
-
   render() {
     return (
       <View style={{alignItems: 'flex-end', marginRight: 16}}>
