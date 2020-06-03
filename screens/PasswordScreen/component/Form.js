@@ -63,10 +63,7 @@ export default class Form extends Component {
           onTextChange={code => this.setState({ code })}
         />
         <View style={styles.box}>
-          <TouchableOpacity onPress={() => navigate("PinCode1")}
-          style={{
-            marginLeft : 10
-          }}>
+          <TouchableOpacity onPress={() => navigate("PinCode1")}>
             <Text style={styles.text2}>Bạn quên mật khẩu?</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.btSignOut}>
