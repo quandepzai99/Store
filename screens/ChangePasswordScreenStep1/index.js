@@ -1,4 +1,4 @@
-import React from "react";
+import React, {setState} from "react";
 import { View, Text, StatusBar, TouchableOpacity } from "react-native";
 import HeaderChangePass from "./Components/Header";
 import styles from "./Components/StyleSheet";
@@ -17,8 +17,10 @@ export default function index() {
       <StatusBar barStyle={"light-content"} />
       <View style={styles.viewBlock2}>
         <Text style={styles.textblock2box1}>Nhập mật khẩu hiện tại</Text>
-        <View style={styles.viewBlock2box1} autofocus={true}>
-          <PinInput />
+        <View style={styles.viewBlock2box1}>
+          <PinInput
+          autofocus={true}
+          keyboardtype= "phone-pad"/>
         </View>
       </View>
       <TouchableOpacity

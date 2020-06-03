@@ -12,8 +12,8 @@ export default function index() {
       <StatusBar barStyle={"light-content"} />
       <View style={styles.viewBlock2}>
         <Text style={styles.textblock2box1}>Nhập mật khẩu</Text>
-        <View style={styles.viewBlock2box1} autofocus={true}>
-          <PinInput />
+        <View style={styles.viewBlock2box1}>
+          <PinInput autofocus={true} />
         </View>
 
         <Text style={styles.textblock2box2}>Xác nhận mật khẩu</Text>
