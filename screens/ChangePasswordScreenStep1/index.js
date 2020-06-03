@@ -35,17 +35,7 @@ export default function index() {
             paddingLeft : 10
         }}/>
         <Text
-          style={{
-            fontSize: 15,
-            fontWeight: "normal",
-            paddingTop: 10,
-            paddingBottom: 10,
-            fontStyle: "normal",
-            lineHeight: 17,
-            letterSpacing: 0,
-            textAlign: "center",
-            textColor: "grey"
-          }}>
+          style={styles.goBackButton}>
           {" "}
           Quay lại
         </Text>

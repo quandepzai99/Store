@@ -1,4 +1,4 @@
-import React from "react";
+import React, {setState} from "react";
 import { View, Text, StatusBar } from "react-native";
 import HeaderChangePass from "./Components/Header";
 import styles from "./Components/StyleSheet";
