@@ -1,4 +1,4 @@
-import React, {setState} from "react";
+import React, { setState } from "react";
 import { View, Text, StatusBar } from "react-native";
 import HeaderChangePass from "./Components/Header";
 import styles from "./Components/StyleSheet";
@@ -28,20 +28,17 @@ export default function index() {
           flexDirection: "row",
           justifyContent: "center"
         }}>
-        <AntDesign name={"left"} size={15} color={"gray"} />
-        <Text
+        <AntDesign
+          name={"left"}
+          size={15}
+          color={"gray"}
           style={{
-            fontSize: 15,
-            fontWeight: "normal",
-            fontStyle: "normal",
-            lineHeight: 17,
-            letterSpacing: 0,
-            textAlign: "center",
-            textColor: "grey"
-          }}>
-          {" "}
-          Quay lai
-        </Text>
+            paddingTop: 10,
+            paddingBottom: 10,
+            paddingLeft: 10
+          }}
+        />
+        <Text style={styles.goBackButton}> Quay lại</Text>
       </View>
     </View>
   );
