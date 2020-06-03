@@ -1,6 +1,4 @@
 import { StyleSheet } from "react-native";
-import colors from "../../../colors";
-import { gray } from "color-name";
 
 const screenResetPw = StyleSheet.create({
   container: {
@@ -30,19 +28,19 @@ const screenResetPw = StyleSheet.create({
     justifyContent: "center"
   },
   viewBlock2: {
-    marginLeft: 12,
+    marginLeft: 16,
     marginRight: 16,
     paddingBottom: 25,
     paddingTop: 25,
+    borderRadius: 24,
     backgroundColor: "#ffffff",
-    shadowColor: "#000",
+    shadowColor: "rgba(22, 60, 132, 0.16)",
     shadowOffset: {
       width: 0,
       height: 3
     },
     shadowRadius: 20,
     shadowOpacity: 1,
-    borderRadius: 24,
     marginTop: -50
   },
   textSuccessfullChanged: {
@@ -67,40 +65,49 @@ const screenResetPw = StyleSheet.create({
   viewBlock2box1: {
     marginLeft: 16,
     marginRight: 16,
-    backgroundColor: "#ffffff",
     marginTop: -5,
-    borderRadius: 12,
-    flexDirection: "row",
-    marginBottom: 24,
-    borderWidth: 1,
-    borderColor: "grey"
+    borderRadius: 24,
+    borderColor: "grey",
+    flexDirection: "row"
   },
   textblock2box1: {
-    zIndex: 1,
     left: 32,
+    top: 10,
+    position: "absolute",
+    zIndex: 1,
     textAlign: "left",
-    backgroundColor: "#ffffff",
-    fontSize: 15,
-    marginRight: 240
+    backgroundColor: "white",
+    fontSize: 15
   },
   viewBlock2box2: {
+
     marginLeft: 16,
     marginRight: 16,
-    backgroundColor: "#ffffff",
-    marginTop: -5,
-    flexDirection: "row",
+    marginTop: 24,
+    borderRadius: 24,
     borderColor: "grey",
-    borderRadius: 12,
-    borderWidth: 1
+    flexDirection: "row"
   },
   textblock2box2: {
-    zIndex: 1,
-    marginLeft: 16,
-    paddingTop: 0,
+    left : 32,
+    bottom: 79,
+    position: 'absolute',
     textAlign: "left",
     backgroundColor: "white",
     fontSize: 15,
-    marginRight: 230
+    zIndex: 1
+  },
+  goBackButton: {
+    fontSize: 15,
+    fontWeight: "normal",
+    paddingTop: 10,
+    paddingBottom: 10,
+    fontStyle: "normal",
+    lineHeight: 17,
+    letterSpacing: 0,
+    textAlign: "center",
+    marginLeft : -5,
+    color: "grey"
   }
 });
 

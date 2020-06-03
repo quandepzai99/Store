@@ -10,9 +10,7 @@ function navigate(name) {
 
 export default class Chat extends Component {
 
-  // continue = () => {
-  //   this.props.navigation.navigate('Chats')
-  // }
+
   render() {
     return (
       <View style={{alignItems: 'flex-end', marginRight: 16}}>

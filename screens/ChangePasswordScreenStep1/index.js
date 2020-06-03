@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component, useState } from "react";
 import { View, Text, StatusBar, TouchableOpacity } from "react-native";
 import HeaderChangePass from "./Components/Header";
 import styles from "./Components/StyleSheet";
@@ -11,15 +11,33 @@ function navigate(name) {
 }
 
 export default function index() {
+  const [isHidden, setIsHidden] = useState(false);
+
+  console.log("Is Hidden:", isHidden);
+  console.log("Set Hidden:", setIsHidden);
+
   return (
     <View>
       <HeaderChangePass />
       <StatusBar barStyle={"light-content"} />
       <View style={styles.viewBlock2}>
         <Text style={styles.textblock2box1}>Nhập mật khẩu hiện tại</Text>
-        <View style={styles.viewBlock2box1} autofocus={true}>
-          <PinInput />
+        <View style={styles.viewBlock2box1}>
+          <PinInput
+            onFulfill={() => {
+              setIsHidden(true);
+            }}
+            keyboardType="phone-pad"
+          />
         </View>
+        <Text style={styles.textblock2box2}>Xác nhận mật khẩu</Text>
+        {isHidden ? (
+          <View style={styles.viewBlock2box2}>
+            <PinInput onFulfill={() => {}} />
+          </View>
+        ) : (
+          <View />
+        )}
       </View>
       <TouchableOpacity
         style={{
@@ -28,27 +46,17 @@ export default function index() {
           marginTop: 26
         }}
         onPress={() => navigate("PinCode")}>
-        <AntDesign name={"left"} size={15} color={"gray"}
-        style={{
-            paddingTop : 10,
-            paddingBottom : 10,
-            paddingLeft : 10
-        }}/>
-        <Text
+        <AntDesign
+          name={"left"}
+          size={15}
+          color={"gray"}
           style={{
-            fontSize: 15,
-            fontWeight: "normal",
             paddingTop: 10,
             paddingBottom: 10,
-            fontStyle: "normal",
-            lineHeight: 17,
-            letterSpacing: 0,
-            textAlign: "center",
-            textColor: "grey"
-          }}>
-          {" "}
-          Quay lại
-        </Text>
+            paddingLeft: 10
+          }}
+        />
+        <Text style={styles.goBackButton}> Quay lại</Text>
       </TouchableOpacity>
     </View>
   );
