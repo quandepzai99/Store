@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet,View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import SmoothPinCodeInput from "react-native-smooth-pincode-input";
 
 export default class PinInput extends React.Component {
@@ -9,14 +9,15 @@ export default class PinInput extends React.Component {
   };
   pinInput = React.createRef();
 
-  _checkCode = code => {
-    if (code != "123456") {
+  _checkCode = () => {
+    {
       this.pinInput.current.shake().then(() => this.setState({ code: "" }));
     }
   };
 
   render() {
     const { password } = this.state;
+
     return (
       <View style={styles.container}>
         <View style={styles.section}>
@@ -33,7 +34,7 @@ export default class PinInput extends React.Component {
             cellSize={28}
             codeLength={6}
             value={password}
-            onTextChange={password => this.setState({ password })}
+            onTextChange={this.onTextChange}
             cellStyle={styles.cellStyle}
             autoFocus={true}
           />
@@ -41,17 +42,28 @@ export default class PinInput extends React.Component {
       </View>
     );
   }
+
+  onTextChange = text => {
+    const { onFulfill } = this.props;
+    const callback = text.length >= 6 ? onFulfill : () => {};
+    this.setState(
+      {
+        password: text
+      },
+      callback
+    );
+  };
 }
 
 const styles = StyleSheet.create({
   container: {
-    borderRadius: 12,
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#ffffff",
     alignItems: "center",
     justifyContent: "center",
-    borderWidth: 1,
-    borderColor: "grey"
+    borderRadius: 12,
+    borderColor: "rgb(230,236,240)",
+    borderWidth: 1
   },
   section: {
     alignItems: "center",

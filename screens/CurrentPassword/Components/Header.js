@@ -27,5 +27,6 @@ export default class HeaderChangePass extends Component {
         </Text>
       </ImageBackground>
     );
-  }
+  };
 }
+

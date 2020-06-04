@@ -47,7 +47,7 @@ export default class Form extends Component {
           <Text style={styles.text1}>Nhập số điện thoại</Text>
           <Translate />
         </View>
-        <Text style={styles.text2}>số điện thoại</Text>
+        <Text style={styles.text2}>Số điện thoại</Text>
         <TextInput
           onChange={this.handleKeyup}
           placeholder={"0901234567"}
@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
     elevation: 4
   },
   trans: {
-    paddingTop: 32,
+    paddingTop: 36,
     flexDirection: "row",
     justifyContent: "space-between",
     paddingHorizontal: 30

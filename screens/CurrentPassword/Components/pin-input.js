@@ -1,6 +1,11 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
 import SmoothPinCodeInput from "react-native-smooth-pincode-input";
+import { navigationRef } from "../../RootNavigation";
+
+function navigation(name) {
+  navigationRef.current && navigationRef.current.navigate(name);
+}
 
 export default class PinInput extends React.Component {
   state = {
@@ -9,14 +14,14 @@ export default class PinInput extends React.Component {
   };
   pinInput = React.createRef();
 
-  _checkCode = code => {
-    if (code != "123456") {
+  _checkCode = () => {
+    {
       this.pinInput.current.shake().then(() => this.setState({ code: "" }));
     }
   };
 
   render() {
-    const { code, password } = this.state;
+    const { password } = this.state;
 
     return (
       <View style={styles.container}>
@@ -44,13 +49,13 @@ export default class PinInput extends React.Component {
   }
 
   onTextChange = text => {
-    const { onFulfill } = this.props;
-    const callback = text.length >= 6 ? onFulfill : () => {};
+    const { onPress } = this.props;
+    const navigate = text.length >= 6 ? navigation("PinCode2") : null;
     this.setState(
       {
         password: text
       },
-      callback
+      navigate
     );
   };
 }
