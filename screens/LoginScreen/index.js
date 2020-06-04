@@ -5,7 +5,16 @@ import Header from "./component/Header";
 import Chat from "./component/Chat";
 
 class index extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      lang: "vi"
+    };
+  }
+
   render() {
+    const { lang } = this.state;
+
     return (
       <View>
         <StatusBar
@@ -13,12 +22,23 @@ class index extends Component {
           translucent={true}
           backgroundColor={"transparent"}
         />
-        <Header />
-        <Form />
+        <Header lange={lang} />
+        <Form onChangeLang={this.onChangeLang} lang={lang} />
         <Chat />
       </View>
     );
   }
+
+  onChangeLang = () => {
+    const { lang } = this.state;
+    const newLang = lang === "en" ? "vi" : "en";
+
+    console.log("new lange:", newLang);
+
+    this.setState({
+      lang: newLang
+    });
+  };
 }
 
 export default index;

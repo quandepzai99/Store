@@ -10,6 +10,7 @@ import { colors } from "../../../colors";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import Translate from "./Translate";
 import { navigationRef } from "../../RootNavigation";
+import switchLanguage from "../../../I18N/selector";
 
 // const navigationRef = React.createRef();
 
@@ -42,11 +43,14 @@ export default class Form extends Component {
   };
 
   render() {
+    const { lang, onChangeLang } = this.props;
+
+    const text = switchLanguage(lang, "AuthenticationScreenPhoneText");
     return (
       <View style={styles.container}>
         <View style={styles.trans}>
-          <Text style={styles.text1}>Nhập số điện thoại</Text>
-          <Translate />
+          <Text style={styles.text1}>{text}</Text>
+          <Translate lang={lang} onChangeLang={onChangeLang} />
         </View>
         <Text style={styles.text2}>Số điện thoại</Text>
         <TextInput

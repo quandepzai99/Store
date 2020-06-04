@@ -13,17 +13,18 @@ import Inbox from "./screens/HelpScreen/Inbox";
 const Stack = createStackNavigator();
 
 export default class App extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
       <NavigationContainer ref={navigationRef}>
         <Stack.Navigator headerMode="none">
           <Stack.Screen name={"Telephone"} component={LoginScreen} />
           <Stack.Screen name={"PinCode"} component={PasswordScreen} />
-          <Stack.Screen name={"PinCode1"} component={CurrentPassword}/>
-          <Stack.Screen
-            name={"PinCode2"}
-            component={ChangePassword}
-          />
+          <Stack.Screen name={"PinCode1"} component={CurrentPassword} />
+          <Stack.Screen name={"PinCode2"} component={ChangePassword} />
           <Stack.Screen name={"Chats"} component={Inbox} />
         </Stack.Navigator>
       </NavigationContainer>
