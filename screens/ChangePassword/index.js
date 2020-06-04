@@ -46,7 +46,7 @@ export default function index() {
           justifyContent: "center",
           marginTop: 26
         }}
-        onPress={() => navigate("PinCode")}>
+        onPress={() => navigate("PinCode1")}>
         <AntDesign
           name={"left"}
           size={15}
