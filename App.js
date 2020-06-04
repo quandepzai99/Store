@@ -4,7 +4,8 @@ import { createStackNavigator } from "@react-navigation/stack";
 import LoginScreen from "./screens/LoginScreen";
 import PasswordScreen from "./screens/PasswordScreen";
 import { navigationRef } from "./screens/RootNavigation";
-import ChangePasswordsScreenStep1 from "./screens/ChangePasswordScreenStep1";
+import CurrentPassword from "./screens/CurrentPassword";
+import ChangePassword from "./screens/ChangePassword";
 import Inbox from "./screens/HelpScreen/Inbox";
 
 // const navigationRef = React.createRef();
@@ -18,9 +19,10 @@ export default class App extends Component {
         <Stack.Navigator headerMode="none">
           <Stack.Screen name={"Telephone"} component={LoginScreen} />
           <Stack.Screen name={"PinCode"} component={PasswordScreen} />
+          <Stack.Screen name={"PinCode1"} component={CurrentPassword}/>
           <Stack.Screen
-            name={"PinCode1"}
-            component={ChangePasswordsScreenStep1}
+            name={"PinCode2"}
+            component={ChangePassword}
           />
           <Stack.Screen name={"Chats"} component={Inbox} />
         </Stack.Navigator>

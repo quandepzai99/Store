@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
 import { View, Text, StatusBar, TouchableOpacity } from "react-native";
 import HeaderChangePass from "./Components/Header";
 import styles from "./Components/StyleSheet";
@@ -21,13 +21,12 @@ export default function index() {
       <HeaderChangePass />
       <StatusBar barStyle={"light-content"} />
       <View style={styles.viewBlock2}>
-        <Text style={styles.textblock2box1}>Nhập mật khẩu hiện tại</Text>
+        <Text style={styles.textblock2box1}>Mật khẩu mới</Text>
         <View style={styles.viewBlock2box1}>
           <PinInput
             onFulfill={() => {
               setIsHidden(true);
             }}
-            keyboardType="phone-pad"
           />
         </View>
         {isShow ? (

@@ -9,14 +9,14 @@ export default class PinInput extends React.Component {
   };
   pinInput = React.createRef();
 
-  _checkCode = code => {
-    if (code != "123456") {
+  _checkCode = () => {
+    {
       this.pinInput.current.shake().then(() => this.setState({ code: "" }));
     }
   };
 
   render() {
-    const { code, password } = this.state;
+    const { password } = this.state;
 
     return (
       <View style={styles.container}>
