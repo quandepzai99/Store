@@ -1,54 +1,74 @@
 import React, {Component} from 'react';
 import {View, TouchableOpacity, StyleSheet, Text} from 'react-native';
 import {colors} from '../../../Styles';
+import {getBackgroundColor} from "react-native/Libraries/LogBox/UI/LogBoxStyle";
+
 
 
 export default class Translate extends Component {
+
+  colorButton = ["#fff"];
   state = {
-    active: false
+    count: 0
   }
 
   handleSwitchToggle = () => {
+
     this.setState({
-      active: !this.state.active
+      count: this.state.count + 5
+    })
+  }
+  update = () => {
+    this.setState({
+
+      count: this.state.count -3
     })
   }
   render() {
-
     const styles = StyleSheet.create({
-      container: {
-        flexDirection: 'row',
-        backgroundColor: '#c7c1c1',
-        borderRadius: 24
-      },
+    //   container: {
+    //     flexDirection: 'row',
+    //     backgroundColor: '#c7c1c1',
+    //     borderRadius: 24
+    //   },
       toggle: {
+        flexDirection: 'row',
         alignItems: 'center',
+        justifyContent: 'space-between',
+        marginHorizontal: 10,
         margin: 4,
-        width: 35,
-        height: 18,
+        width: 70,
+        height: 25,
         borderRadius: 24,
-        marginRight: 35,
-        backgroundColor: colors.paleGreyFour,
-        left: this.state.active ? 30 : 0
+        backgroundColor: 'grey',
+        // marginLeft: this.state.active ? 30 : 0,
+
       },
-      label: {
-        fontSize: 13,
-        fontWeight: "normal",
-        fontStyle: "normal",
-        lineHeight: 20,
-        letterSpacing: 0,
-        textAlign: "center",
-        color: colors.velvet
-      }
+      viewText: {
+        marginLeft: 10,
+        // backgroundColor: this.state.active
+      },
+      // viewText2: {
+      //   marginRight: 10,
+      //   backgroundColor: this.active
+      // }
+
     })
     return (
-      <View style={styles.container}>
+      <View>
+        <Text>{this.state.count}</Text>
         <TouchableOpacity
           style={styles.toggle}
-          onPress={() => this.handleSwitchToggle()}
+          onPress={this.handleSwitchToggle}
         >
-          <Text style={styles.label}>{this.state.active ? 'EN' : 'VN'}</Text>
+          <View style={styles.viewText}>
+          <Text style={styles.label}>VN</Text>
+          </View>
+          <View style={styles.viewText}>
+          <Text style={styles.label}>EN</Text>
+          </View>
         </TouchableOpacity>
+        <TouchableOpacity style={styles.toggle} onPress={this.update}></TouchableOpacity>
       </View>
     );
   }

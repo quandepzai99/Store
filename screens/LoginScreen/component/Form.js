@@ -19,7 +19,6 @@ function navigate(name) {
 
 export default class Form extends Component {
   colorButton = ["#fff"];
-
   constructor(props) {
     super(props);
     this.state = {
