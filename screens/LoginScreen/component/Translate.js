@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { View, TouchableOpacity, StyleSheet, Text } from "react-native";
 import { colors } from "../../../colors";
 
+
 export default function Translate() {
   const [langEng, setLang] = useState(false);
   const labelActiveStyle = {
