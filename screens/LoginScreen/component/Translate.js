@@ -1,57 +1,112 @@
-import React, {Component} from 'react';
-import {View, TouchableOpacity, StyleSheet, Text} from 'react-native';
-import {colors} from '../../../Styles';
+import React, { useState } from "react";
+import { View, TouchableOpacity, StyleSheet, Text } from "react-native";
+import { colors } from "../../../colors";
 
+export default function Translate() {
+  const [langEng, setLang] = useState(false);
+  const labelActiveStyle = {
+    color: "gray"
+  };
 
-export default class Translate extends Component {
-  state = {
-    active: false
-  }
+  const bgInactiveStyle = {
+    backgroundColor: "transparent"
+  };
 
-  handleSwitchToggle = () => {
-    this.setState({
-      active: !this.state.active
-    })
-  }
-  render() {
+  const bgActiveStyle = {
+    backgroundColor: "white"
+  };
 
-    const styles = StyleSheet.create({
-      container: {
-        flexDirection: 'row',
-        backgroundColor: '#c7c1c1',
-        borderRadius: 24
-      },
-      toggle: {
-        alignItems: 'center',
-        margin: 4,
-        width: 35,
-        height: 18,
-        borderRadius: 24,
-        marginRight: 35,
-        backgroundColor: colors.paleGreyFour,
-        left: this.state.active ? 30 : 0
-      },
-      label: {
-        fontSize: 13,
-        fontWeight: "normal",
-        fontStyle: "normal",
-        lineHeight: 20,
-        letterSpacing: 0,
-        textAlign: "center",
-        color: colors.velvet
-      }
-    })
-    return (
-      <View style={styles.container}>
-        <TouchableOpacity
-          style={styles.toggle}
-          onPress={() => this.handleSwitchToggle()}
-        >
-          <Text style={styles.label}>{this.state.active ? 'EN' : 'VN'}</Text>
-        </TouchableOpacity>
+  const textEngStyle  = langEng
+    ? styles.textStyle
+    : [styles.textStyle, labelActiveStyle];
+
+  const textViStyle = langEng
+    ? [styles.textStyle, labelActiveStyle]
+    : styles.textStyle;
+
+  const btnVnStyle = langEng
+    ? [styles.buttonVNStyle, bgInactiveStyle]
+    : [styles.buttonVNStyle, bgActiveStyle];
+
+  const btnEngStyle = langEng
+    ? [styles.buttonENStyle, bgActiveStyle]
+    : [styles.buttonENStyle, bgInactiveStyle];
+
+  return (
+    <TouchableOpacity
+      style={styles.touchStyle}
+      onPress={() => {
+        setLang(!langEng);
+      }}>
+      <View style={btnVnStyle}>
+        <Text style={textViStyle}>VN</Text>
       </View>
-    );
-  }
+      <View style={btnEngStyle}>
+        <Text style={textEngStyle}>EN</Text>
+      </View>
+    </TouchableOpacity>
+  );
 }
 
-
+const styles = StyleSheet.create({
+  touchStyle: {
+    width: 76,
+    height: 24,
+    backgroundColor: colors.paleGray,
+    flexDirection: "row",
+    justifyContent: "space-around",
+    alignItems: "center",
+    borderRadius: 24,
+    padding: 4
+  },
+  buttonVNStyle: {
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "#ffffff",
+    shadowColor: "rgba(22, 60, 132, 0.16)",
+    shadowOffset: {
+      width: 0,
+      height: 3
+    },
+    shadowRadius: 6,
+    shadowOpacity: 1,
+    borderRadius: 24,
+    paddingLeft: 8,
+    paddingRight: 8,
+    paddingTop: 1,
+    paddingBottom: 3,
+    marginTop: 3,
+    marginBottom: 3
+  },
+  textStyle: {
+    width: 18,
+    height: 15,
+    fontSize: 13,
+    fontWeight: "normal",
+    fontStyle: "normal",
+    lineHeight: 20,
+    letterSpacing: 0,
+    textAlign: "center",
+    color: colors.velvet
+  },
+  buttonENStyle: {
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "#ffffff",
+    shadowColor: "rgba(22, 60, 132, 0.16)",
+    shadowOffset: {
+      width: 0,
+      height: 3
+    },
+    shadowRadius: 6,
+    shadowOpacity: 1,
+    borderRadius: 24,
+    paddingLeft: 8,
+    paddingRight: 8,
+    paddingTop: 1,
+    paddingBottom: 3,
+    marginLeft: 3,
+    marginTop: 3,
+    marginBottom: 3
+  }
+});
