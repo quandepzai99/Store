@@ -1,77 +1,112 @@
-import React, {Component} from 'react';
-import {View, TouchableOpacity, StyleSheet, Text} from 'react-native';
-import {colors} from '../../../Styles';
-import {getBackgroundColor} from "react-native/Libraries/LogBox/UI/LogBoxStyle";
+import React, { useState } from "react";
+import { View, TouchableOpacity, StyleSheet, Text } from "react-native";
+import { colors } from "../../../colors";
 
+export default function Translate() {
+  const [langEng, setLang] = useState(false);
+  const labelActiveStyle = {
+    color: "gray"
+  };
 
+  const bgInactiveStyle = {
+    backgroundColor: "transparent"
+  };
 
-export default class Translate extends Component {
+  const bgActiveStyle = {
+    backgroundColor: "white"
+  };
 
-  colorButton = ["#fff"];
-  state = {
-    count: 0
-  }
+  const textEngStyle  = langEng
+    ? styles.textStyle
+    : [styles.textStyle, labelActiveStyle];
 
-  handleSwitchToggle = () => {
+  const textViStyle = langEng
+    ? [styles.textStyle, labelActiveStyle]
+    : styles.textStyle;
 
-    this.setState({
-      count: this.state.count + 5
-    })
-  }
-  update = () => {
-    this.setState({
+  const btnVnStyle = langEng
+    ? [styles.buttonVNStyle, bgInactiveStyle]
+    : [styles.buttonVNStyle, bgActiveStyle];
 
-      count: this.state.count -3
-    })
-  }
-  render() {
-    const styles = StyleSheet.create({
-    //   container: {
-    //     flexDirection: 'row',
-    //     backgroundColor: '#c7c1c1',
-    //     borderRadius: 24
-    //   },
-      toggle: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        marginHorizontal: 10,
-        margin: 4,
-        width: 70,
-        height: 25,
-        borderRadius: 24,
-        backgroundColor: 'grey',
-        // marginLeft: this.state.active ? 30 : 0,
+  const btnEngStyle = langEng
+    ? [styles.buttonENStyle, bgActiveStyle]
+    : [styles.buttonENStyle, bgInactiveStyle];
 
-      },
-      viewText: {
-        marginLeft: 10,
-        // backgroundColor: this.state.active
-      },
-      // viewText2: {
-      //   marginRight: 10,
-      //   backgroundColor: this.active
-      // }
-
-    })
-    return (
-      <View>
-        <Text>{this.state.count}</Text>
-        <TouchableOpacity
-          style={styles.toggle}
-          onPress={this.handleSwitchToggle}
-        >
-          <View style={styles.viewText}>
-          <Text style={styles.label}>VN</Text>
-          </View>
-          <View style={styles.viewText}>
-          <Text style={styles.label}>EN</Text>
-          </View>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.toggle} onPress={this.update}></TouchableOpacity>
+  return (
+    <TouchableOpacity
+      style={styles.touchStyle}
+      onPress={() => {
+        setLang(!langEng);
+      }}>
+      <View style={btnVnStyle}>
+        <Text style={textViStyle}>VN</Text>
       </View>
-    );
-  }
+      <View style={btnEngStyle}>
+        <Text style={textEngStyle}>EN</Text>
+      </View>
+    </TouchableOpacity>
+  );
 }
 
-
+const styles = StyleSheet.create({
+  touchStyle: {
+    width: 76,
+    height: 24,
+    backgroundColor: colors.paleGray,
+    flexDirection: "row",
+    justifyContent: "space-around",
+    alignItems: "center",
+    borderRadius: 24,
+    padding: 4
+  },
+  buttonVNStyle: {
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "#ffffff",
+    shadowColor: "rgba(22, 60, 132, 0.16)",
+    shadowOffset: {
+      width: 0,
+      height: 3
+    },
+    shadowRadius: 6,
+    shadowOpacity: 1,
+    borderRadius: 24,
+    paddingLeft: 8,
+    paddingRight: 8,
+    paddingTop: 1,
+    paddingBottom: 3,
+    marginTop: 3,
+    marginBottom: 3
+  },
+  textStyle: {
+    width: 18,
+    height: 15,
+    fontSize: 13,
+    fontWeight: "normal",
+    fontStyle: "normal",
+    lineHeight: 20,
+    letterSpacing: 0,
+    textAlign: "center",
+    color: colors.velvet
+  },
+  buttonENStyle: {
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "#ffffff",
+    shadowColor: "rgba(22, 60, 132, 0.16)",
+    shadowOffset: {
+      width: 0,
+      height: 3
+    },
+    shadowRadius: 6,
+    shadowOpacity: 1,
+    borderRadius: 24,
+    paddingLeft: 8,
+    paddingRight: 8,
+    paddingTop: 1,
+    paddingBottom: 3,
+    marginLeft: 3,
+    marginTop: 3,
+    marginBottom: 3
+  }
+});

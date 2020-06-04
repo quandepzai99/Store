@@ -6,7 +6,7 @@ import {
   TextInput,
   TouchableOpacity
 } from "react-native";
-import { colors } from "../../../Styles";
+import { colors } from "../../../colors";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import Translate from "./Translate";
 import { navigationRef } from "../../RootNavigation";
@@ -35,7 +35,7 @@ export default class Form extends Component {
       });
     } else {
       this.setState({
-        Reds: 'white'
+        Reds: "white"
       });
     }
   };
@@ -106,7 +106,8 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     marginBottom: 76,
     borderStyle: "solid",
-    marginHorizontal: 16
+    marginHorizontal: 16,
+    paddingHorizontal: 16
   },
 
   text1: {
@@ -118,7 +119,7 @@ const styles = StyleSheet.create({
     textAlign: "center"
   },
   text2: {
-    position: 'absolute',
+    position: "absolute",
     left: 32,
     top: 85,
     zIndex: 1,
@@ -132,7 +133,7 @@ const styles = StyleSheet.create({
   },
   ellipse529: {
     position: "absolute",
-    justifyContent: 'center',
+    justifyContent: "center",
     bottom: -40,
     left: "50%",
     alignItems: "center",
