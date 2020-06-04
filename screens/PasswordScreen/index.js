@@ -15,7 +15,6 @@ class index extends Component {
         <Header />
         <Form />
         <Chat />
-        {/*<Test />*/}
       </View>
     );
   }

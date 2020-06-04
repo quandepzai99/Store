@@ -17,13 +17,13 @@ export default class Form extends Component {
 
   PinInput = React.createRef();
 
-  _checkCode = code => {
-    if (code != "1234") {
+  _checkCode = () => {
+    {
       this.PinInput.current.shake().then(() => this.setState({ code: "" }));
     }
   };
   render() {
-    const { code, password } = this.state;
+    const { code } = this.state;
     return (
       <View style={styles.container}>
         <Text style={styles.text1}>Nhập mật khẩu</Text>
@@ -63,10 +63,14 @@ export default class Form extends Component {
           onTextChange={code => this.setState({ code })}
         />
         <View style={styles.box}>
-          <TouchableOpacity onPress={() => navigate("PinCode1")} style={{paddingTop: 10, paddingBottom: 10}}>
+          <TouchableOpacity
+            onPress={() => navigate("PinCode1")}
+            style={{ paddingTop: 10, paddingBottom: 10 }}>
             <Text style={styles.text2}>Bạn quên mật khẩu?</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.btSignOut} >
+          <TouchableOpacity
+            style={styles.btSignOut}
+            onPress={() => navigate("Telephone")}>
             <Image source={images.sigleout} style={{ top: 3, right: 5 }} />
             <Text style={styles.text3}>Đăng xuất</Text>
           </TouchableOpacity>
@@ -102,18 +106,17 @@ const styles = StyleSheet.create({
   },
   box: {
     flexDirection: "row",
-    marginTop: 35,
+    marginTop: 35
   },
   btSignOut: {
     marginRight: 16,
     top: -5,
     flexDirection: "row",
     paddingTop: 15,
-    left: 50,
-
+    left: 50
   },
   text2: {
-    marginLeft : 10,
+    marginLeft: 10,
     right: 30,
     fontSize: 14,
     fontWeight: "normal",
@@ -124,7 +127,7 @@ const styles = StyleSheet.create({
     color: colors.deepSkyBlue
   },
   text3: {
-    marginRight : 10,
+    marginRight: 10,
     fontSize: 15,
     fontWeight: "normal",
     fontStyle: "normal",
