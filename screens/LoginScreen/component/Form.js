@@ -45,14 +45,16 @@ export default class Form extends Component {
   render() {
     const { lang, onChangeLang } = this.props;
 
-    const text = switchLanguage(lang, "AuthenticationScreenPhoneText");
+    const bigText = switchLanguage(lang, "AuthenticationScreenPhoneText");
+    const smallText = switchLanguage(lang, "AuthenticationScreenEnterPhoneNumberText")
+
     return (
       <View style={styles.container}>
         <View style={styles.trans}>
-          <Text style={styles.text1}>{text}</Text>
+          <Text style={styles.text1}>{bigText}</Text>
           <Translate lang={lang} onChangeLang={onChangeLang} />
         </View>
-        <Text style={styles.text2}>Số điện thoại</Text>
+        <Text style={styles.text2}>{smallText}</Text>
         <TextInput
           onChange={this.handleKeyup}
           placeholder={"0901234567"}
