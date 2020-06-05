@@ -14,13 +14,13 @@ const tempData = [
     id: 2,
     image: images.banner1,
     desc: '[Hot] Lorem Ipsum is simply dummy text of the printing and typesetting industry…',
-    name: 'quan'
+    name: 'Urbox'
   },
   {
     id: 3,
     image: images.banner1,
     desc: '[Hot] Lorem Ipsum is simply dummy text of the printing and typesetting industry…',
-    name: 'quan'
+    name: 'UrBox'
   },
 ]
 export default class SlideBanner extends Component {
@@ -31,8 +31,8 @@ export default class SlideBanner extends Component {
       <TouchableOpacity style={styles.btnBanner}>
         <View >
           <Image source={item.image} style={{borderRadius: 12}}/>
-          <Text>{item.desc}</Text>
-          <Text>{item.name}</Text>
+          <Text style={styles.desc}>{item.desc}</Text>
+          <Text style={styles.name}>{item.name}</Text>
         </View>
       </TouchableOpacity>
     )
@@ -87,5 +87,17 @@ const styles = StyleSheet.create({
     shadowRadius: 10,
     shadowOpacity: 1,
     elevation: 5
+  },
+  desc: {
+    fontSize: 15,
+    left: 12,
+    fontWeight: "500",
+    fontStyle: "normal",
+    lineHeight: 20,
+    letterSpacing: 0,
+    color: colors.greyishBrown
+  },
+  name: {
+
   }
 })
