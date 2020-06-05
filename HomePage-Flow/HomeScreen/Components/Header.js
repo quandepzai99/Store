@@ -48,8 +48,8 @@ export default function Header() {
           </TouchableOpacity>
           <View style={styles.viewAddCardTouch}>
             <TouchableOpacity style={styles.buttonAddCardTouch}>
-              <Image source={images.cross} style={{ padding: 3 }} />
-              <Text style={styles.textAddCard}>Nap the Urbox</Text>
+              <Image source={images.cross} />
+              <Text style={styles.textAddCard}>Nạp thẻ Urbox</Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -130,21 +130,25 @@ const styles = StyleSheet.create({
     borderColor: colors.golden,
     marginTop: 20,
     marginRight: 16,
-      alignItems: "center",
-    justifyContent: "center",
-    flexDirection : "row"
+    alignItems: "center",
+    justifyContent: "center"
   },
   buttonAddCardTouch: {
+    flexDirection: "row",
+
     marginTop: 0,
-    marginRight: 16
+    marginRight: 16,
+    padding: 6,
+    alignItems: "center",
+    justifyContent: "center"
   },
   textAddCard: {
     fontSize: 12,
-    fontWeight: "500",
     fontStyle: "normal",
     lineHeight: 14,
     letterSpacing: 0,
     textAlign: "left",
-    color: colors.golden
+    color: colors.golden,
+    padding: 4
   }
 });
