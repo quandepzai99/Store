@@ -5,7 +5,8 @@ const images = {
   icon1: require('../Picture/ico1.png'),
   icon2: require('../Picture/ico2.png'),
   icon3: require('../Picture/ico3.png'),
-  icon4: require('../Picture/ico4.png')
+  icon4: require('../Picture/ico4.png'),
+  banner1: require('../Picture/Layer1.png')
 }
 
 export default images;

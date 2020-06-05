@@ -6,35 +6,34 @@ import images from "../../../Common/images";
 const tempData = [
   {
     id: 1,
-    image: '',
-    name: 'quan'
+    image: images.banner1,
+    desc: '',
+    name: 'UrBox'
   },
   {
     id: 2,
-    image: '',
+    image: images.banner1,
+    desc: '',
     name: 'quan'
   },
   {
     id: 3,
-    image: '',
+    image: images.banner1,
+    desc: '',
     name: 'quan'
   },
 ]
 export default class SlideBanner extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
 
-    }
-  }
-
- _renderItem = ({item, index}) => {
+ _renderItem = ({item}) => {
 
     return(
-      <View style={styles.btnBanner}>
-        {/*<Image source={{uri: item.image}} />*/}
-        <Text>{item.name}</Text>
-      </View>
+      <TouchableOpacity style={styles.btnBanner}>
+        <View >
+          <Image source={item.image} style={{borderRadius: 12}}/>
+          <Text>{item.name}</Text>
+        </View>
+      </TouchableOpacity>
     )
   }
 
@@ -44,14 +43,14 @@ export default class SlideBanner extends Component {
         <Text style={styles.title}>
           Tin tức <Text style={{color: colors.tangerine, fontWeight: 'bold', fontSize: 24}}>nổi bật</Text>
         </Text>
-        <View style={{padding: 32, height: 248}}>
+        <View style={{height: 300}}>
           <FlatList
             data={tempData}
             renderItem={this._renderItem}
-            horizontal={true}
-            showHorizontalScrollIndicator={false}
+            horizontal
+            showsHorizontalScrollIndicator={false}
             keyExtractor={item => item.name}
-
+            keybroardShouldPersisTaps={'always'}
           />
         </View>
       </View>
@@ -61,20 +60,31 @@ export default class SlideBanner extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     top: 33
   },
   title: {
     marginLeft: 16,
     fontFamily: "Roboto",
     fontSize: 24,
-    fontWeight: "normal",
-    fontStyle: "normal",
     lineHeight: 26,
     letterSpacing: 0,
     color: colors.velvet
   },
-  category: {
-
+  btnBanner: {
+    top: 50,
+    borderRadius: 12,
+    marginHorizontal: 16,
+    alignItems: 'center',
+    width: 368,
+    height: 248,
+    backgroundColor: "#ffffff",
+    shadowColor: "rgba(22, 60, 132, 0.16)",
+    shadowOffset: {
+      width: 0,
+      height: 10
+    },
+    shadowRadius: 10,
+    shadowOpacity: 1,
+    elevation: 5
   }
 })
