@@ -7,19 +7,19 @@ const tempData = [
   {
     id: 1,
     image: images.banner1,
-    desc: '',
+    desc: '[Hot] Lorem Ipsum is simply dummy text of the printing and typesetting industry…',
     name: 'UrBox'
   },
   {
     id: 2,
     image: images.banner1,
-    desc: '',
+    desc: '[Hot] Lorem Ipsum is simply dummy text of the printing and typesetting industry…',
     name: 'quan'
   },
   {
     id: 3,
     image: images.banner1,
-    desc: '',
+    desc: '[Hot] Lorem Ipsum is simply dummy text of the printing and typesetting industry…',
     name: 'quan'
   },
 ]
@@ -31,6 +31,7 @@ export default class SlideBanner extends Component {
       <TouchableOpacity style={styles.btnBanner}>
         <View >
           <Image source={item.image} style={{borderRadius: 12}}/>
+          <Text>{item.desc}</Text>
           <Text>{item.name}</Text>
         </View>
       </TouchableOpacity>
