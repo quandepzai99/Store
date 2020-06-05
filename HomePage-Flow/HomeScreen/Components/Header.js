@@ -6,11 +6,13 @@ import {
   View,
   TouchableOpacity,
   Image,
-  Text
-} from "react-native";
+  Text, ScrollView,
+} from 'react-native';
 import images from "../../../Common/images";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import colors from "../../../colors";
+import ScrollViewBrands from "./Scroll_View_Brands"
+
 export default function Header() {
   return (
     <View
@@ -60,11 +62,27 @@ export default function Header() {
           style={{ width: 382, height: 160, borderRadius: 12 }}
         />
       </View>
-      <View>
-        <Text>
+      <View
+        style={{
+          marginLeft: 16,
+          marginTop: 26
+        }}>
+        <Text
+          style={{
+            fontSize: 24,
+            fontWeight: "normal",
+            fontStyle: "normal",
+            lineHeight: 24,
+            letterSpacing: 0,
+            textAlign: "left",
+            color : colors.velvet
+          }}
+          >
           Thương hiệu yêu thích của bạn
         </Text>
+        <ScrollViewBrands/>
       </View>
+
     </View>
   );
 }
@@ -175,6 +193,6 @@ const styles = StyleSheet.create({
     },
     shadowRadius: 10,
     shadowOpacity: 1,
-    marginTop : -70
+    marginTop: -70
   }
 });
