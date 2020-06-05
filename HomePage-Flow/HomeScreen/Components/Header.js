@@ -135,9 +135,7 @@ const styles = StyleSheet.create({
   },
   buttonAddCardTouch: {
     flexDirection: "row",
-
     marginTop: 0,
-    marginRight: 16,
     padding: 6,
     alignItems: "center",
     justifyContent: "center"
@@ -149,6 +147,7 @@ const styles = StyleSheet.create({
     letterSpacing: 0,
     textAlign: "left",
     color: colors.golden,
-    padding: 4
+    padding: 5
+
   }
 });
