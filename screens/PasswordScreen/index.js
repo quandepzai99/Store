@@ -9,7 +9,7 @@ class index extends Component {
     return (
       <View>
         <StatusBar barStyle={"light-content"} />
-        <Header lang={lang} />
+        <Header />
         <Form />
         <Chat />
       </View>
