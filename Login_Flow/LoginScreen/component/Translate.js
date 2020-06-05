@@ -1,6 +1,6 @@
 import React from "react";
 import { View, TouchableOpacity, StyleSheet, Text } from "react-native";
-import { colors } from "../../../colors";
+import colors from "../../../colors";
 
 export default function Translate(props) {
   const { lang, onChangeLang } = props;
