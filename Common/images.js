@@ -6,7 +6,9 @@ const images = {
   icon2: require('../Picture/ico2.png'),
   icon3: require('../Picture/ico3.png'),
   icon4: require('../Picture/ico4.png'),
-  banner1: require('../Picture/Layer1.png')
+  banner1: require('../Picture/Layer1.png'),
+  witness: require('../Picture/witness.png'),
+  cross : require('../Picture/icon-Cross/bt.png')
 }
 
 export default images;
