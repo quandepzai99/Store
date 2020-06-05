@@ -17,10 +17,10 @@ export default function Translate(props) {
   };
 
   const textEngStyle =
-    lang === "vi" ? styles.textStyle : [styles.textStyle, labelActiveStyle];
+    lang === "vi" ? [styles.textStyle, labelActiveStyle] : styles.textStyle;
 
   const textViStyle =
-    lang === "vi" ? [styles.textStyle, labelActiveStyle] : styles.textStyle;
+    lang === "vi" ? styles.textStyle : [styles.textStyle, labelActiveStyle];
 
   const btnVnStyle =
     lang === "en"
