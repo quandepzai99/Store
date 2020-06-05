@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import LoginScreen from "./screens/LoginScreen";
-import PasswordScreen from "./screens/PasswordScreen";
-import { navigationRef } from "./screens/RootNavigation";
-import CurrentPassword from "./screens/CurrentPassword";
-import ChangePassword from "./screens/ChangePassword";
-import Inbox from "./screens/HelpScreen/Inbox";
+import LoginScreen from "./Login_Flow/LoginScreen";
+import PasswordScreen from "./Login_Flow/PasswordScreen";
+import { navigationRef } from "./Login_Flow/RootNavigation";
+import CurrentPassword from "./Login_Flow/CurrentPassword";
+import ChangePassword from "./Login_Flow/ChangePassword";
+import Inbox from "./Login_Flow/HelpScreen/Inbox";
 
 // const navigationRef = React.createRef();
 
