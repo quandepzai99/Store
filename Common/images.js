@@ -8,7 +8,8 @@ const images = {
   icon4: require('../Picture/ico4.png'),
   banner1: require('../Picture/Layer1.png'),
   witness: require('../Picture/witness.png'),
-  cross : require('../Picture/icon-Cross/bt.png')
+  cross : require('../Picture/icon-Cross/bt.png'),
+  banner : require('../Picture/Banner/banner.jpg')
 }
 
 export default images;

@@ -54,6 +54,17 @@ export default function Header() {
           </View>
         </View>
       </ImageBackground>
+      <View style={styles.banner}>
+        <Image
+          source={images.banner}
+          style={{ width: 382, height: 160, borderRadius: 12 }}
+        />
+      </View>
+      <View>
+        <Text>
+          Thương hiệu yêu thích của bạn
+        </Text>
+      </View>
     </View>
   );
 }
@@ -148,6 +159,22 @@ const styles = StyleSheet.create({
     textAlign: "left",
     color: colors.golden,
     padding: 5
-
+  },
+  banner: {
+    marginLeft: 16,
+    marginRight: 16,
+    zIndex: 1,
+    width: 382,
+    height: 160,
+    borderRadius: 12,
+    backgroundColor: "#ffffff",
+    shadowColor: "rgba(22, 60, 132, 0.16)",
+    shadowOffset: {
+      width: 0,
+      height: 3
+    },
+    shadowRadius: 10,
+    shadowOpacity: 1,
+    marginTop : -70
   }
 });
