@@ -1,0 +1,52 @@
+import React, {Component} from 'react';
+import {View, Text, Image, StyleSheet, TouchableOpacity} from "react-native";
+import images from "../../../Common/images";
+import {colors} from "../../../Styles";
+
+export default class CategoryIcon extends Component {
+  render() {
+    return (
+      <View style={styles.container}>
+        <TouchableOpacity style={styles.category}>
+          <Image source={images.icon4} />
+          <Text style={styles.text}>Demo</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.category}>
+          <Image source={images.icon3} />
+          <Text style={styles.text}>Xem phim</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.category}>
+          <Image source={images.icon2} />
+          <Text style={styles.text}>Ăn uống</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.category}>
+          <Image source={images.icon1} />
+          <Text style={styles.text}>du lịch và nghỉ dưỡng</Text>
+        </TouchableOpacity>
+      </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    top: 20,
+    flexDirection: 'row',
+  },
+  category: {
+    flex: 1,
+    marginHorizontal: 15,
+    alignItems: 'center'
+  },
+  text: {
+    marginTop: 6,
+    fontFamily: "Roboto",
+    fontSize: 12,
+    fontWeight: "500",
+    lineHeight: 16,
+    letterSpacing: 0,
+    textAlign: "center",
+    color: colors.greyishBrown
+  }
+})
+

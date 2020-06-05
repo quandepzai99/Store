@@ -5,5 +5,6 @@ export const colors = {
   blueyGrey: 'rgb(150, 158, 178)',
   paleGreyFour: 'rgb(230, 236, 240)',
   deepSkyBlue: 'rgb(16, 116, 255)',
-  red: 'rgb(255, 0, 0)'
+  red: 'rgb(255, 0, 0)',
+  tangerine: 'rgb(247, 143, 0)'
 }
