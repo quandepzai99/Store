@@ -5,10 +5,6 @@ import Form from "./component/Form";
 import Chat from "./component/Chat";
 
 class index extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { lang: "vi" };
-  }
   render() {
     return (
       <View>
@@ -19,14 +15,6 @@ class index extends Component {
       </View>
     );
   }
-  onChangeLang = () => {
-    const { lang } = this.state;
-    const newLang = lang === "en" ? "vi" : "en";
-
-    this.setState({
-      lang: newLang
-    });
-  };
 }
 
 export default index;
