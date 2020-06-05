@@ -34,7 +34,6 @@ class index extends Component {
     const newLang = lang === "en" ? "vi" : "en";
 
     console.log("new lange:", newLang);
-
     this.setState({
       lang: newLang
     });
