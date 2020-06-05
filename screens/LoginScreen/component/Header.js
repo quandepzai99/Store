@@ -6,8 +6,9 @@ import switchLanguage from "../../../I18N/selector";
 export default class Header extends Component {
   render() {
     const { lang } = this.props;
+
     const text = switchLanguage(lang, "AuthenticationScreenLoginText");
-    console.log("langggg:", lang, text);
+
     return (
       <ImageBackground source={images.HeaderBackground} style={{ height: 224 }}>
         <Text style={styles.text}>{text}</Text>

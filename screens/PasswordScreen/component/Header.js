@@ -1,12 +1,12 @@
-import React, {Component} from 'react';
-import {StyleSheet, Text, ImageBackground} from 'react-native';
-import images from '../../../Common/images';
+import React, { Component } from "react";
+import { StyleSheet, Text, ImageBackground } from "react-native";
+import images from "../../../Common/images";
 
 export default class Header extends Component {
   render() {
     return (
-      <ImageBackground source={images.HeaderBackground} style={{height: 224}}>
-        <Text style={styles.text}>Chào mừng bạn quay lại UrBox</Text>
+      <ImageBackground source={images.HeaderBackground} style={{ height: 224 }}>
+        <Text style={styles.text}> Chào mừng bạn quay lại UrBox</Text>
       </ImageBackground>
     );
   }
@@ -22,6 +22,6 @@ const styles = StyleSheet.create({
     lineHeight: 35,
     letterSpacing: 0,
     textAlign: "center",
-    color: '#fff',
+    color: "#fff"
   }
-})
+});
