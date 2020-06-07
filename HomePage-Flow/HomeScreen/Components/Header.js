@@ -70,8 +70,6 @@ export default function Header() {
 const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
-
-    flex: 1
   },
   searchField: {
     marginVertical: 10,
