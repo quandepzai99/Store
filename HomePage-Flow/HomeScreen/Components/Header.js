@@ -16,9 +16,7 @@ import ScrollViewBrands from "./Scroll_View_Brands"
 export default function Header() {
   return (
     <View
-      style={{
-        flex: 1
-      }}>
+      style={styles.container}>
       <ImageBackground source={images.HeaderBackground} style={{ height: 220 }}>
         <TouchableOpacity style={styles.searchField}>
           <AntDesign
@@ -67,27 +65,15 @@ export default function Header() {
           marginLeft: 16,
           marginTop: 26
         }}>
-        <Text
-          style={{
-            fontSize: 24,
-            fontWeight: "normal",
-            fontStyle: "normal",
-            lineHeight: 24,
-            letterSpacing: 0,
-            textAlign: "left",
-            color : colors.velvet
-          }}
-          >
-          Thương hiệu yêu thích của bạn
-        </Text>
-        <ScrollViewBrands/>
       </View>
-
     </View>
   );
 }
 
 const styles = StyleSheet.create({
+  container: {
+    alignItems: 'center',
+  },
   TextInput: {
     marginRight: 16,
     width: 382,
