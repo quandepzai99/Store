@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import {View, StatusBar, StyleSheet} from "react-native";
-import SlideBanner from "./Components/SlideBanner";
+import {View, StatusBar, StyleSheet, ScrollView, Text} from "react-native";
+import News from "./Components/News";
 import CategoryIcon from "./Components/CategoryIcon";
 import Header from "./Components/Header";
 
@@ -9,12 +9,14 @@ import Header from "./Components/Header";
 export default class index extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <StatusBar barStyle={'light-content'}/>
-        <Header />
-        <CategoryIcon />
-        <SlideBanner />
-      </View>
+      <ScrollView>
+        <View style={styles.container}>
+          <StatusBar barStyle={'light-content'}/>
+          <Header />
+          <CategoryIcon />
+          <News />
+        </View>
+      </ScrollView>
     );
   }
 }

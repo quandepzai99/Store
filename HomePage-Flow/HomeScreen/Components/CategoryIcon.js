@@ -30,7 +30,6 @@ export default class CategoryIcon extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    top: 20,
     flexDirection: 'row',
   },
   category: {

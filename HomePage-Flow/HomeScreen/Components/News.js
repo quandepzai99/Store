@@ -23,7 +23,7 @@ const tempData = [
     name: 'UrBox'
   },
 ]
-export default class SlideBanner extends Component {
+export default class News extends Component {
 
  _renderItem = ({item}) => {
 
@@ -61,7 +61,7 @@ export default class SlideBanner extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    top: 33
+    top: 10
   },
   title: {
     marginLeft: 16,
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     color: colors.velvet
   },
   btnBanner: {
-    top: 50,
+    top: 10,
     borderRadius: 12,
     marginHorizontal: 16,
     alignItems: 'center',

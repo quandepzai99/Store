@@ -11,16 +11,13 @@ import {
 import images from "../../../Common/images";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import colors from "../../../colors";
-import ScrollViewBrands from "./Scroll_View_Brands"
 
 export default function Header() {
   return (
     <View
-      style={{
-        flex: 1
-      }}>
-      <ImageBackground source={images.HeaderBackground} style={{ height: 220 }}>
-        <TouchableOpacity style={styles.searchField}>
+      style={styles.container}>
+      <ImageBackground source={images.HeaderBackground} style={{ width: '100%', height: 220 }}>
+        <View style={styles.searchField}>
           <AntDesign
             name={"search1"}
             style={styles.iconStyle}
@@ -29,10 +26,10 @@ export default function Header() {
           />
           <TextInput
             style={styles.TextInput}
-            placeholder={"         Thương hiệu"}
+            placeholder={"Thương hiệu"}
             placeholderTextColor={"white"}
           />
-        </TouchableOpacity>
+        </View>
         <View
           style={{
             flexDirection: "row",
@@ -56,60 +53,45 @@ export default function Header() {
           </View>
         </View>
       </ImageBackground>
-      <View style={styles.banner}>
         <Image
           source={images.banner}
-          style={{ width: 382, height: 160, borderRadius: 12 }}
+          style={styles.banner}
         />
-      </View>
       <View
         style={{
           marginLeft: 16,
           marginTop: 26
         }}>
-        <Text
-          style={{
-            fontSize: 24,
-            fontWeight: "normal",
-            fontStyle: "normal",
-            lineHeight: 24,
-            letterSpacing: 0,
-            textAlign: "left",
-            color : colors.velvet
-          }}
-          >
-          Thương hiệu yêu thích của bạn
-        </Text>
-        <ScrollViewBrands/>
       </View>
-
     </View>
   );
 }
 
 const styles = StyleSheet.create({
+  container: {
+    alignItems: 'center',
+  },
+  searchField: {
+    marginVertical: 10,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignSelf: 'center'
+  },
   TextInput: {
-    marginRight: 16,
-    width: 382,
-    height: 32,
-    marginLeft: 16,
+    width: '90%',
+    padding: 5,
+    paddingLeft: 30,
     borderRadius: 20,
     backgroundColor: "rgba(114, 13, 93, 0.5)",
-    borderStyle: "solid",
     borderWidth: 1,
     borderColor: "rgba(114, 13, 93, 1.0)",
     fontSize: 15,
     color: "white"
   },
-  searchField: {
-    marginTop: 30
-  },
   iconStyle: {
-    bottom: -25,
-    left: 30,
-    zIndex: 1,
-    width: 16,
-    height: 16
+    position: 'absolute',
+    top: 12,
+    left: 8
   },
   iconBalanceWitness: {
     marginLeft: 16,
@@ -179,20 +161,7 @@ const styles = StyleSheet.create({
     padding: 5
   },
   banner: {
-    marginLeft: 16,
-    marginRight: 16,
-    zIndex: 1,
-    width: 382,
-    height: 160,
     borderRadius: 12,
-    backgroundColor: "#ffffff",
-    shadowColor: "rgba(22, 60, 132, 0.16)",
-    shadowOffset: {
-      width: 0,
-      height: 3
-    },
-    shadowRadius: 10,
-    shadowOpacity: 1,
-    marginTop: -70
+    top: -80
   }
 });
