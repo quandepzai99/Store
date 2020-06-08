@@ -6,7 +6,7 @@ import {
   TextInput,
   TouchableOpacity
 } from "react-native";
-import { colors } from "../../../colors";
+import  colors  from "../../../colors";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import Translate from "./Translate";
 import { navigationRef } from "../../RootNavigation";
@@ -20,7 +20,6 @@ function navigate(name) {
 
 export default class Form extends Component {
   colorButton = ["#fff"];
-
   constructor(props) {
     super(props);
     this.state = {

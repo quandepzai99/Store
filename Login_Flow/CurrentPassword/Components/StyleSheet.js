@@ -80,7 +80,6 @@ const screenResetPw = StyleSheet.create({
     fontSize: 15
   },
   viewBlock2box2: {
-
     marginLeft: 16,
     marginRight: 16,
     marginTop: 24,
