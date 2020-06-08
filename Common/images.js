@@ -4,7 +4,7 @@ const images = {
   sigleout: require("../Picture/signout.png"),
   witness: require("../Picture/witness.png"),
   cross: require("../Picture/icon-Cross/bt.png"),
-  banner: require("../Picture/Banner/banner.jpeg"),
+  banner: require("../Picture/Banner/banner.png"),
   icon_search: require("../Picture/ico_Search.png"),
   logo_urbox: require("../Picture/Logos Brand/logoUrboxFinal1.png"),
   logo_the_coffee_house: require("../Picture/Logos Brand/icon.png"),
