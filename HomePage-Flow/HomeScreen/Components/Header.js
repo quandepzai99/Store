@@ -54,6 +54,7 @@ export default function Header() {
         style={{
           marginLeft: 16,
           marginTop: 26
+
         }}
       />
     </View>
