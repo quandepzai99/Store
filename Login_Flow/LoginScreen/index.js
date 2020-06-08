@@ -22,7 +22,7 @@ class index extends Component {
           translucent={true}
           backgroundColor={"transparent"}
         />
-        <Header lang={lang} />
+        <Header lange={lang} />
         <Form onChangeLang={this.onChangeLang} lang={lang} />
         <Chat />
       </View>
@@ -33,6 +33,7 @@ class index extends Component {
     const { lang } = this.state;
     const newLang = lang === "en" ? "vi" : "en";
 
+    console.log("new lange:", newLang);
     this.setState({
       lang: newLang
     });
