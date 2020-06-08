@@ -48,18 +48,11 @@ export default function Header() {
           </View>
         </View>
       </ImageBackground>
-      <View
-        style={{
-          backgroundColor: "red",
-          paddingLeft: 160,
-          paddingRight: 160
-        }}>
-        <Image
-          source={images.banner}
-          style={styles.banner}
-          resizeMethod="scale"
-        />
-      </View>
+      <Image
+        source={images.banner}
+        style={styles.banner}
+        resizeMethod="scale"
+      />
     </View>
   );
 }
