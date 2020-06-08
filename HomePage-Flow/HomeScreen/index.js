@@ -3,6 +3,8 @@ import {View, StatusBar, StyleSheet, ScrollView, SafeAreaView} from "react-nativ
 import News from "./Components/News";
 import CategoryIcon from "./Components/CategoryIcon";
 import Header from "./Components/Header";
+import FavoriteBrands from './Components/FavoriteBrands'
+
 
 
 
@@ -11,8 +13,10 @@ export default class index extends Component {
     return (
       <ScrollView>
         <SafeAreaView style={styles.container}>
-          <StatusBar/>
+          <StatusBar />
           <Header />
+          <FavoriteBrands />
+
           {/*<CategoryIcon />*/}
           {/*<News />*/}
         </SafeAreaView>

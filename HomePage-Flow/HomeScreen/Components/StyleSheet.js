@@ -4,8 +4,7 @@ const screenWidth = Dimensions.get("window").width;
 
 const styles = StyleSheet.create({
   container: {
-    alignItems: "center",
-    backgroundColor: "white"
+    alignItems: "center"
   },
   searchField: {
     marginTop: 10,
@@ -100,7 +99,8 @@ const styles = StyleSheet.create({
     width: (screenWidth * 382) / 414,
     height: 160,
     borderRadius: 12,
-    top: -70
+    top: -70,
+
   },
   searchIcon: { width: 15, height: 15, position: "absolute", margin: 8 }
 });
