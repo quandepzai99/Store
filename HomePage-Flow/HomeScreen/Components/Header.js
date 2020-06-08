@@ -6,24 +6,20 @@ import {
   View,
   TouchableOpacity,
   Image,
-  Text, ScrollView,
-} from 'react-native';
+  Text,
+  ScrollView
+} from "react-native";
 import images from "../../../Common/images";
-import AntDesign from "react-native-vector-icons/AntDesign";
 import colors from "../../../colors";
 
 export default function Header() {
   return (
-    <View
-      style={styles.container}>
-      <ImageBackground source={images.HeaderBackground} style={{ width: '100%', height: 220 }}>
+    <View style={styles.container}>
+      <ImageBackground
+        source={images.HeaderBackground}
+        style={{ width: "100%", height: 220 }}>
         <View style={styles.searchField}>
-          <AntDesign
-            name={"search1"}
-            style={styles.iconStyle}
-            size={16}
-            color={"white"}
-          />
+          <Image source={images.icon_search} style={styles.searchIcon} />
           <TextInput
             style={styles.TextInput}
             placeholder={"Thương hiệu"}
@@ -53,33 +49,29 @@ export default function Header() {
           </View>
         </View>
       </ImageBackground>
-        <Image
-          source={images.banner}
-          style={styles.banner}
-        />
+      <Image source={images.banner} style={styles.banner} />
       <View
         style={{
           marginLeft: 16,
-          marginTop: 26,
-        }}>
-      </View>
+          marginTop: 26
+        }}
+      />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    alignItems: 'center',
-    backgroundColor: "white",
+    alignItems: "center",
+    backgroundColor: "white"
   },
   searchField: {
     marginTop: 30,
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignSelf: 'center'
+    flexDirection: "row",
+    alignSelf: "center"
   },
   TextInput: {
-    width: '90%',
+    width: "90%",
     padding: 5,
     paddingLeft: 30,
     borderRadius: 20,
@@ -87,10 +79,11 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: "rgba(114, 13, 93, 1.0)",
     fontSize: 15,
-    color: "white"
+    color: "white",
+    opacity: 0.6
   },
   iconStyle: {
-    position: 'absolute',
+    position: "absolute",
     top: 10,
     left: 8
   },
@@ -164,5 +157,6 @@ const styles = StyleSheet.create({
   banner: {
     borderRadius: 12,
     top: -80
-  }
+  },
+  searchIcon: { width: 15, height: 15, position: "absolute", margin: 8 }
 });
