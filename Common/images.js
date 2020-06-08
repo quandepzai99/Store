@@ -10,7 +10,8 @@ const images = {
   witness: require("../Picture/witness.png"),
   cross: require("../Picture/icon-Cross/bt.png"),
   banner: require("../Picture/Banner_Card.jpg"),
-  icon_search: require("../Picture/ico_Search.png")
+  icon_search: require("../Picture/ico_Search.png"),
+  banner2: require('../Picture/banner.jpg')
 };
 
 export default images;

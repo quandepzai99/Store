@@ -7,19 +7,19 @@ const tempData = [
   {
     id: 1,
     image: images.banner1,
-    desc: '[Hot] Lorem Ipsum is simply dummy text of the printing and typesetting industry…',
+    desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry…',
     name: 'UrBox'
   },
   {
     id: 2,
     image: images.banner1,
-    desc: '[Hot] Lorem Ipsum is simply dummy text of the printing and typesetting industry…',
-    name: 'Urbox'
+    desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry…',
+    name: 'UrBox'
   },
   {
     id: 3,
     image: images.banner1,
-    desc: '[Hot] Lorem Ipsum is simply dummy text of the printing and typesetting industry…',
+    desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry…',
     name: 'UrBox'
   },
 ]
@@ -29,9 +29,10 @@ export default class News extends Component {
 
     return(
       <TouchableOpacity style={styles.btnBanner}>
-        <View >
+        <View>
           <Image source={item.image} style={{borderRadius: 12}}/>
-          <Text style={styles.desc}>{item.desc}</Text>
+          <Text style={styles.desc}><Text style={{color: 'red',fontWeight: 'bold' }}>[Hot] </Text>{item.desc}</Text>
+          <View style={styles.divider}/>
           <Text style={styles.name}>{item.name}</Text>
         </View>
       </TouchableOpacity>
@@ -76,7 +77,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 16,
     alignItems: 'center',
     width: 368,
-    height: 248,
+    height: 255,
     backgroundColor: "#ffffff",
     shadowColor: "rgba(22, 60, 132, 0.16)",
     shadowOffset: {
@@ -88,6 +89,7 @@ const styles = StyleSheet.create({
     elevation: 5
   },
   desc: {
+    paddingVertical: 10,
     fontSize: 15,
     left: 12,
     fontWeight: "500",
@@ -97,6 +99,19 @@ const styles = StyleSheet.create({
     color: colors.greyishBrown
   },
   name: {
-
+    fontSize: 12,
+    left: 12,
+    fontWeight: "500",
+    fontStyle: "normal",
+    lineHeight: 20,
+    textAlign: "left",
+    color: colors.blueyGrey
+  },
+  divider: {
+    backgroundColor: colors.paleGreyFour,
+    borderWidth: 1,
+    opacity: 0.1,
+    left: 10,
+    marginRight: 20
   }
 })
