@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {View, StyleSheet, Text, FlatList, TouchableOpacity, SafeAreaView, Image} from "react-native";
 import {colors} from "../../../Styles";
 import images from "../../../Common/images";
+import DataTimePicker from '@react-native-community/datetimepicker'
 
 const tempData = [
   {
