@@ -8,6 +8,10 @@ import CurrentPassword from "./Login_Flow/CurrentPassword";
 import ChangePassword from "./Login_Flow/ChangePassword";
 import Inbox from "./Login_Flow/HelpScreen/Inbox";
 import HomeScreen from './HomePage-Flow/HomeScreen'
+import Page1 from "./HomePage-Flow/HomeScreen/Components/Detail/Page1";
+import Page2 from "./HomePage-Flow/HomeScreen/Components/Detail/Page2";
+import Page3 from "./HomePage-Flow/HomeScreen/Components/Detail/Page3";
+
 
 // const navigationRef = React.createRef();
 
@@ -24,6 +28,9 @@ export default class App extends Component {
           {/*<Stack.Screen name={"PinCode2"} component={ChangePassword}/>*/}
           {/*<Stack.Screen name={"Chats"} component={Inbox} />*/}
           <Stack.Screen name={"Home"} component={HomeScreen} />
+          <Stack.Screen name={"Page1"} component={Page1} />
+          <Stack.Screen name={"Page2"} component={Page2} />
+          <Stack.Screen name={"Page3"} component={Page3} />
         </Stack.Navigator>
       </NavigationContainer>
     );

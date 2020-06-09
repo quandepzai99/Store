@@ -1,26 +1,29 @@
 import React, {Component} from 'react';
-import {View, StyleSheet, Text, FlatList, TouchableOpacity, SafeAreaView, Image} from "react-native";
+import {View, StyleSheet, Text, FlatList, TouchableOpacity, Image} from "react-native";
 import {colors} from "../../../Styles";
 import images from "../../../Common/images";
 import DataTimePicker from '@react-native-community/datetimepicker'
+import Page1 from "./Detail/Page1";
+import Page2 from "./Detail/Page2";
+import Page3 from "./Detail/Page3";
 
 const tempData = [
   {
-    id: 1,
+    id: Page1,
     image: images.banner1,
     desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry…',
     name: 'UrBox',
     time: images.times
   },
   {
-    id: 2,
+    id: Page2,
     image: images.banner1,
     desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry…',
     name: 'UrBo',
     time: images.times
   },
   {
-    id: 3,
+    id: Page3,
     image: images.banner1,
     desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry…',
     name: 'UrBx',
@@ -33,37 +36,35 @@ export default class News extends Component {
     this.state =
       {
       isVisible: false,
+      showListVisible: false,
       date: new Date()
       }
   }
 
+  toggleListModal = () => {
 
-  showDatePicker = (date) => {
-    this.setState({
-      date
-    })
   }
 
- _renderItem = ({item}) => {
-const { isVisible, setVisible, setDate, } = this.state;
+ _renderItem = ({item, onSelect, id}) => {
+const {  date} = this.state;
     return(
-      <TouchableOpacity style={styles.btnBanner}>
+      <TouchableOpacity style={styles.btnBanner} onPress={() => this.id}>
         <View>
           <Image source={item.image} style={{borderRadius: 12}}/>
           <Text style={styles.desc}><Text style={{color: 'red',fontWeight: 'bold' }}>[Hot] </Text>{item.desc}</Text>
           <View style={styles.divider}>
             <Text style={styles.name}>{item.name}</Text>
-            <Image source={item.time} />
+            <Image source={item.time} style={{left: 100}}/>
             {/*<DataTimePicker*/}
             {/*  value={new Date()}*/}
-            {/*  date={this.state.date}*/}
             {/*  onChange={this.showDatePicker}*/}
             {/*  mode={'date'}*/}
             {/*  testID="dateTimePicker"*/}
             {/*  format="DD-MM-YYYY"*/}
             {/*/>*/}
-            <Text>
+            <Text style={styles.name}>
               09-06-2020
+              {/*{this.state.date}*/}
             </Text>
           </View>
         </View>
@@ -75,6 +76,7 @@ const { isVisible, setVisible, setDate, } = this.state;
     // const { isVisible } = this.state
     return (
       <View style={styles.container}>
+
         <Text style={styles.title}>
           Tin tức <Text style={{color: colors.tangerine, fontWeight: 'bold', fontSize: 24}}>nổi bật</Text>
         </Text>
