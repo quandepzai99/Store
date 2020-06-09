@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {View, StyleSheet, Text, FlatList, TouchableOpacity, Image} from "react-native";
 import {colors} from "../../../Styles";
 import images from "../../../Common/images";
-import DataTimePicker from '@react-native-community/datetimepicker'
+import DataTimePicker from "@react-native-community/datetimepicker";
 import Page1 from "./Detail/Page1";
 import Page2 from "./Detail/Page2";
 import Page3 from "./Detail/Page3";

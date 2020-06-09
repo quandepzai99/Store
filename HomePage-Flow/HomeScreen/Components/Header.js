@@ -5,8 +5,8 @@ import {
   View,
   TouchableOpacity,
   Image,
-  Text, StatusBar,
-} from 'react-native';
+  Text
+} from "react-native";
 import styles from "./StyleSheet";
 
 import images from "../../../Common/images";
