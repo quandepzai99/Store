@@ -15,14 +15,11 @@ import FavoriteBrands from "./Components/FavoriteBrands";
 export default function Class() {
   return (
     <ScrollView>
-      <SafeAreaView style={styles.container}>
         <StatusBar />
         <Header />
         <CategoryIcon />
         <News />
         <FavoriteBrands />
-
-      </SafeAreaView>
     </ScrollView>
   );
 }

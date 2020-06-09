@@ -16,22 +16,22 @@ const tempData = [
   {
     id: Page1,
     image: images.banner1,
-    desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry…',
+    desc: 'Lorem Ipsum is simply dummy text of the and typesetting industry…',
     name: 'UrBox',
     time: images.times
   },
   {
     id: Page2,
     image: images.banner1,
-    desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry…',
-    name: 'UrBo',
+    desc: 'Lorem Ipsum is simply dummy text of the and typesetting industry…',
+    name: 'UrBox',
     time: images.times
   },
   {
     id: Page3,
     image: images.banner1,
-    desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry…',
-    name: 'UrBx',
+    desc: 'Lorem Ipsum is simply dummy text of the and typesetting industry…',
+    name: 'UrBox',
     time: images.times
   },
 ]
