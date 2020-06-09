@@ -8,14 +8,11 @@ import FavoriteBrands from "./Components/FavoriteBrands";
 export default function Class() {
   return (
     <ScrollView>
-      <StatusBar translucent={true} backgroundColor={"transparent"}/>
-      <SafeAreaView style={styles.container}>
-        <StatusBar />
-        <Header />
-        <CategoryIcon />
-        <News />
-        <FavoriteBrands />
-      </SafeAreaView>
+      <StatusBar barStyle={"light-content"} />
+      <Header />
+      <CategoryIcon />
+      <News />
+      <FavoriteBrands />
     </ScrollView>
   );
 }
