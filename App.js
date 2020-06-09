@@ -26,11 +26,11 @@ export default class App extends Component {
     return (
       <NavigationContainer ref={navigationRef}>
         <Stack.Navigator headerMode="none">
-          {/*<Stack.Screen name={"Telephone"} component={LoginScreen} />*/}
-          {/*<Stack.Screen name={"PinCode"} component={PasswordScreen} />*/}
-          {/*<Stack.Screen name={"PinCode1"} component={CurrentPassword}/>*/}
-          {/*<Stack.Screen name={"PinCode2"} component={ChangePassword}/>*/}
-          {/*<Stack.Screen name={"Chats"} component={Inbox} />*/}
+          <Stack.Screen name={"Telephone"} component={LoginScreen} />
+          <Stack.Screen name={"PinCode"} component={PasswordScreen} />
+          <Stack.Screen name={"PinCode1"} component={CurrentPassword}/>
+          <Stack.Screen name={"PinCode2"} component={ChangePassword}/>
+          <Stack.Screen name={"Chats"} component={Inbox} />
           <Stack.Screen name={"Home"} component={Bottom} />
           <Stack.Screen name={"Page1"} component={Page1} />
           <Stack.Screen name={"Page2"} component={Page2} />

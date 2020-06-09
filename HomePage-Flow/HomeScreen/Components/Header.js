@@ -5,8 +5,8 @@ import {
   View,
   TouchableOpacity,
   Image,
-  Text
-} from "react-native";
+  Text, StatusBar,
+} from 'react-native';
 import styles from "./StyleSheet";
 
 import images from "../../../Common/images";
@@ -16,7 +16,7 @@ export default function Header() {
     <View style={styles.container}>
       <ImageBackground
         source={images.HeaderBackground}
-        style={{ width: "100%", height: 176 }}>
+        style={{ width: "100%", height: 220 }}>
         <View style={styles.searchField}>
           <Image source={images.icon_search} style={styles.searchIcon} />
           <TextInput
@@ -56,6 +56,3 @@ export default function Header() {
     </View>
   );
 }
-
-
-

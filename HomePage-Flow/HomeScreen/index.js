@@ -11,15 +11,14 @@ import CategoryIcon from "./Components/CategoryIcon";
 import Header from "./Components/Header";
 import FavoriteBrands from "./Components/FavoriteBrands";
 
-
 export default function Class() {
   return (
     <ScrollView>
-        <StatusBar />
-        <Header />
-        <CategoryIcon />
-        <News />
-        <FavoriteBrands />
+      <StatusBar barStyle={"light-content"} />
+      <Header />
+      <CategoryIcon />
+      <News />
+      <FavoriteBrands />
     </ScrollView>
   );
 }

@@ -45,7 +45,7 @@ export default function Translate(props) {
 }
 
 const styles = StyleSheet.create({
-  scrollStyle: {
+  touchStyle: {
     width: 76,
     height: 24,
     backgroundColor: colors.paleGray,
@@ -53,7 +53,9 @@ const styles = StyleSheet.create({
     justifyContent: "space-around",
     alignItems: "center",
     borderRadius: 24,
-    padding: 4
+    padding: 4,
+
+
   },
   buttonVNStyle: {
     flexDirection: "row",

@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     justifyContent : "space-around"
   },
   searchField: {
-    marginTop: 10,
+    marginTop: 30,
     flexDirection: "row",
     alignItems: 'center',
     alignSelf: "center"
