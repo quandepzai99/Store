@@ -45,7 +45,7 @@ export default function Translate(props) {
 }
 
 const styles = StyleSheet.create({
-  scrollStyle: {
+  touchStyle: {
     width: 76,
     height: 24,
     backgroundColor: colors.paleGray,

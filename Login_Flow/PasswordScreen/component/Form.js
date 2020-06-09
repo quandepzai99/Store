@@ -22,6 +22,18 @@ export default class Form extends Component {
       this.PinInput.current.shake().then(() => this.setState({ code: "" }));
     }
   };
+
+  onTextChange = text => {
+    const { onPress } = this.props;
+    const navigate = text.length >= 6 ? navigate("Home") : null;
+    this.setState(
+      {
+        password: text
+      },
+      navigate
+    );
+  };
+
   render() {
     const { code } = this.state;
     return (
@@ -60,7 +72,7 @@ export default class Form extends Component {
           password={true}
           autoFocus={true}
           codeLength={6}
-          onTextChange={code => this.setState({ code })}
+          onTextChange={() => navigate('Home')}
         />
         <View style={styles.box}>
           <TouchableOpacity
