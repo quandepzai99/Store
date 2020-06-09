@@ -5,7 +5,7 @@ import images from "../../../Common/images";
 import SmoothPinCodeInput from "react-native-smooth-pincode-input";
 import { navigationRef } from "../../RootNavigation";
 
-function navigate(name) {
+function navigation(name) {
   navigationRef.current && navigationRef.current.navigate(name);
 }
 
@@ -15,21 +15,11 @@ export default class Form extends Component {
     password: ""
   };
 
-  onTextChange = text => {
-    const {} = this.props;
-    const navigate = text.length >= 6 ? navigation("PinCode2") : null;
-    this.setState(
-      {
-        password: text
-      },
-      navigate
-    );
-  };
-
   PinInput = React.createRef();
 
   render() {
     const { code } = this.state;
+    const navigate = code.length >= 6 ? navigation("Home") : null;
     return (
       <View style={styles.container}>
         <Text style={styles.text1}>Nhập mật khẩu</Text>
@@ -66,7 +56,7 @@ export default class Form extends Component {
           password={true}
           autoFocus={true}
           codeLength={6}
-          onTextChange={this.onTextChange}
+          onTextChange={code => this.setState({ code })}
         />
         <View style={styles.box}>
           <TouchableOpacity
@@ -92,7 +82,7 @@ export default class Form extends Component {
 const styles = StyleSheet.create({
   container: {
     alignItems: "center",
-    backgroundColor: "#fff",
+    backgroundColor: "white",
     marginHorizontal: 16,
     borderRadius: 24,
     marginTop: -40,
