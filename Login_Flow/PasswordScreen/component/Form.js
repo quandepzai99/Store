@@ -15,13 +15,19 @@ export default class Form extends Component {
     password: ""
   };
 
+  onTextChange = text => {
+    const {} = this.props;
+    const navigate = text.length >= 6 ? navigation("PinCode2") : null;
+    this.setState(
+      {
+        password: text
+      },
+      navigate
+    );
+  };
+
   PinInput = React.createRef();
 
-  _checkCode = () => {
-    {
-      this.PinInput.current.shake().then(() => this.setState({ code: "" }));
-    }
-  };
   render() {
     const { code } = this.state;
     return (
@@ -60,7 +66,7 @@ export default class Form extends Component {
           password={true}
           autoFocus={true}
           codeLength={6}
-          onTextChange={code => this.setState({ code })}
+          onTextChange={this.onTextChange}
         />
         <View style={styles.box}>
           <TouchableOpacity

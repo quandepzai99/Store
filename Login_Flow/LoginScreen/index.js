@@ -22,7 +22,7 @@ class index extends Component {
           translucent={true}
           backgroundColor={"transparent"}
         />
-        <Header lange={lang} />
+        <Header lang={lang} />
         <Form onChangeLang={this.onChangeLang} lang={lang} />
         <Chat />
       </View>
