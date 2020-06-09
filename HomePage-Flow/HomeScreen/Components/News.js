@@ -9,38 +9,70 @@ const tempData = [
     id: 1,
     image: images.banner1,
     desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry…',
-    name: 'UrBox'
+    name: 'UrBox',
+    time: images.times
   },
   {
     id: 2,
     image: images.banner1,
     desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry…',
-    name: 'UrBox'
+    name: 'UrBo',
+    time: images.times
   },
   {
     id: 3,
     image: images.banner1,
     desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry…',
-    name: 'UrBox'
+    name: 'UrBx',
+    time: images.times
   },
 ]
 export default class News extends Component {
+  constructor(props) {
+    super(props);
+    this.state =
+      {
+      isVisible: false,
+      date: new Date()
+      }
+  }
+
+
+  showDatePicker = (date) => {
+    this.setState({
+      date
+    })
+  }
 
  _renderItem = ({item}) => {
-
+const { isVisible, setVisible, setDate, } = this.state;
     return(
       <TouchableOpacity style={styles.btnBanner}>
         <View>
           <Image source={item.image} style={{borderRadius: 12}}/>
           <Text style={styles.desc}><Text style={{color: 'red',fontWeight: 'bold' }}>[Hot] </Text>{item.desc}</Text>
-          <View style={styles.divider}/>
-          <Text style={styles.name}>{item.name}</Text>
+          <View style={styles.divider}>
+            <Text style={styles.name}>{item.name}</Text>
+            <Image source={item.time} />
+            {/*<DataTimePicker*/}
+            {/*  value={new Date()}*/}
+            {/*  date={this.state.date}*/}
+            {/*  onChange={this.showDatePicker}*/}
+            {/*  mode={'date'}*/}
+            {/*  testID="dateTimePicker"*/}
+            {/*  format="DD-MM-YYYY"*/}
+            {/*/>*/}
+            <Text>
+              09-06-2020
+            </Text>
+          </View>
         </View>
       </TouchableOpacity>
     )
   }
 
   render() {
+    // const { isVisible } = this.state
     return (
       <View style={styles.container}>
         <Text style={styles.title}>
@@ -78,7 +110,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 16,
     alignItems: 'center',
     width: 368,
-    height: 255,
+    height: 260,
     backgroundColor: "#ffffff",
     shadowColor: "rgba(22, 60, 132, 0.16)",
     shadowOffset: {
@@ -101,17 +133,17 @@ const styles = StyleSheet.create({
   },
   name: {
     fontSize: 12,
-    left: 12,
     fontWeight: "500",
     fontStyle: "normal",
-    lineHeight: 20,
     textAlign: "left",
     color: colors.blueyGrey
   },
   divider: {
-    backgroundColor: colors.paleGreyFour,
-    borderWidth: 1,
-    opacity: 0.1,
+    paddingTop: 5,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    borderColor: colors.paleGreyFour,
+    borderTopWidth: 1,
     left: 10,
     marginRight: 20
   }

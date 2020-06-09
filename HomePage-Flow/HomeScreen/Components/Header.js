@@ -50,12 +50,7 @@ export default function Header() {
         </View>
       </ImageBackground>
       <Image source={images.banner} style={styles.banner} />
-      <View
-        style={{
-          marginLeft: 16,
-          marginTop: 26
-        }}
-      />
+
     </View>
   );
 }
@@ -66,7 +61,7 @@ const styles = StyleSheet.create({
     backgroundColor: "white"
   },
   searchField: {
-    marginTop: 30,
+    marginTop: 10,
     flexDirection: "row",
     alignItems: 'center',
     alignSelf: "center"

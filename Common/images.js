@@ -11,7 +11,8 @@ const images = {
   cross: require("../Picture/icon-Cross/bt.png"),
   banner: require("../Picture/Banner_Card.jpg"),
   icon_search: require("../Picture/ico_Search.png"),
-  banner2: require('../Picture/banner.jpg')
+  banner2: require('../Picture/banner.jpg'),
+  times: require('../Picture/ico_calendar.png')
 };
 
 export default images;
