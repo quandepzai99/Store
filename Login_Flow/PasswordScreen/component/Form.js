@@ -5,7 +5,7 @@ import images from "../../../Common/images";
 import SmoothPinCodeInput from "react-native-smooth-pincode-input";
 import { navigationRef } from "../../RootNavigation";
 
-function navigate(name) {
+function navigation(name) {
   navigationRef.current && navigationRef.current.navigate(name);
 }
 
@@ -60,13 +60,13 @@ export default class Form extends Component {
         />
         <View style={styles.box}>
           <TouchableOpacity
-            onPress={() => navigate("PinCode1")}
+            onPress={() => navigation("PinCode1")}
             style={{ paddingTop: 10, paddingBottom: 10 }}>
             <Text style={styles.text2}>Bạn quên mật khẩu?</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.btSignOut}
-            onPress={() => navigate("Telephone")}>
+            onPress={() => navigation("Telephone")}>
             <Image source={images.sigleout} style={{ top: 3, right: 5 }} />
             <Text style={styles.text3}>Đăng xuất</Text>
           </TouchableOpacity>
