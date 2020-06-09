@@ -35,7 +35,14 @@ function Item({ item }) {
           backgroundColor: "white",
           alignItems: "center",
           justifyContent: "center",
-          top: -20
+          top: -20,
+          shadowColor: "rgba(22, 60, 132, 0.1)",
+          shadowOffset: {
+            width: 0,
+            height: 3
+          },
+          shadowRadius: 10,
+          shadowOpacity: 1
         }}>
         <Image
           resizeMode="contain"
@@ -71,8 +78,7 @@ export default function FavoriteBrands() {
         style={{
           marginLeft: 16,
           top: -20
-
-         }}
+        }}
         keyExtractor={(item, index) => index.toString()}
       />
     </View>
@@ -84,7 +90,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
     width: 110,
     height: 104,
-    backgroundColor: "gold",
+    backgroundColor: "white",
     shadowColor: "rgba(22, 60, 132, 0.16)",
     shadowOffset: {
       width: 0,
@@ -95,7 +101,7 @@ const styles = StyleSheet.create({
     borderBottomLeftRadius: 12,
     borderBottomRightRadius: 12,
     borderTopEndRadius: 12,
-    borderTopLeftRadius: 95,
+    borderTopLeftRadius: 92,
     alignItems: "center",
     marginRight: 16
   }
