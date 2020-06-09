@@ -6,16 +6,21 @@ import PasswordScreen from "./Login_Flow/PasswordScreen";
 import { navigationRef } from "./Login_Flow/RootNavigation";
 import CurrentPassword from "./Login_Flow/CurrentPassword";
 import ChangePassword from "./Login_Flow/ChangePassword";
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Inbox from "./Login_Flow/HelpScreen/Inbox";
 import HomeScreen from './HomePage-Flow/HomeScreen'
 import Page1 from "./HomePage-Flow/HomeScreen/Components/Detail/Page1";
 import Page2 from "./HomePage-Flow/HomeScreen/Components/Detail/Page2";
 import Page3 from "./HomePage-Flow/HomeScreen/Components/Detail/Page3";
 
+import Bottom from './HomePage-Flow/Bottom';
 
 // const navigationRef = React.createRef();
 
 const Stack = createStackNavigator();
+const Tab = createBottomTabNavigator();
+
+
 
 export default class App extends Component {
   render() {
@@ -31,6 +36,7 @@ export default class App extends Component {
           <Stack.Screen name={"Page1"} component={Page1} />
           <Stack.Screen name={"Page2"} component={Page2} />
           <Stack.Screen name={"Page3"} component={Page3} />
+          <Stack.Screen name={"Home"} component={Bottom} />
         </Stack.Navigator>
       </NavigationContainer>
     );
