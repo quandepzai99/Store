@@ -6,7 +6,7 @@ import {
   TextInput,
   TouchableOpacity
 } from "react-native";
-import  colors  from "../../../colors";
+import colors from "../../../colors";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import Translate from "./Translate";
 import { navigationRef } from "../../RootNavigation";
@@ -45,7 +45,10 @@ export default class Form extends Component {
     const { lang, onChangeLang } = this.props;
 
     const bigText = switchLanguage(lang, "AuthenticationScreenPhoneText");
-    const smallText = switchLanguage(lang, "AuthenticationScreenEnterPhoneNumberText")
+    const smallText = switchLanguage(
+      lang,
+      "AuthenticationScreenEnterPhoneNumberText"
+    );
 
     return (
       <View style={styles.container}>
@@ -95,7 +98,7 @@ const styles = StyleSheet.create({
     paddingTop: 36,
     flexDirection: "row",
     justifyContent: "space-between",
-    paddingHorizontal: 30
+    paddingHorizontal: 30,
   },
   input: {
     fontSize: 24,
@@ -108,12 +111,12 @@ const styles = StyleSheet.create({
     height: 60,
     borderColor: colors.blueyGrey,
     borderWidth: 1,
-    marginTop: 40,
+    marginTop: 33,
     borderRadius: 12,
     marginBottom: 76,
     borderStyle: "solid",
     marginHorizontal: 16,
-    paddingHorizontal: 16
+    paddingHorizontal: 16,
   },
 
   text1: {
@@ -127,7 +130,7 @@ const styles = StyleSheet.create({
   text2: {
     position: "absolute",
     left: 32,
-    top: 85,
+    top: 80,
     zIndex: 1,
     backgroundColor: "#fff",
     fontSize: 15,
@@ -136,6 +139,7 @@ const styles = StyleSheet.create({
     lineHeight: 24,
     letterSpacing: 0,
     color: colors.blueyGrey
+
   },
   ellipse529: {
     position: "absolute",

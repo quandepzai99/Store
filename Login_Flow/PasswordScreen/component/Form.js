@@ -17,25 +17,9 @@ export default class Form extends Component {
 
   PinInput = React.createRef();
 
-  _checkCode = () => {
-    {
-      this.PinInput.current.shake().then(() => this.setState({ code: "" }));
-    }
-  };
-
-  onTextChange = text => {
-    const { onPress } = this.props;
-    const navigate = text.length >= 6 ? navigate("Home") : null;
-    this.setState(
-      {
-        password: text
-      },
-      navigate
-    );
-  };
-
   render() {
     const { code } = this.state;
+    const navigate = code.length >= 6 ? navigation("Home") : null;
     return (
       <View style={styles.container}>
         <Text style={styles.text1}>Nhập mật khẩu</Text>
@@ -72,7 +56,7 @@ export default class Form extends Component {
           password={true}
           autoFocus={true}
           codeLength={6}
-          onTextChange={() => navigate('Home')}
+          onTextChange={code => this.setState({ code })}
         />
         <View style={styles.box}>
           <TouchableOpacity

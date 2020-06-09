@@ -63,7 +63,7 @@ export default class PinInput extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#ffffff",
+    backgroundColor: "white",
     alignItems: "center",
     justifyContent: "center",
     borderRadius: 12,
