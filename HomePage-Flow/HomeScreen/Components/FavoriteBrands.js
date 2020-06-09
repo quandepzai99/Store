@@ -50,7 +50,9 @@ function Item({ item }) {
           style={{ borderRadius: 38 }}
         />
       </View>
-      <Text style={{ top: -10 }}>{item.name}</Text>
+      <Text style={{ top: -15, alignItems: "center", textAlign: "left" }}>
+        {item.name}
+      </Text>
     </TouchableOpacity>
   );
 }
@@ -66,7 +68,7 @@ export default function FavoriteBrands() {
           letterSpacing: 0,
           textAlign: "left",
           color: colors.velvet,
-          marginLeft: 16,
+          marginLeft: 16
         }}>
         Thương hiệu yêu thích của bạn
       </Text>
