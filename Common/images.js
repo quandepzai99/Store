@@ -17,7 +17,8 @@ const images = {
   icon_home: require("../Picture/BottomNvgBar/home.png"),
   icon_voucher: require("../Picture/BottomNvgBar/voucher.png"),
   icon_account: require("../Picture/BottomNvgBar/account.png"),
-  icon_wallet: require("../Picture/BottomNvgBar/wallet.png")
+  icon_wallet: require("../Picture/BottomNvgBar/wallet.png"),
+  times: require('../Picture/ico_calendar.png')
 };
 
 export default images;

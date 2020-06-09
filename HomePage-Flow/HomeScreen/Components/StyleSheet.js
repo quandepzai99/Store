@@ -10,6 +10,7 @@ const styles = StyleSheet.create({
   searchField: {
     marginTop: 10,
     flexDirection: "row",
+    alignItems: 'center',
     alignSelf: "center"
   },
   TextInput: {
@@ -98,7 +99,7 @@ const styles = StyleSheet.create({
   },
   banner: {
     width: (screenWidth * 382) / 414,
-    height: 160,
+    height: 150,
     borderRadius: 12,
     top: -70,
 

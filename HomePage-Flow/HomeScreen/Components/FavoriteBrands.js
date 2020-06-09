@@ -67,7 +67,6 @@ export default function FavoriteBrands() {
           textAlign: "left",
           color: colors.velvet,
           marginLeft: 16,
-          top: -40
         }}>
         Thương hiệu yêu thích của bạn
       </Text>
@@ -77,7 +76,7 @@ export default function FavoriteBrands() {
         renderItem={Item}
         style={{
           marginLeft: 16,
-          top: -20
+          top: 10
         }}
         keyExtractor={(item, index) => index.toString()}
       />

@@ -6,6 +6,11 @@ import DataTimePicker from '@react-native-community/datetimepicker'
 import Page1 from "./Detail/Page1";
 import Page2 from "./Detail/Page2";
 import Page3 from "./Detail/Page3";
+import {navigationRef} from "../../../Login_Flow/RootNavigation";
+
+function navigate(name,id) {
+  navigationRef.current && navigationRef.current.navigate(name, id);
+}
 
 const tempData = [
   {
@@ -41,14 +46,14 @@ export default class News extends Component {
       }
   }
 
-  toggleListModal = () => {
-
-  }
+  // toggleListModal = (id) => {
+  //   this.props.navigation.navigate(id)
+  // }
 
  _renderItem = ({item, onSelect, id}) => {
 const {  date} = this.state;
     return(
-      <TouchableOpacity style={styles.btnBanner} onPress={() => this.id}>
+      <TouchableOpacity style={styles.btnBanner} onPress={() => navigate('Page1')}>
         <View>
           <Image source={item.image} style={{borderRadius: 12}}/>
           <Text style={styles.desc}><Text style={{color: 'red',fontWeight: 'bold' }}>[Hot] </Text>{item.desc}</Text>

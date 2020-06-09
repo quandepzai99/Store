@@ -18,10 +18,9 @@ export default function Class() {
       <SafeAreaView style={styles.container}>
         <StatusBar />
         <Header />
+        <CategoryIcon />
+        <News />
         <FavoriteBrands />
-
-        {/*<CategoryIcon />*/}
-        {/*<News />*/}
 
       </SafeAreaView>
     </ScrollView>
