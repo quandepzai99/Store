@@ -71,7 +71,8 @@ export default function FavoriteBrands() {
         style={{
           marginLeft: 16,
           top: -20
-        }}
+
+         }}
         keyExtractor={(item, index) => index.toString()}
       />
     </View>

@@ -13,7 +13,11 @@ const images = {
   icon2: require("../Picture/ico2.png"),
   icon3: require("../Picture/ico3.png"),
   icon4: require("../Picture/ico4.png"),
-  banner1: require("../Picture/Layer1.png")
+  banner1: require("../Picture/Layer1.png"),
+  icon_home: require("../Picture/BottomNvgBar/home.png"),
+  icon_voucher: require("../Picture/BottomNvgBar/voucher.png"),
+  icon_account: require("../Picture/BottomNvgBar/account.png"),
+  icon_wallet: require("../Picture/BottomNvgBar/wallet.png")
 };
 
 export default images;

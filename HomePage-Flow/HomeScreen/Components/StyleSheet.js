@@ -4,7 +4,8 @@ const screenWidth = Dimensions.get("window").width;
 
 const styles = StyleSheet.create({
   container: {
-    alignItems: "center"
+    alignItems: "center",
+    justifyContent : "space-around"
   },
   searchField: {
     marginTop: 10,
