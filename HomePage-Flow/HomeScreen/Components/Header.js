@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
   searchField: {
     marginTop: 30,
     flexDirection: "row",
-    alignItems: 'center',
+    alignItems: "center",
     alignSelf: "center"
   },
   TextInput: {
