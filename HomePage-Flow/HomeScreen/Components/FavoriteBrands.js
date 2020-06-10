@@ -10,6 +10,7 @@ import {
 } from "react-native";
 import images from "../../../Common/images";
 import colors from "../../../colors";
+
 const brands = [
   {
     image: images.logo_urbox,
@@ -44,24 +45,7 @@ function Item({ item }) {
           height: 112
         }}
       />
-      <View
-        style={{
-          width: 72,
-          height: 72,
-          borderRadius: 38,
-          backgroundColor: "white",
-          alignItems: "center",
-          justifyContent: "center",
-          top: -5,
-          shadowColor: "rgba(22, 60, 132, 0.1)",
-          shadowOffset: {
-            width: 0,
-            height: 3
-          },
-          shadowRadius: 10,
-          shadowOpacity: 1,
-          position: "absolute"
-        }}>
+      <View style={styles.logo_icon}>
         <Image
           resizeMode="contain"
           source={item.image}
@@ -86,17 +70,7 @@ function Item({ item }) {
 export default function FavoriteBrands() {
   return (
     <View>
-      <Text
-        style={{
-          fontSize: 24,
-          fontWeight: "normal",
-          fontStyle: "normal",
-          lineHeight: 24,
-          letterSpacing: 0,
-          textAlign: "left",
-          color: colors.velvet,
-          marginLeft: 16
-        }}>
+      <Text style={styles.HeaderFavoriteBrand}>
         Thương hiệu yêu thích của bạn
       </Text>
       <FlatList
@@ -125,5 +99,32 @@ const styles = StyleSheet.create({
     shadowRadius: 10,
     shadowOpacity: 1,
     alignItems: "center"
+  },
+  logo_icon: {
+    width: 72,
+    height: 72,
+    borderRadius: 38,
+    backgroundColor: "white",
+    alignItems: "center",
+    justifyContent: "center",
+    top: -5,
+    shadowColor: "rgba(22, 60, 132, 0.1)",
+    shadowOffset: {
+      width: 0,
+      height: 3
+    },
+    shadowRadius: 10,
+    shadowOpacity: 1,
+    position: "absolute"
+  },
+  HeaderFavoriteBrand: {
+    fontSize: 24,
+    fontWeight: "normal",
+    fontStyle: "normal",
+    lineHeight: 24,
+    letterSpacing: 0,
+    textAlign: "left",
+    color: colors.velvet,
+    marginLeft: 16
   }
 });
