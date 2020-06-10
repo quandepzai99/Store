@@ -1,5 +1,11 @@
 import React, { Component } from "react";
-import { StatusBar, StyleSheet, ScrollView, SafeAreaView } from "react-native";
+import {
+  View,
+  StatusBar,
+  StyleSheet,
+  ScrollView,
+  SafeAreaView
+} from "react-native";
 import News from "./Components/News";
 import CategoryIcon from "./Components/CategoryIcon";
 import Header from "./Components/Header";
