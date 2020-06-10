@@ -95,7 +95,7 @@ function ItemList() {
   );
 }
 
-export default function TabView() {
+export default function BottomTabView() {
   return (
     <ScrollableTabView
       initialPage={0}
