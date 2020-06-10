@@ -28,7 +28,16 @@ const brands = [
   {
     image: images.logo_mobifone,
     name: "Mobifone"
-  }
+  },
+  {
+    image: images.logo_vinid,
+    name: "VinID"
+  },
+  {
+    image: images.logo_bee,
+    name: "Bee"
+  },
+  { image: images.logo_dienmayxanh, name: "Điện máy xanh" }
 ];
 
 function Item({ item }) {
@@ -95,7 +104,7 @@ function ItemList() {
   );
 }
 
-export default function TabView() {
+export default function BottomTabView() {
   return (
     <ScrollableTabView
       initialPage={0}
@@ -104,22 +113,18 @@ export default function TabView() {
       <ScrollView tabLabel="Nổi bật" style={styles.tabView}>
         <ItemList />
       </ScrollView>
-      <ScrollView tabLabel="Nổi bật" style={styles.tabView}>
+      <ScrollView tabLabel="Ăn uống" style={styles.tabView}>
         <ItemList />
       </ScrollView>
-      <ScrollView tabLabel="Nổi bật" style={styles.tabView}>
+      <ScrollView tabLabel="Mua sắm" style={styles.tabView}>
         <ItemList />
       </ScrollView>
       <ScrollView tabLabel="Du Lịch" style={styles.tabView}>
         <ItemList />
       </ScrollView>
-
-      <ScrollView tabLabel="Chiu" style={styles.tabView}>
+      <ScrollView tabLabel="Something" style={styles.tabView}>
         <ItemList />
       </ScrollView>
-      <Text tabLabel={"Tab #1"}>
-        <ItemList />
-      </Text>
     </ScrollableTabView>
   );
 }
@@ -134,7 +139,7 @@ const styles = StyleSheet.create({
     },
     shadowRadius: 10,
     shadowOpacity: 1,
-    alignItems: "center",
+    alignItems: "center"
   },
   tabView: {
     flex: 1,
