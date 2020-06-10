@@ -22,7 +22,10 @@ const brands = [
   {
     image: images.logo_mobifone,
     name: "Mobifone"
-  }
+  },
+    {
+        image: images.
+    }
 ];
 
 function Item({ item }) {

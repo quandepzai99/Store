@@ -9,6 +9,9 @@ const images = {
   logo_urbox: require("../Picture/Logos_Brand/logoUrboxFinal1.png"),
   logo_the_coffee_house: require("../Picture/Logos_Brand/icon.png"),
   logo_mobifone: require("../Picture/Logos_Brand/mobifone.png"),
+  logo_vinid: require("../Picture/Logos_Brand/vinId.png"),
+  logo_bee: require("../Picture/Logos_Brand/appLogoBe.png"),
+  logo_dienmayxanh: require("../Picture/Logos_Brand/appLogoDienMayXanh.png"),
   icon1: require("../Picture/ico1.png"),
   icon2: require("../Picture/ico2.png"),
   icon3: require("../Picture/ico3.png"),
@@ -18,8 +21,8 @@ const images = {
   icon_voucher: require("../Picture/BottomNvgBar/voucher.png"),
   icon_account: require("../Picture/BottomNvgBar/account.png"),
   icon_wallet: require("../Picture/BottomNvgBar/wallet.png"),
-  times: require('../Picture/ico_calendar.png'),
-  frame_item : require('../Picture/Frame_Item.png')
+  times: require("../Picture/ico_calendar.png"),
+  frame_item: require("../Picture/Frame_Item.png")
 };
 
 export default images;
