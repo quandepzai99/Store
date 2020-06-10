@@ -6,7 +6,8 @@ import {
   ScrollView,
   FlatList,
   Image,
-  TouchableOpacity
+  TouchableOpacity,
+  Dimensions
 } from "react-native";
 
 import ScrollableTabView, {
@@ -31,25 +32,32 @@ const brands = [
 ];
 
 function Item({ item }) {
-  console.log(item);
   return (
     <TouchableOpacity style={styles.scrollStyle}>
+      <Image
+        source={images.frame_item}
+        style={{
+          width: (110 / 414) * Dimensions.get("screen").width,
+          height: 112
+        }}
+      />
       <View
         style={{
-          width: 76,
-          height: 76,
+          width: 72,
+          height: 72,
           borderRadius: 38,
           backgroundColor: "white",
           alignItems: "center",
           justifyContent: "center",
-          top: -20,
+          top: -5,
           shadowColor: "rgba(22, 60, 132, 0.1)",
           shadowOffset: {
             width: 0,
             height: 3
           },
           shadowRadius: 10,
-          shadowOpacity: 1
+          shadowOpacity: 1,
+          position: "absolute"
         }}>
         <Image
           resizeMode="contain"
@@ -57,8 +65,18 @@ function Item({ item }) {
           style={{ borderRadius: 38 }}
         />
       </View>
-
-      <Text style={{ top: -15, textAlign: "left" }}>{item.name}</Text>
+      <Text
+        adjustsFontSizeToFit={true}
+        allowFontScaling={true}
+        style={{
+          top: -40,
+          textAlign: "left",
+          fontSize: 12,
+          fontWeight: "500",
+          lineHeight: 16
+        }}>
+        {item.name}
+      </Text>
     </TouchableOpacity>
   );
 }
@@ -109,9 +127,6 @@ export default function TabView() {
 const styles = StyleSheet.create({
   scrollStyle: {
     marginTop: 20,
-    width: 110,
-    height: 104,
-    backgroundColor: "white",
     shadowColor: "rgba(22, 60, 132, 0.16)",
     shadowOffset: {
       width: 0,
@@ -119,12 +134,7 @@ const styles = StyleSheet.create({
     },
     shadowRadius: 10,
     shadowOpacity: 1,
-    borderBottomLeftRadius: 12,
-    borderBottomRightRadius: 12,
-    borderTopEndRadius: 12,
-    borderTopLeftRadius: 92,
     alignItems: "center",
-    marginRight: 16
   },
   tabView: {
     flex: 1,
