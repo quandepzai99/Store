@@ -127,7 +127,7 @@ const styles = StyleSheet.create({
   },
   tabView: {
     flex: 1,
-    padding: 16,
+    padding: 10,
     backgroundColor: "rgba(0,0,0,0.01)"
   },
     iconStyle : {
