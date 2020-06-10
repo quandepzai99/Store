@@ -93,7 +93,7 @@ export default function BottomTabView() {
     <ScrollableTabView
       initialPage={0}
       renderTabBar={() => <ScrollableTabBar />}
-      style={{ marginTop: 10 }}>
+      style={{ marginTop: 20 }}>
       <ScrollView tabLabel="Nổi bật" style={styles.tabView}>
         <ItemList />
       </ScrollView>
