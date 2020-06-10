@@ -69,7 +69,7 @@ function Item({ item }) {
 }
 export default function FavoriteBrands() {
   return (
-    <View>
+    <View style={styles.container}>
       <Text style={styles.HeaderFavoriteBrand}>
         Thương hiệu yêu thích của bạn
       </Text>
@@ -87,6 +87,9 @@ export default function FavoriteBrands() {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    top: 30
+  },
   scrollStyle: {
     marginTop: 20,
     width: 112,
