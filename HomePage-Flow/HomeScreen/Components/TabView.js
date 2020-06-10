@@ -1,15 +1,21 @@
 import React from "react";
 import {
-  View,
   Text,
+  View,
+  StyleSheet,
+  ScrollView,
+  FlatList,
   Image,
   TouchableOpacity,
-  StyleSheet,
-  FlatList,
   Dimensions
 } from "react-native";
+
+import ScrollableTabView, {
+  ScrollableTabBar
+} from "react-native-scrollable-tab-view";
+
 import images from "../../../Common/images";
-import colors from "../../../colors";
+
 const brands = [
   {
     image: images.logo_urbox,
@@ -74,40 +80,53 @@ function Item({ item }) {
     </TouchableOpacity>
   );
 }
-export default function FavoriteBrands() {
+
+function ItemList() {
   return (
-    <View>
-      <Text
-        style={{
-          fontSize: 24,
-          fontWeight: "normal",
-          fontStyle: "normal",
-          lineHeight: 24,
-          letterSpacing: 0,
-          textAlign: "left",
-          color: colors.velvet,
-          marginLeft: 16
-        }}>
-        Thương hiệu yêu thích của bạn
+    <FlatList
+      horizontal={true}
+      data={brands}
+      renderItem={Item}
+      style={{
+        paddingBottom: 5
+      }}
+      keyExtractor={(item, index) => index.toString()}
+    />
+  );
+}
+
+export default function TabView() {
+  return (
+    <ScrollableTabView
+      initialPage={0}
+      renderTabBar={() => <ScrollableTabBar />}
+      style={{ marginTop: 10 }}>
+      <ScrollView tabLabel="Nổi bật" style={styles.tabView}>
+        <ItemList />
+      </ScrollView>
+      <ScrollView tabLabel="Nổi bật" style={styles.tabView}>
+        <ItemList />
+      </ScrollView>
+      <ScrollView tabLabel="Nổi bật" style={styles.tabView}>
+        <ItemList />
+      </ScrollView>
+      <ScrollView tabLabel="Du Lịch" style={styles.tabView}>
+        <ItemList />
+      </ScrollView>
+
+      <ScrollView tabLabel="Chiu" style={styles.tabView}>
+        <ItemList />
+      </ScrollView>
+      <Text tabLabel={"Tab #1"}>
+        <ItemList />
       </Text>
-      <FlatList
-        horizontal={true}
-        data={brands}
-        renderItem={Item}
-        style={{
-          padding: 10
-        }}
-        keyExtractor={(item, index) => index.toString()}
-      />
-    </View>
+    </ScrollableTabView>
   );
 }
 
 const styles = StyleSheet.create({
   scrollStyle: {
     marginTop: 20,
-    width: 112,
-    height: 104,
     shadowColor: "rgba(22, 60, 132, 0.16)",
     shadowOffset: {
       width: 0,
@@ -115,6 +134,11 @@ const styles = StyleSheet.create({
     },
     shadowRadius: 10,
     shadowOpacity: 1,
-    alignItems: "center"
+    alignItems: "center",
+  },
+  tabView: {
+    flex: 1,
+    padding: 16,
+    backgroundColor: "rgba(0,0,0,0.01)"
   }
 });

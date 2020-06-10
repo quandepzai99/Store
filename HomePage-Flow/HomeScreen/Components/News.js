@@ -1,14 +1,21 @@
-import React, {Component} from 'react';
-import {View, StyleSheet, Text, FlatList, TouchableOpacity, Image} from "react-native";
-import {colors} from "../../../Styles";
+import React, { Component } from "react";
+import {
+  View,
+  StyleSheet,
+  Text,
+  FlatList,
+  TouchableOpacity,
+  Image
+} from "react-native";
+import { colors } from "../../../Styles";
 import images from "../../../Common/images";
 import DataTimePicker from "@react-native-community/datetimepicker";
 import Page1 from "./Detail/Page1";
 import Page2 from "./Detail/Page2";
 import Page3 from "./Detail/Page3";
-import {navigationRef} from "../../../Login_Flow/RootNavigation";
+import { navigationRef } from "../../../Login_Flow/RootNavigation";
 
-function navigate(name,id) {
+function navigate(name, id) {
   navigationRef.current && navigationRef.current.navigate(name, id);
 }
 
@@ -16,50 +23,57 @@ const tempData = [
   {
     id: Page1,
     image: images.banner1,
-    desc: 'Lorem Ipsum is simply dummy text of the and typesetting industry…',
-    name: 'UrBox',
+    desc:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry…",
+    name: "UrBox",
     time: images.times
   },
   {
     id: Page2,
     image: images.banner1,
-    desc: 'Lorem Ipsum is simply dummy text of the and typesetting industry…',
-    name: 'UrBox',
+    desc:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry…",
+    name: "UrBo",
     time: images.times
   },
   {
     id: Page3,
     image: images.banner1,
-    desc: 'Lorem Ipsum is simply dummy text of the and typesetting industry…',
-    name: 'UrBox',
+    desc:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry…",
+    name: "UrBx",
     time: images.times
-  },
-]
+  }
+];
 export default class News extends Component {
   constructor(props) {
     super(props);
-    this.state =
-      {
+    this.state = {
       isVisible: false,
       showListVisible: false,
       date: new Date()
-      }
+    };
   }
 
   // toggleListModal = (id) => {
   //   this.props.navigation.navigate(id)
   // }
 
- _renderItem = ({item, onSelect, id}) => {
-const {  date} = this.state;
-    return(
-      <TouchableOpacity style={styles.btnBanner} onPress={() => navigate('Page1')}>
+  _renderItem = ({ item, onSelect, id }) => {
+    const { date } = this.state;
+    return (
+      <TouchableOpacity
+        style={styles.btnBanner}
+        onPress={() => navigate("Page1")}>
         <View>
-          <Image source={item.image} style={{borderRadius: 12}}/>
-          <Text style={styles.desc}><Text style={{color: 'red',fontWeight: 'bold' }}>[Hot] </Text>{item.desc}</Text>
+          <Image source={item.image} style={{ borderRadius: 12 }} />
+          <Text style={styles.desc}>
+            <Text style={{ color: "red", fontWeight: "bold" }}>[Hot] </Text>
+            {item.desc}
+          </Text>
           <View style={styles.divider}>
             <Text style={styles.name}>{item.name}</Text>
-            <Image source={item.time} style={{left: 100}}/>
+            <Image source={item.time} style={{ left: 100 }} />
             {/*<DataTimePicker*/}
             {/*  value={new Date()}*/}
             {/*  onChange={this.showDatePicker}*/}
@@ -74,25 +88,32 @@ const {  date} = this.state;
           </View>
         </View>
       </TouchableOpacity>
-    )
-  }
+    );
+  };
 
   render() {
     // const { isVisible } = this.state
     return (
       <View style={styles.container}>
-
         <Text style={styles.title}>
-          Tin tức <Text style={{color: colors.tangerine, fontWeight: 'bold', fontSize: 24}}>nổi bật</Text>
+          Tin tức{" "}
+          <Text
+            style={{
+              color: colors.tangerine,
+              fontWeight: "bold",
+              fontSize: 24
+            }}>
+            nổi bật
+          </Text>
         </Text>
-        <View style={{height: 300}}>
+        <View style={{ height: 300 }}>
           <FlatList
             data={tempData}
             renderItem={this._renderItem}
             horizontal
             showsHorizontalScrollIndicator={false}
             keyExtractor={item => item.name}
-            keybroardShouldPersisTaps={'always'}
+            keybroardShouldPersisTaps={"always"}
           />
         </View>
       </View>
@@ -115,7 +136,7 @@ const styles = StyleSheet.create({
     top: 10,
     borderRadius: 12,
     marginHorizontal: 16,
-    alignItems: 'center',
+    alignItems: "center",
     width: 368,
     height: 260,
     backgroundColor: "#ffffff",
@@ -147,11 +168,11 @@ const styles = StyleSheet.create({
   },
   divider: {
     paddingTop: 5,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+    flexDirection: "row",
+    justifyContent: "space-between",
     borderColor: colors.paleGreyFour,
     borderTopWidth: 1,
     left: 10,
     marginRight: 20
   }
-})
+});
