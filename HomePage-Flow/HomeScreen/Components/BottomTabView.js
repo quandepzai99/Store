@@ -51,23 +51,7 @@ function Item({ item }) {
         }}
       />
       <View
-        style={{
-          width: 72,
-          height: 72,
-          borderRadius: 38,
-          backgroundColor: "white",
-          alignItems: "center",
-          justifyContent: "center",
-          top: -5,
-          shadowColor: "rgba(22, 60, 132, 0.1)",
-          shadowOffset: {
-            width: 0,
-            height: 3
-          },
-          shadowRadius: 10,
-          shadowOpacity: 1,
-          position: "absolute"
-        }}>
+        style={styles.iconStyle}>
         <Image
           resizeMode="contain"
           source={item.image}
@@ -145,5 +129,22 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 16,
     backgroundColor: "rgba(0,0,0,0.01)"
-  }
+  },
+    iconStyle : {
+        width: 72,
+        height: 72,
+        borderRadius: 38,
+        backgroundColor: "white",
+        alignItems: "center",
+        justifyContent: "center",
+        top: -5,
+        shadowColor: "rgba(22, 60, 132, 0.1)",
+        shadowOffset: {
+            width: 0,
+            height: 3
+        },
+        shadowRadius: 10,
+        shadowOpacity: 1,
+        position: "absolute"
+    }
 });
