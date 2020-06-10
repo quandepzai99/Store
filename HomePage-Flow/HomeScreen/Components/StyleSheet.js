@@ -5,13 +5,14 @@ const screenWidth = Dimensions.get("window").width;
 const styles = StyleSheet.create({
   container: {
     alignItems: "center",
-    justifyContent : "space-around"
+    justifyContent : "space-around",
   },
   searchField: {
     marginTop: 30,
     flexDirection: "row",
     alignItems: 'center',
-    alignSelf: "center"
+    alignSelf: "center",
+    top : 10
   },
   TextInput: {
     width: "90%",
@@ -27,13 +28,12 @@ const styles = StyleSheet.create({
   },
   iconStyle: {
     position: "absolute",
-    top: 10,
     left: 8
   },
   iconBalanceWitness: {
     marginLeft: 16,
     marginTop: 20,
-    flexDirection: "row"
+    flexDirection: "row", top : 10
   },
   bigWitness: {
     width: 32,
@@ -79,7 +79,8 @@ const styles = StyleSheet.create({
     marginTop: 20,
     marginRight: 16,
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
+    top: 10
   },
   buttonAddCardTouch: {
     flexDirection: "row",
@@ -91,7 +92,7 @@ const styles = StyleSheet.create({
   textAddCard: {
     fontSize: 12,
     fontStyle: "normal",
-    lineHeight: 14,
+    lineHeight: 12,
     letterSpacing: 0,
     textAlign: "left",
     color: colors.golden,
