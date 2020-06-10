@@ -20,9 +20,10 @@ export default function Class() {
       <Header />
       <CategoryIcon />
       <News />
+      <Product />
       <FavoriteBrands />
       <TabView/>
-      <Product />
+
       {/*<FavoriteBrands />*/}
     </ScrollView>
   );
