@@ -5,7 +5,8 @@ import {
   Image,
   TouchableOpacity,
   StyleSheet,
-  FlatList
+  FlatList,
+  Dimensions
 } from "react-native";
 import images from "../../../Common/images";
 import colors from "../../../colors";
@@ -27,7 +28,13 @@ const brands = [
 function Item({ item }) {
   return (
     <TouchableOpacity style={styles.scrollStyle}>
-      <Image source={images.frame_item} style={{ width: 118, height: 112 }} />
+      <Image
+        source={images.frame_item}
+        style={{
+          width: (118 / 414) * Dimensions.get("screen").width,
+          height: 112
+        }}
+      />
       <View
         style={{
           width: 76,
@@ -44,7 +51,7 @@ function Item({ item }) {
           },
           shadowRadius: 10,
           shadowOpacity: 1,
-            position : "absolute"
+          position: "absolute"
         }}>
         <Image
           resizeMode="contain"
@@ -77,9 +84,7 @@ export default function FavoriteBrands() {
         data={brands}
         renderItem={Item}
         style={{
-          marginLeft: 16,
-          top: 10,
-          paddingBottom: 5
+          padding: 10
         }}
         keyExtractor={(item, index) => index.toString()}
       />
@@ -90,7 +95,7 @@ export default function FavoriteBrands() {
 const styles = StyleSheet.create({
   scrollStyle: {
     marginTop: 20,
-    width: 110,
+    width: 112,
     height: 104,
     shadowColor: "rgba(22, 60, 132, 0.16)",
     shadowOffset: {
@@ -99,7 +104,6 @@ const styles = StyleSheet.create({
     },
     shadowRadius: 10,
     shadowOpacity: 1,
-    alignItems: "center",
-    marginRight: 16
+    alignItems: "center"
   }
 });
