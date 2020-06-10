@@ -23,7 +23,8 @@ const images = {
   pro1: require('../Picture/product/pro1.png'),
   pro2: require('../Picture/product/pro2.png'),
   pro3: require('../Picture/product/pro1.png'),
-  plus1: require('../Picture/plus.png')
+  plus1: require('../Picture/plus.png'),
+  frame_item : require('../Picture/Frame_Item.png')
 };
 
 export default images;
