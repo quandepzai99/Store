@@ -7,18 +7,20 @@ const proData = [
   {
     image: images.pro1,
     desc: 'Tay Cầm Microsoft Xbox One S (Màu…',
-    price: '200.000đ'
-  },
-  {
-    image: images.pro2,
-    desc: 'Tay Cầm Microsoft Xbox One S (Màu…',
-    price: '200.000đ'
+    price: '200.000đ',
+    plus: images.plus1
   },
   {
     image: images.pro2,
     desc: 'Tay Cầm Microsoft Xbox One S (Màu…',
     price: '200.000đ',
-    plus: images
+    plus: images.plus1
+  },
+  {
+    image: images.pro2,
+    desc: 'Tay Cầm Microsoft Xbox One S (Màu…',
+    price: '200.000đ',
+    plus: images.plus1
   }
 ]
 
@@ -27,9 +29,11 @@ function Item({item}) {
     <TouchableOpacity style={styles.itemProduct}>
       <Image source={item.image} />
       <Text style={styles.desc}>{item.desc}</Text>
-      <View style={{flexDirection: 'row'}}>
+      <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
         <Text style={styles.price}>{item.price}</Text>
-        <TouchableOpacity style={styles.plus}><Image source={}/></TouchableOpacity>
+        <TouchableOpacity style={styles.plus}>
+          <Image source={item.plus}/>
+        </TouchableOpacity>
       </View>
     </TouchableOpacity>
   )
@@ -38,7 +42,7 @@ function Item({item}) {
 export default function Product(){
   return (
     <View style={styles.container}>
-      <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+      <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
         <Text style={styles.title}>Mua sắm với UrBox</Text>
         <Text style={styles.xemTtC}>Xem tất cả</Text>
       </View>
@@ -57,7 +61,7 @@ export default function Product(){
 
 const styles = StyleSheet.create({
   container: {
-
+    flex: 1
   },
   title: {
     fontSize: 24,
@@ -71,6 +75,7 @@ const styles = StyleSheet.create({
   },
   itemProduct: {
     alignItems: 'center',
+    justifyContent: 'center',
     top: 10,
     width: 174,
     height: 264,
@@ -101,8 +106,7 @@ const styles = StyleSheet.create({
     fontWeight: "500",
     fontStyle: "normal",
     lineHeight: 18,
-    letterSpacing: 0,
-    textAlign: "left",
+
     color: colors.velvet
   },
   xemTtC: {
@@ -110,10 +114,14 @@ const styles = StyleSheet.create({
     fontWeight: "normal",
     fontStyle: "normal",
     lineHeight: 16,
-    textAlign: "right",
+    right: 16,
     color: colors.deepSkyBlue
   },
   plus: {
-    backgroundColor: colors.tangerine
+    padding: 13,
+    left: 35,
+    backgroundColor: colors.tangerine,
+    borderTopLeftRadius: 12,
+    borderBottomRightRadius: 12,
   }
 })
