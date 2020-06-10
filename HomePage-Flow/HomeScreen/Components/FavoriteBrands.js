@@ -23,9 +23,15 @@ const brands = [
     image: images.logo_mobifone,
     name: "Mobifone"
   },
-    {
-        image: images.
-    }
+  {
+    image: images.logo_vinid,
+    name: "VinID"
+  },
+  {
+    image: images.logo_bee,
+    name: "Bee"
+  },
+  { image: images.logo_dienmayxanh, name: "Điện máy xanh" }
 ];
 
 function Item({ item }) {
