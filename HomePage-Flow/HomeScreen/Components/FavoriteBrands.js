@@ -31,19 +31,19 @@ function Item({ item }) {
       <Image
         source={images.frame_item}
         style={{
-          width: (118 / 414) * Dimensions.get("screen").width,
+          width: (110 / 414) * Dimensions.get("screen").width,
           height: 112
         }}
       />
       <View
         style={{
-          width: 76,
-          height: 76,
+          width: 72,
+          height: 72,
           borderRadius: 38,
           backgroundColor: "white",
           alignItems: "center",
           justifyContent: "center",
-          top: -20,
+          top: -5,
           shadowColor: "rgba(22, 60, 132, 0.1)",
           shadowOffset: {
             width: 0,
@@ -59,7 +59,18 @@ function Item({ item }) {
           style={{ borderRadius: 38 }}
         />
       </View>
-      <Text style={{ top: -50, textAlign: "left" }}>{item.name}</Text>
+      <Text
+        adjustsFontSizeToFit={true}
+        allowFontScaling={true}
+        style={{
+          top: -40,
+          textAlign: "left",
+          fontSize: 12,
+          fontWeight: "500",
+          lineHeight: 16
+        }}>
+        {item.name}
+      </Text>
     </TouchableOpacity>
   );
 }
