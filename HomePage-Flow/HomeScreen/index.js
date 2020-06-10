@@ -11,6 +11,7 @@ import CategoryIcon from "./Components/CategoryIcon";
 import Header from "./Components/Header";
 import FavoriteBrands from "./Components/FavoriteBrands";
 import BottomTabView from "./Components/BottomTabView";
+import Product from "./Components/Product";
 
 export default function Class() {
   return (
@@ -19,6 +20,7 @@ export default function Class() {
       <Header />
       <CategoryIcon />
       <News />
+      <Product />
       <FavoriteBrands />
       <BottomTabView />
     </ScrollView>
