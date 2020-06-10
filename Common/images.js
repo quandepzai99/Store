@@ -19,7 +19,10 @@ const images = {
   icon_account: require("../Picture/BottomNvgBar/account.png"),
   icon_wallet: require("../Picture/BottomNvgBar/wallet.png"),
   times: require('../Picture/ico_calendar.png'),
-  detail: require('../Picture/Voucher_default.png')
+  detail: require('../Picture/Voucher_default.png'),
+  pro1: require('../Picture/product/pro1.png'),
+  pro2: require('../Picture/product/pro2.png'),
+  pro3: require('../Picture/product/pro1.png'),
 };
 
 export default images;

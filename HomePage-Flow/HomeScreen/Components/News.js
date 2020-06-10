@@ -91,7 +91,7 @@ const {  date} = this.state;
             renderItem={this._renderItem}
             horizontal
             showsHorizontalScrollIndicator={false}
-            keyExtractor={item => item.name}
+            keyExtractor={item => item.id}
             keybroardShouldPersisTaps={'always'}
           />
         </View>
