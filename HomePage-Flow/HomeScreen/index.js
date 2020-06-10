@@ -4,6 +4,7 @@ import News from "./Components/News";
 import CategoryIcon from "./Components/CategoryIcon";
 import Header from "./Components/Header";
 import FavoriteBrands from "./Components/FavoriteBrands";
+import TabView from  "./Components/TabView"
 
 export default function Class() {
   return (
@@ -13,6 +14,7 @@ export default function Class() {
       <CategoryIcon />
       <News />
       <FavoriteBrands />
+      <TabView/>
     </ScrollView>
   );
 }

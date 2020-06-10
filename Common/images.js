@@ -18,7 +18,8 @@ const images = {
   icon_voucher: require("../Picture/BottomNvgBar/voucher.png"),
   icon_account: require("../Picture/BottomNvgBar/account.png"),
   icon_wallet: require("../Picture/BottomNvgBar/wallet.png"),
-  times: require('../Picture/ico_calendar.png')
+  times: require('../Picture/ico_calendar.png'),
+  frame_item : require('../Picture/Frame_Item.png')
 };
 
 export default images;

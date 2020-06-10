@@ -27,6 +27,7 @@ const brands = [
 function Item({ item }) {
   return (
     <TouchableOpacity style={styles.scrollStyle}>
+      <Image source={images.frame_item} style={{ width: 118, height: 112 }} />
       <View
         style={{
           width: 76,
@@ -42,7 +43,8 @@ function Item({ item }) {
             height: 3
           },
           shadowRadius: 10,
-          shadowOpacity: 1
+          shadowOpacity: 1,
+            position : "absolute"
         }}>
         <Image
           resizeMode="contain"
@@ -50,7 +52,7 @@ function Item({ item }) {
           style={{ borderRadius: 38 }}
         />
       </View>
-      <Text style={{ top: -15, textAlign: "left" }}>{item.name}</Text>
+      <Text style={{ top: -50, textAlign: "left" }}>{item.name}</Text>
     </TouchableOpacity>
   );
 }
@@ -76,7 +78,8 @@ export default function FavoriteBrands() {
         renderItem={Item}
         style={{
           marginLeft: 16,
-          top: 10
+          top: 10,
+          paddingBottom: 5
         }}
         keyExtractor={(item, index) => index.toString()}
       />
@@ -89,7 +92,6 @@ const styles = StyleSheet.create({
     marginTop: 20,
     width: 110,
     height: 104,
-    backgroundColor: "white",
     shadowColor: "rgba(22, 60, 132, 0.16)",
     shadowOffset: {
       width: 0,
@@ -97,10 +99,6 @@ const styles = StyleSheet.create({
     },
     shadowRadius: 10,
     shadowOpacity: 1,
-    borderBottomLeftRadius: 12,
-    borderBottomRightRadius: 12,
-    borderTopEndRadius: 12,
-    borderTopLeftRadius: 92,
     alignItems: "center",
     marginRight: 16
   }
