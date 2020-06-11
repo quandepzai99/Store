@@ -53,12 +53,13 @@ export default function Product() {
       <View
         style={{
           flexDirection: "row",
-          justifyContent: "space-around"
+          justifyContent: "space-around",
         }}>
         <Text style={styles.title}>Mua sắm với UrBox</Text>
         <Text style={styles.xemTtC}>Xem tất cả</Text>
       </View>
-      <View style={{ height: 300 }}>
+      <View style={{ height: 300,
+     }}>
         <FlatList
           data={proData}
           renderItem={Item}
@@ -93,21 +94,14 @@ const styles = StyleSheet.create({
     paddingTop: 17,
     marginLeft: 16,
     borderRadius: 12,
-    backgroundColor: "white",
-    shadowColor: "rgba(22, 60, 132, 0.16)",
-    shadowOffset: {
-      width: 0,
-      height: 3
-    },
-    shadowRadius: 10,
-    shadowOpacity: 1,
-    elevation: 5
+    backgroundColor: "white"
   },
   desc: {
     fontSize: (15 / 736) * Dimensions.get("screen").height,
     lineHeight: (18 / 736) * Dimensions.get("screen").height,
     letterSpacing: 0,
-    paddingTop: 22,
+    paddingTop: 15,
+    paddingBottom :15,
     paddingLeft: 10,
     textAlign: "left",
     justifyContent: "center",
@@ -136,8 +130,8 @@ const styles = StyleSheet.create({
     borderBottomRightRadius: 12,
     flexDirection: "row",
     justifyContent: "space-between",
-    top: 13,
-  },
+    alignContent: "center",
+    backgroundColor: "white"},
   plus: {
     padding: 13,
     backgroundColor: colors.tangerine,
