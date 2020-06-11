@@ -103,7 +103,7 @@ export default function ContentTabView() {
     <ScrollableTabView
       initialPage={0}
       renderTabBar={() => <ScrollableTabBar />}
-      style={{ height: 250, top: 10 }}>
+      style={{ height: 250, top: 20 }}>
       <ItemList tabLabel="Nổi  bật" />
       <ItemList tabLabel="Ăn uống" />
       <ItemList tabLabel="Du lịch" />
