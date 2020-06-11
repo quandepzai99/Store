@@ -105,9 +105,11 @@ export default function BottomTabView() {
       renderTabBar={() => <ScrollableTabBar />}
       style={{ height: 250, top: 10,}}
       >
-      <ItemList tabLabel='Tab #1' />
-      <Text tabLabel='Tab #2'>favorite</Text>
-      <Text tabLabel='Tab #3'>project</Text>
+      <ItemList tabLabel='Nổi  bật' />
+      <Text tabLabel='Ăn uống'>project</Text>
+      <Text tabLabel='Du lịch'>project</Text>
+      <Text tabLabel='Mua sắm'>project</Text>
+      <Text tabLabel='Something'>project</Text>
     </ScrollableTabView>
   );
 }

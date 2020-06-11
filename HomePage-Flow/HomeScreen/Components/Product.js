@@ -27,9 +27,9 @@ const proData = [
 function Item({item}) {
   return(
     <TouchableOpacity style={styles.itemProduct}>
-      <Image source={item.image} />
+      <Image source={item.image}/>
       <Text style={styles.desc}>{item.desc}</Text>
-      <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
+      <View style={{flexDirection: 'row',justifyContent: 'space-between', alignItems: 'center', backgroundColor: 'red'}}>
         <Text style={styles.price}>{item.price}</Text>
         <TouchableOpacity style={styles.plus}>
           <Image source={item.plus}/>
@@ -46,7 +46,7 @@ export default function Product(){
         <Text style={styles.title}>Mua sắm với UrBox</Text>
         <Text style={styles.xemTtC}>Xem tất cả</Text>
       </View>
-      <View style={{height: 280}}>
+      <View style={{height: 280,}}>
           <FlatList
             data={proData}
             renderItem={Item}
@@ -61,7 +61,8 @@ export default function Product(){
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
+
   },
   title: {
     fontSize: 24,
@@ -74,9 +75,8 @@ const styles = StyleSheet.create({
     color: colors.velvet
   },
   itemProduct: {
-    alignItems: 'center',
-    justifyContent: 'center',
     top: 10,
+
     width: 174,
     height: 264,
     paddingTop: 17,
@@ -93,20 +93,18 @@ const styles = StyleSheet.create({
     elevation: 5
   },
   desc: {
-
     fontSize: 15,
-    lineHeight: 20,
-    letterSpacing: 0,
+    lineHeight: 15,
     padding: 15,
-    textAlign: 'left',
+
     color: colors.greyishBrown
   },
   price: {
+    textAlign: 'left',
     fontSize: 17,
     fontWeight: "500",
     fontStyle: "normal",
     lineHeight: 18,
-
     color: colors.velvet
   },
   xemTtC: {
@@ -118,8 +116,7 @@ const styles = StyleSheet.create({
     color: colors.deepSkyBlue
   },
   plus: {
-    padding: 13,
-    left: 33,
+    padding: 10,
     backgroundColor: colors.tangerine,
     borderTopLeftRadius: 12,
     borderBottomRightRadius: 12,

@@ -78,7 +78,7 @@ export default class News extends Component {
             {/*  format="DD-MM-YYYY"*/}
             {/*/>*/}
             <Text style={styles.name}>
-              09-06-2020
+              11-06-2020
               {/*{this.state.date}*/}
             </Text>
           </View>
