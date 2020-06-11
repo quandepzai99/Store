@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
     width: (174 / 414) * Dimensions.get("screen").width,
     height: (264 / 736) * Dimensions.get("screen").height,
     paddingTop: 17,
-    marginHorizontal: 17,
+    marginLeft: 16,
     borderRadius: 12,
     backgroundColor: "white",
     shadowColor: "rgba(22, 60, 132, 0.16)",
