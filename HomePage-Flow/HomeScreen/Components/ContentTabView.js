@@ -76,24 +76,24 @@ function Item({ item }) {
 }
 
 function News() {
-  return(
+  return (
     <View>
       <Text>aaa</Text>
     </View>
-  )
+  );
 }
 function ItemList() {
   return (
-    <View style={{height: 300}}>
-    <FlatList
-      horizontal={true}
-      data={brands}
-      renderItem={Item}
-      style={{
-        paddingBottom: 5
-      }}
-      keyExtractor={(item, index) => index.toString()}
-    />
+    <View style={{ height: 300 }}>
+      <FlatList
+        horizontal={true}
+        data={brands}
+        renderItem={Item}
+        style={{
+          paddingBottom: 5
+        }}
+        keyExtractor={(item, index) => index.toString()}
+      />
     </View>
   );
 }
@@ -102,15 +102,13 @@ export default function ContentTabView() {
   return (
     <ScrollableTabView
       initialPage={0}
-      scrollWithoutAnimation={true}
       renderTabBar={() => <ScrollableTabBar />}
-      style={{ height: 250, top: 10,}}
-      >
-      <ItemList tabLabel='Nổi  bật' />
-      <Text tabLabel='Ăn uống'>project</Text>
-      <Text tabLabel='Du lịch'>project</Text>
-      <Text tabLabel='Mua sắm'>project</Text>
-      <Text tabLabel='Something'>project</Text>
+      style={{ height: 250, top: 10 }}>
+      <ItemList tabLabel="Nổi  bật" />
+      <ItemList tabLabel="Ăn uống" />
+      <ItemList tabLabel="Du lịch" />
+      <ItemList tabLabel="Mua sắm" />
+      <ItemList tabLabel="Something" />
     </ScrollableTabView>
   );
 }
@@ -126,11 +124,10 @@ const styles = StyleSheet.create({
     shadowRadius: 10,
     shadowOpacity: 1,
     alignItems: "center",
-    marginLeft : 5
+    marginLeft: 10
   },
   tabView: {
     flex: 1,
-    marginLeft: 5,
     backgroundColor: "rgba(0,0,0,0.01)"
   },
   iconStyle: {
@@ -151,8 +148,7 @@ const styles = StyleSheet.create({
     position: "absolute"
   },
   container: {
-    top: 30,
-    marginLeft: 5
+    top: 30
   },
   logo_icon: {
     width: 72,
@@ -171,21 +167,10 @@ const styles = StyleSheet.create({
     shadowOpacity: 1,
     position: "absolute"
   },
-  HeaderFavoriteBrand: {
-    fontSize: 24,
-    fontWeight: "normal",
-    fontStyle: "normal",
-    lineHeight: 24,
-    letterSpacing: 0,
-    textAlign: "left",
-    color: colors.velvet,
-    marginLeft: 16
-  },
   icon_name: {
     textAlign: "center",
     fontSize: 12,
     fontWeight: "500",
-    lineHeight: 16,
-    paddingLeft: 5
+    lineHeight: 16
   }
 });

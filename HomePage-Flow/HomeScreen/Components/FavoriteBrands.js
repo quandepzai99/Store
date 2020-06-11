@@ -90,7 +90,6 @@ export default function FavoriteBrands() {
 const styles = StyleSheet.create({
   container: {
     top: 30,
-    marginLeft: 5
   },
   scrollStyle: {
     marginTop: 20,
@@ -102,7 +101,7 @@ const styles = StyleSheet.create({
     shadowRadius: 10,
     shadowOpacity: 1,
     alignItems: "center",
-    marginLeft : 5
+    marginLeft : 10
   },
   logo_icon: {
     width: 72,
@@ -136,6 +135,5 @@ const styles = StyleSheet.create({
     fontSize: 12,
     fontWeight: "500",
     lineHeight: 16,
-    paddingLeft: 5
   }
 });
