@@ -37,10 +37,10 @@ function Item({ item }) {
     <TouchableOpacity style={styles.itemProduct}>
       <Image source={item.image} style={{ alignSelf: "center" }} />
       <Text style={styles.desc}>{item.desc}</Text>
-      <View
-        style={{
-          flexDirection: "row",
-          justifyContent: "space-between"
+      <View style={{
+              flexDirection: "row",
+              justifyContent: "space-between",
+              top: 13,
         }}>
         <Text style={styles.price}>{item.price}</Text>
         <TouchableOpacity style={styles.plus}>
@@ -62,7 +62,7 @@ export default function Product() {
         <Text style={styles.title}>Mua sắm với UrBox</Text>
         <Text style={styles.xemTtC}>Xem tất cả</Text>
       </View>
-      <View style={{ height: 280 }}>
+      <View style={{ height: 300 }}>
         <FlatList
           data={proData}
           renderItem={Item}
@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
   itemProduct: {
     justifyContent: "center",
     top: 10,
-    width: (174 / 414) * Dimensions.get("screen").width,
+    width: (180 / 414) * Dimensions.get("screen").width,
     height: (264 / 736) * Dimensions.get("screen").height,
     paddingTop: 17,
     marginLeft: 16,
@@ -111,7 +111,8 @@ const styles = StyleSheet.create({
     fontSize: (15 / 736) * Dimensions.get("screen").height,
     lineHeight: (18 / 736) * Dimensions.get("screen").height,
     letterSpacing: 0,
-    padding: 12,
+    paddingTop: 22,
+    paddingLeft: 10,
     textAlign: "left",
     justifyContent: "center",
     color: colors.greyishBrown
@@ -125,7 +126,7 @@ const styles = StyleSheet.create({
     fontStyle: "normal",
     lineHeight: 17,
     paddingLeft: 12,
-    paddingTop: 10,
+    paddingTop: 15,
     color: colors.velvet
   },
   xemTtC: {
