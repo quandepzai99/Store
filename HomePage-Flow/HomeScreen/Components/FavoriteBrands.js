@@ -78,7 +78,7 @@ export default function FavoriteBrands() {
         data={brands}
         renderItem={Item}
         style={{
-          padding: 10
+          paddingBottom : 5
         }}
         keyExtractor={(item, index) => index.toString()}
       />
@@ -88,12 +88,11 @@ export default function FavoriteBrands() {
 
 const styles = StyleSheet.create({
   container: {
-    top: 30
+    top: 30,
+    marginLeft: 5
   },
   scrollStyle: {
     marginTop: 20,
-    width: 112,
-    height: 104,
     shadowColor: "rgba(22, 60, 132, 0.16)",
     shadowOffset: {
       width: 0,
@@ -101,7 +100,8 @@ const styles = StyleSheet.create({
     },
     shadowRadius: 10,
     shadowOpacity: 1,
-    alignItems: "center"
+    alignItems: "center",
+    marginRight: 3,
   },
   logo_icon: {
     width: 72,

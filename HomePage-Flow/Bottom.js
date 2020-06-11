@@ -7,15 +7,15 @@ import images from "../Common/images";
 const Tab = createBottomTabNavigator();
 function Voucher() {
   return (
-    <View>
+    <View style={styles.itemContent}>
       <Image source={images.icon_voucher} />
-      <Text style={{ backgroundColor: "red" }}>Voucher</Text>
+      <Text>Voucher</Text>
     </View>
   );
 }
 function Wallet() {
   return (
-    <View>
+    <View style={styles.itemContent}>
       <Image source={images.icon_wallet} />
       <Text>Wallet</Text>
     </View>
@@ -23,7 +23,7 @@ function Wallet() {
 }
 function Account() {
   return (
-    <View>
+    <View style={styles.itemContent}>
       <Image source={images.icon_account} />
       <Text>Account</Text>
     </View>
@@ -37,12 +37,7 @@ export default function Bottom() {
         component={HomeScreen}
         options={{
           tabBarLabel: "Home",
-          tabBarIcon: ({}) => (
-            <Image
-              source={images.icon_home}
-              style={{ justifyContent: "center", alignItems: "center" }}
-            />
-          )
+          tabBarIcon: ({}) => <Image source={images.icon_home} />
         }}
       />
       <Tab.Screen
@@ -50,12 +45,7 @@ export default function Bottom() {
         component={Voucher}
         options={{
           tabBarLabel: "Voucher",
-          tabBarIcon: ({}) => (
-            <Image
-              source={images.icon_voucher}
-              style={{ justifyContent: "center", alignItems: "center" }}
-            />
-          )
+          tabBarIcon: ({}) => <Image source={images.icon_voucher} />
         }}
       />
       <Tab.Screen
@@ -63,12 +53,7 @@ export default function Bottom() {
         component={Wallet}
         options={{
           tabBarLabel: "Wallet",
-          tabBarIcon: ({}) => (
-            <Image
-              source={images.icon_wallet}
-              style={{ justifyContent: "center", alignItems: "center" }}
-            />
-          )
+          tabBarIcon: ({}) => <Image source={images.icon_wallet} />
         }}
       />
       <Tab.Screen
@@ -76,12 +61,7 @@ export default function Bottom() {
         component={Account}
         options={{
           tabBarLabel: "Account",
-          tabBarIcon: ({}) => (
-            <Image
-              source={images.icon_account}
-              style={{ justifyContent: "center", alignItems: "center" }}
-            />
-          )
+          tabBarIcon: ({}) => <Image source={images.icon_account} />
         }}
       />
     </Tab.Navigator>
@@ -93,5 +73,10 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "red"
+  },
+  itemContent: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center"
   }
 });

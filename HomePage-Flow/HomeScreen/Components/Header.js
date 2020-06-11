@@ -37,7 +37,7 @@ export default function Header() {
               </View>
             </View>
             <View style={styles.viewBalance}>
-              <Text style={styles.textBalance}>20.00000</Text>
+              <Text style={styles.textBalance}>2.400.000đ</Text>
             </View>
           </TouchableOpacity>
           <View style={styles.viewAddCardTouch}>

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
-import { colors } from "../../../Styles";
+import colors from "../../../colors";
 import images from "../../../Common/images";
 import SmoothPinCodeInput from "react-native-smooth-pincode-input";
 import { navigationRef } from "../../RootNavigation";
@@ -149,6 +149,6 @@ const styles = StyleSheet.create({
     lineHeight: 24,
     letterSpacing: 0,
     textAlign: "left",
-    color: colors.blueyGrey
+    color: colors.blueGrey
   }
 });

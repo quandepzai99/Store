@@ -50,8 +50,7 @@ function Item({ item }) {
           height: 112
         }}
       />
-      <View
-        style={styles.iconStyle}>
+      <View style={styles.iconStyle}>
         <Image
           resizeMode="contain"
           source={item.image}
@@ -97,7 +96,7 @@ function ItemList() {
   );
 }
 
-export default function BottomTabView() {
+export default function ContentTabView() {
   return (
     <ScrollableTabView
       initialPage={0}
@@ -124,28 +123,29 @@ const styles = StyleSheet.create({
     },
     shadowRadius: 10,
     shadowOpacity: 1,
-    alignItems: "center"
+    alignItems: "center",
+    marginRight: 3
   },
   tabView: {
     flex: 1,
-    padding: 10,
+    marginLeft: 5,
     backgroundColor: "rgba(0,0,0,0.01)"
   },
-    iconStyle : {
-        width: 72,
-        height: 72,
-        borderRadius: 38,
-        backgroundColor: "white",
-        alignItems: "center",
-        justifyContent: "center",
-        top: -5,
-        shadowColor: "rgba(22, 60, 132, 0.1)",
-        shadowOffset: {
-            width: 0,
-            height: 3
-        },
-        shadowRadius: 10,
-        shadowOpacity: 1,
-        position: "absolute"
-    }
+  iconStyle: {
+    width: 72,
+    height: 72,
+    borderRadius: 38,
+    backgroundColor: "white",
+    alignItems: "center",
+    justifyContent: "center",
+    top: -5,
+    shadowColor: "rgba(22, 60, 132, 0.1)",
+    shadowOffset: {
+      width: 0,
+      height: 3
+    },
+    shadowRadius: 10,
+    shadowOpacity: 1,
+    position: "absolute"
+  }
 });

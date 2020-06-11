@@ -1,59 +1,76 @@
-import React, {Component} from 'react';
-import {View, StyleSheet, Text, Image, FlatList, TouchableOpacity} from "react-native";
+import React from "react";
+import {
+  View,
+  StyleSheet,
+  Text,
+  Image,
+  FlatList,
+  TouchableOpacity
+} from "react-native";
 import images from "../../../Common/images";
-import {colors} from "../../../Styles";
+import colors from "../../../colors";
 
 const proData = [
   {
     image: images.pro1,
-    desc: 'Tay Cầm Microsoft Xbox One S (Màu…',
-    price: '200.000đ',
+    desc: "Tay Cầm Microsoft Xbox One S (Màu…",
+    price: "200.000đ",
     plus: images.plus1
   },
   {
     image: images.pro2,
-    desc: 'Tay Cầm Microsoft Xbox One S (Màu…',
-    price: '200.000đ',
+    desc: "Tay Cầm Microsoft Xbox One S (Màu…",
+    price: "200.000đ",
     plus: images.plus1
   },
   {
     image: images.pro2,
-    desc: 'Tay Cầm Microsoft Xbox One S (Màu…',
-    price: '200.000đ',
+    desc: "Tay Cầm Microsoft Xbox One S (Màu…",
+    price: "200.000đ",
     plus: images.plus1
   }
-]
+];
 
-function Item({item}) {
-  return(
+function Item({ item }) {
+  return (
     <TouchableOpacity style={styles.itemProduct}>
-      <Image source={item.image}/>
+      <Image source={item.image} />
       <Text style={styles.desc}>{item.desc}</Text>
-      <View style={{flexDirection: 'row',justifyContent: 'space-between', alignItems: 'center', backgroundColor: 'red'}}>
+      <View
+        style={{
+          flexDirection: "row",
+          justifyContent: "space-between",
+          alignItems: "center"
+        }}>
         <Text style={styles.price}>{item.price}</Text>
         <TouchableOpacity style={styles.plus}>
-          <Image source={item.plus}/>
+          <Image source={item.plus} />
         </TouchableOpacity>
       </View>
     </TouchableOpacity>
-  )
+  );
 }
 
-export default function Product(){
+export default function Product() {
   return (
     <View style={styles.container}>
-      <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
+      <View
+        style={{
+          flexDirection: "row",
+          justifyContent: "space-between",
+          alignItems: "center"
+        }}>
         <Text style={styles.title}>Mua sắm với UrBox</Text>
         <Text style={styles.xemTtC}>Xem tất cả</Text>
       </View>
-      <View style={{height: 280,}}>
-          <FlatList
-            data={proData}
-            renderItem={Item}
-            horizontal
-            showsHorizontalScrollIndicator={false}
-            keybroardShouldPersisTaps={'always'}
-          />
+      <View style={{ height: 280 }}>
+        <FlatList
+          data={proData}
+          renderItem={Item}
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          keybroardShouldPersisTaps={"always"}
+        />
       </View>
     </View>
   );
@@ -61,8 +78,7 @@ export default function Product(){
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-
+    flex: 1
   },
   title: {
     fontSize: 24,
@@ -75,8 +91,9 @@ const styles = StyleSheet.create({
     color: colors.velvet
   },
   itemProduct: {
+    alignItems: "center",
+    justifyContent: "center",
     top: 10,
-
     width: 174,
     height: 264,
     paddingTop: 17,
@@ -94,17 +111,18 @@ const styles = StyleSheet.create({
   },
   desc: {
     fontSize: 15,
-    lineHeight: 15,
+    lineHeight: 20,
+    letterSpacing: 0,
     padding: 15,
-
+    textAlign: "left",
     color: colors.greyishBrown
   },
   price: {
-    textAlign: 'left',
     fontSize: 17,
     fontWeight: "500",
     fontStyle: "normal",
     lineHeight: 18,
+
     color: colors.velvet
   },
   xemTtC: {
@@ -116,9 +134,10 @@ const styles = StyleSheet.create({
     color: colors.deepSkyBlue
   },
   plus: {
-    padding: 10,
+    padding: 13,
+    left: 30,
     backgroundColor: colors.tangerine,
     borderTopLeftRadius: 12,
-    borderBottomRightRadius: 12,
+    borderBottomRightRadius: 12
   }
-})
+});
