@@ -5,7 +5,7 @@ import colors from "../../../colors";
 export default function Translate(props) {
   const { lang, onChangeLang } = props;
   const labelActiveStyle = {
-    color: "gray"
+    color: colors.blueGrey
   };
 
   const bgInactiveStyle = {
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
   touchStyle: {
     width: 76,
     height: 24,
-    backgroundColor: colors.paleGray,
+    backgroundColor: colors.paleGreyFour,
     flexDirection: "row",
     justifyContent: "space-around",
     alignItems: "center",
