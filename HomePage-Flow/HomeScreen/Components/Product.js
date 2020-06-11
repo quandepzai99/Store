@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
     justifyContent: "center"
   },
   itemProduct: {
-    justifyContent: "center",
+    justifyContent: "space-between",
     top: 10,
     width: (180 / 414) * Dimensions.get("screen").width,
     height: (264 / 736) * Dimensions.get("screen").height,
@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
     fontSize: (15 / 736) * Dimensions.get("screen").height,
     lineHeight: (18 / 736) * Dimensions.get("screen").height,
     letterSpacing: 0,
-    paddingTop: 22,
+    paddingTop: 20,
     paddingLeft: 10,
     textAlign: "left",
     justifyContent: "center",
@@ -136,7 +136,6 @@ const styles = StyleSheet.create({
     borderBottomRightRadius: 12,
     flexDirection: "row",
     justifyContent: "space-between",
-    top: 13,
   },
   plus: {
     padding: 13,
