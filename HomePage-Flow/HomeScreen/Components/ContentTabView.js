@@ -14,6 +14,7 @@ import ScrollableTabView, {
   ScrollableTabBar
 } from "react-native-scrollable-tab-view";
 import images from "../../../Common/images";
+import colors from "../../../colors";
 
 const brands = [
   {
@@ -46,28 +47,30 @@ function Item({ item }) {
         source={images.frame_item}
         style={{
           width: (110 / 414) * Dimensions.get("screen").width,
-          height: 112
+          height: 112,
         }}
       />
-      <View style={styles.iconStyle}>
+      <View style={styles.logo_icon}>
         <Image
           resizeMode="contain"
           source={item.image}
           style={{ borderRadius: 38 }}
         />
       </View>
-      <Text
-        adjustsFontSizeToFit={true}
-        allowFontScaling={true}
+      <View
         style={{
-          top: -40,
-          textAlign: "left",
-          fontSize: 12,
-          fontWeight: "500",
-          lineHeight: 16
+          width: (110 / 414) * Dimensions.get("screen").width,
+          justifyContent: "center",
+          marginTop: -45,
+          marginBottom: 10
         }}>
-        {item.name}
-      </Text>
+        <Text
+          adjustsFontSizeToFit={true}
+          allowFontScaling={true}
+          style={styles.icon_name}>
+          {item.name}
+        </Text>
+      </View>
     </TouchableOpacity>
   );
 }
@@ -122,7 +125,7 @@ const styles = StyleSheet.create({
     shadowRadius: 10,
     shadowOpacity: 1,
     alignItems: "center",
-    marginRight: 3
+    marginLeft : 5
   },
   tabView: {
     flex: 1,
@@ -145,5 +148,43 @@ const styles = StyleSheet.create({
     shadowRadius: 10,
     shadowOpacity: 1,
     position: "absolute"
+  },
+  container: {
+    top: 30,
+    marginLeft: 5
+  },
+  logo_icon: {
+    width: 72,
+    height: 72,
+    borderRadius: 38,
+    backgroundColor: "white",
+    alignItems: "center",
+    justifyContent: "center",
+    top: -5,
+    shadowColor: "rgba(22, 60, 132, 0.1)",
+    shadowOffset: {
+      width: 0,
+      height: 3
+    },
+    shadowRadius: 10,
+    shadowOpacity: 1,
+    position: "absolute"
+  },
+  HeaderFavoriteBrand: {
+    fontSize: 24,
+    fontWeight: "normal",
+    fontStyle: "normal",
+    lineHeight: 24,
+    letterSpacing: 0,
+    textAlign: "left",
+    color: colors.velvet,
+    marginLeft: 16
+  },
+  icon_name: {
+    textAlign: "center",
+    fontSize: 12,
+    fontWeight: "500",
+    lineHeight: 16,
+    paddingLeft: 5
   }
 });

@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
     shadowRadius: 10,
     shadowOpacity: 1,
     alignItems: "center",
-    marginRight: 3
+    marginLeft : 5
   },
   logo_icon: {
     width: 72,
