@@ -49,10 +49,13 @@ export default class Form extends Component {
             color: colors.velvet
           }}
           textStyleFocused={{
-            color: "crimson"
+            color: "red"
+          }}
+          cellStyleFocused={{
+            borderColor : colors.blueGrey
           }}
           value={code}
-          maskDelay={1000}
+          maskDelay={500}
           password={true}
           autoFocus={true}
           codeLength={6}
