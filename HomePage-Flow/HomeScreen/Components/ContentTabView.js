@@ -124,7 +124,7 @@ const styles = StyleSheet.create({
     shadowRadius: 10,
     shadowOpacity: 1,
     alignItems: "center",
-    marginLeft: 10
+    marginLeft: 16
   },
   tabView: {
     flex: 1,

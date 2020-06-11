@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
     shadowRadius: 10,
     shadowOpacity: 1,
     alignItems: "center",
-    marginLeft : 10
+    marginLeft: 16
   },
   logo_icon: {
     width: 72,
@@ -134,6 +134,6 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontSize: 12,
     fontWeight: "500",
-    lineHeight: 16,
+    lineHeight: 16
   }
 });

@@ -60,12 +60,12 @@ export default function Product() {
       <View
         style={{
           flexDirection: "row",
-          justifyContent: "space-around"
+          justifyContent: "space-between"
         }}>
         <Text style={styles.title}>Mua sắm với UrBox</Text>
         <Text style={styles.xemTtC}>Xem tất cả</Text>
       </View>
-      <View style={{ height: 300/736*Dimensions.get("screen").height }}>
+      <View style={{ height: (300 / 736) * Dimensions.get("screen").height }}>
         <FlatList
           data={proData}
           renderItem={Item}
@@ -90,7 +90,8 @@ const styles = StyleSheet.create({
     letterSpacing: 0,
     textAlign: "left",
     color: colors.velvet,
-    justifyContent: "center"
+    justifyContent: "center",
+    marginLeft: 16
   },
   itemProduct: {
     justifyContent: "center",
@@ -136,7 +137,8 @@ const styles = StyleSheet.create({
     fontStyle: "normal",
     lineHeight: 30,
     color: colors.deepSkyBlue,
-    textAlign: "center"
+    textAlign: "center",
+    marginRight: 16
   },
   box: {
     borderBottomLeftRadius: 12,
