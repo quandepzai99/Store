@@ -1,20 +1,15 @@
-import React, {Component} from 'react';
-import {View, TouchableOpacity, Text, StyleSheet, Image} from 'react-native';
+import React, { Component } from "react";
+import { View, TouchableOpacity, StyleSheet, Image } from "react-native";
 import colors from "../../../colors";
 import images from "../../../Common/images";
 
-
-
-
 export default class Chat extends Component {
-
-
   render() {
     return (
-      <View style={{alignItems: 'flex-end', marginRight: 16}}>
+      <View style={{ alignItems: "flex-end", marginRight: 16 }}>
         <TouchableOpacity style={styles.container}>
           <View style={styles.ellipse608}>
-            <Image source={images.chat} style={styles.chat}/>
+            <Image source={images.chat} style={styles.chat} />
           </View>
         </TouchableOpacity>
       </View>
@@ -24,17 +19,17 @@ export default class Chat extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
     bottom: -60,
     width: 76,
     height: 76,
     borderRadius: 40,
-    backgroundColor: "rgba(114, 13, 93, 0.1)",
+    backgroundColor: "rgba(114, 13, 93, 0.1)"
   },
 
   ellipse608: {
-    alignItems: 'center',
+    alignItems: "center",
     margin: 10,
     borderRadius: 30,
     backgroundColor: "#ffffff",
@@ -45,4 +40,4 @@ const styles = StyleSheet.create({
   chat: {
     margin: 14
   }
-})
+});

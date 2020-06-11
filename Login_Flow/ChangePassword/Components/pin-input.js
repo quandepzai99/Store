@@ -1,6 +1,7 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
 import SmoothPinCodeInput from "react-native-smooth-pincode-input";
+import colors from "../../../colors"
 
 export default class PinInput extends React.Component {
   state = {
@@ -76,7 +77,7 @@ const styles = StyleSheet.create({
   },
   cellStyle: {
     borderRadius: 24,
-    borderColor: "black",
+    borderColor: colors.paleGreyFour,
     borderWidth: 1,
     marginLeft: 12
   }

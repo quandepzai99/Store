@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import colors from "../../../colors"
 
 const screenResetPw = StyleSheet.create({
   container: {
@@ -77,7 +78,8 @@ const screenResetPw = StyleSheet.create({
     zIndex: 1,
     textAlign: "left",
     backgroundColor: "white",
-    fontSize: 15
+    fontSize: 15,
+    color: colors.blueGrey
   },
   viewBlock2box2: {
 
@@ -95,7 +97,9 @@ const screenResetPw = StyleSheet.create({
     textAlign: "left",
     backgroundColor: "white",
     fontSize: 15,
-    zIndex: 1
+    zIndex: 1,
+    color: colors.blueGrey
+
   },
   goBackButton: {
     fontSize: 15,
