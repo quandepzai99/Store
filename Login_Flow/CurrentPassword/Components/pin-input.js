@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
   },
   cellStyle: {
     borderRadius: 24,
-    borderColor: "black",
+    borderColor: colors.paleGreyFour,
     borderWidth: 1,
     marginLeft: 12
   }
