@@ -32,9 +32,8 @@ const styles = StyleSheet.create({
   },
   iconBalanceWitness: {
     marginLeft: 16,
-    marginTop: 20,
-    flexDirection: "row",
-    top: 10
+
+    flexDirection: "row"
   },
   bigWitness: {
     width: 32,
@@ -43,7 +42,7 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(114, 13, 93, 0.5)",
     borderRadius: 24,
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "center"
   },
   smallWitness: {
     width: 24,
@@ -53,20 +52,17 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center"
   },
-  viewBalance: {
-    marginLeft: 8,
-    height: 38/736*Dimensions.get("screen").height,
-    alignItems: "center",
-    justifyContent: "center"
-  },
   textBalance: {
-    fontSize: 32/736*Dimensions.get("screen").height,
+    fontSize: (32 / 736) * Dimensions.get("screen").height,
     fontWeight: "bold",
     fontStyle: "normal",
-    lineHeight: 32/736*Dimensions.get("screen").height,
+    lineHeight: (36 / 736) * Dimensions.get("screen").height,
     letterSpacing: 0,
     textAlign: "left",
     color: colors.golden,
+    marginLeft: 8,
+    alignItems: "center",
+    justifyContent: "center"
   },
   viewAddCardTouch: {
     height: (32 / 736) * Dimensions.get("screen").height,
@@ -75,12 +71,11 @@ const styles = StyleSheet.create({
     borderStyle: "solid",
     borderWidth: 1,
     borderColor: colors.golden,
-    marginTop: 20,
+
     marginRight: 16,
     alignItems: "center",
     justifyContent: "center",
-    top: 10,
-    marginLeft : 10
+    marginLeft: 10
   },
   buttonAddCardTouch: {
     flexDirection: "row",

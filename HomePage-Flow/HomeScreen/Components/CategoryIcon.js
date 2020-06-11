@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
   },
   category: {
     flex: 1,
-    marginHorizontal: 15,
+    marginHorizontal: 10,
     alignItems: "center"
   },
   text: {

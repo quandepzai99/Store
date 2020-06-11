@@ -5,7 +5,7 @@ import {
   View,
   TouchableOpacity,
   Image,
-  Text
+  Text, Dimensions
 } from "react-native";
 import styles from "./StyleSheet";
 
@@ -16,7 +16,7 @@ export default function Header() {
     <View style={styles.container}>
       <ImageBackground
         source={images.HeaderBackground}
-        style={{ width: "100%", height: 220 }}>
+        style={{ width: "100%", height: 220/736*Dimensions.get("screen").height }}>
         <View style={styles.searchField}>
           <Image source={images.icon_search} style={styles.searchIcon} />
           <TextInput
@@ -28,7 +28,8 @@ export default function Header() {
         <View
           style={{
             flexDirection: "row",
-            justifyContent: "space-between"
+            justifyContent: "space-between",
+            marginTop: 25
           }}>
           <TouchableOpacity style={styles.iconBalanceWitness}>
             <View style={styles.bigWitness}>
@@ -36,9 +37,8 @@ export default function Header() {
                 <Image source={images.witness} />
               </View>
             </View>
-            <View style={styles.viewBalance}>
-              <Text style={styles.textBalance}>2.400.000đ</Text>
-            </View>
+
+            <Text style={styles.textBalance}>2.400.000đ</Text>
           </TouchableOpacity>
           <View style={styles.viewAddCardTouch}>
             <TouchableOpacity style={styles.buttonAddCardTouch}>

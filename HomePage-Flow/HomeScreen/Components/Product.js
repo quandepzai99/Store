@@ -5,7 +5,8 @@ import {
   Text,
   Image,
   FlatList,
-  TouchableOpacity
+  TouchableOpacity,
+  Dimensions
 } from "react-native";
 import images from "../../../Common/images";
 import colors from "../../../colors";
@@ -94,12 +95,12 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     top: 10,
-    width: 174,
-    height: 264,
+    width: (174 / 414) * Dimensions.get("screen").width,
+    height: (264 / 736) * Dimensions.get("screen").height,
     paddingTop: 17,
     marginHorizontal: 17,
     borderRadius: 12,
-    backgroundColor: "#ffffff",
+    backgroundColor: "red",
     shadowColor: "rgba(22, 60, 132, 0.16)",
     shadowOffset: {
       width: 0,
@@ -111,17 +112,18 @@ const styles = StyleSheet.create({
   },
   desc: {
     fontSize: 15,
-    lineHeight: 20,
+    lineHeight: 15,
     letterSpacing: 0,
-    padding: 15,
+    padding: 10,
     textAlign: "left",
+    justifyContent: "center",
     color: colors.greyishBrown
   },
   price: {
     fontSize: 17,
     fontWeight: "500",
     fontStyle: "normal",
-    lineHeight: 18,
+    lineHeight: 17,
 
     color: colors.velvet
   },
