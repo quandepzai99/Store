@@ -23,7 +23,7 @@ export default class Form extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      Reds: colors.blueyGrey
+      Reds: colors.blueGrey
     };
   }
 
@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
     textAlign: "left",
     color: colors.greyishBrown,
     height: 60,
-    borderColor: colors.blueyGrey,
+    borderColor: colors.paleGreyFour,
     borderWidth: 1,
     marginTop: 33,
     borderRadius: 12,
@@ -138,7 +138,7 @@ const styles = StyleSheet.create({
     fontStyle: "normal",
     lineHeight: 24,
     letterSpacing: 0,
-    color: colors.blueyGrey
+    color: colors.blueGrey
 
   },
   ellipse529: {

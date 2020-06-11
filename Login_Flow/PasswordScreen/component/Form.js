@@ -29,7 +29,7 @@ export default class Form extends Component {
             borderRadius: 24,
             width: 28,
             height: 28,
-            borderColor: "#000",
+            borderColor: colors.paleGreyFour,
             backgroundColor: "#fff",
             marginTop: 36,
             marginLeft: 16
