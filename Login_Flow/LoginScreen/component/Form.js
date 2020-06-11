@@ -36,7 +36,7 @@ export default class Form extends Component {
       });
     } else {
       this.setState({
-        Reds: "white"
+        Reds: colors.blueGrey
       });
     }
   };

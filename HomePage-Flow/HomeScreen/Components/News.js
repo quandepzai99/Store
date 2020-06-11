@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   Image
 } from "react-native";
-import { colors } from "../../../Styles";
+import colors  from "../../../colors";
 import images from "../../../Common/images";
 import DataTimePicker from "@react-native-community/datetimepicker";
 import Page1 from "./Detail/Page1";

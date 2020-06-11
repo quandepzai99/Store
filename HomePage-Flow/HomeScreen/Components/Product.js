@@ -1,59 +1,76 @@
-import React, {Component} from 'react';
-import {View, StyleSheet, Text, Image, FlatList, TouchableOpacity} from "react-native";
+import React from "react";
+import {
+  View,
+  StyleSheet,
+  Text,
+  Image,
+  FlatList,
+  TouchableOpacity
+} from "react-native";
 import images from "../../../Common/images";
-import {colors} from "../../../Styles";
+import colors from "../../../colors";
 
 const proData = [
   {
     image: images.pro1,
-    desc: 'Tay Cầm Microsoft Xbox One S (Màu…',
-    price: '200.000đ',
+    desc: "Tay Cầm Microsoft Xbox One S (Màu…",
+    price: "200.000đ",
     plus: images.plus1
   },
   {
     image: images.pro2,
-    desc: 'Tay Cầm Microsoft Xbox One S (Màu…',
-    price: '200.000đ',
+    desc: "Tay Cầm Microsoft Xbox One S (Màu…",
+    price: "200.000đ",
     plus: images.plus1
   },
   {
     image: images.pro2,
-    desc: 'Tay Cầm Microsoft Xbox One S (Màu…',
-    price: '200.000đ',
+    desc: "Tay Cầm Microsoft Xbox One S (Màu…",
+    price: "200.000đ",
     plus: images.plus1
   }
-]
+];
 
-function Item({item}) {
-  return(
+function Item({ item }) {
+  return (
     <TouchableOpacity style={styles.itemProduct}>
       <Image source={item.image} />
       <Text style={styles.desc}>{item.desc}</Text>
-      <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
+      <View
+        style={{
+          flexDirection: "row",
+          justifyContent: "space-between",
+          alignItems: "center"
+        }}>
         <Text style={styles.price}>{item.price}</Text>
         <TouchableOpacity style={styles.plus}>
-          <Image source={item.plus}/>
+          <Image source={item.plus} />
         </TouchableOpacity>
       </View>
     </TouchableOpacity>
-  )
+  );
 }
 
-export default function Product(){
+export default function Product() {
   return (
     <View style={styles.container}>
-      <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
+      <View
+        style={{
+          flexDirection: "row",
+          justifyContent: "space-between",
+          alignItems: "center"
+        }}>
         <Text style={styles.title}>Mua sắm với UrBox</Text>
         <Text style={styles.xemTtC}>Xem tất cả</Text>
       </View>
-      <View style={{height: 280}}>
-          <FlatList
-            data={proData}
-            renderItem={Item}
-            horizontal
-            showsHorizontalScrollIndicator={false}
-            keybroardShouldPersisTaps={'always'}
-          />
+      <View style={{ height: 280 }}>
+        <FlatList
+          data={proData}
+          renderItem={Item}
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          keybroardShouldPersisTaps={"always"}
+        />
       </View>
     </View>
   );
@@ -74,8 +91,8 @@ const styles = StyleSheet.create({
     color: colors.velvet
   },
   itemProduct: {
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
     top: 10,
     width: 174,
     height: 264,
@@ -93,12 +110,11 @@ const styles = StyleSheet.create({
     elevation: 5
   },
   desc: {
-
     fontSize: 15,
     lineHeight: 20,
     letterSpacing: 0,
     padding: 15,
-    textAlign: 'left',
+    textAlign: "left",
     color: colors.greyishBrown
   },
   price: {
@@ -122,6 +138,6 @@ const styles = StyleSheet.create({
     left: 30,
     backgroundColor: colors.tangerine,
     borderTopLeftRadius: 12,
-    borderBottomRightRadius: 12,
+    borderBottomRightRadius: 12
   }
-})
+});

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 import images from "../../../Common/images";
-import { colors } from "../../../Styles";
+import colors from "../../../colors";
 
 export default class CategoryIcon extends Component {
   render() {
@@ -30,7 +30,7 @@ export default class CategoryIcon extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop : -50,
+    marginTop: -50,
     flexDirection: "row"
   },
   category: {
