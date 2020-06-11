@@ -6,7 +6,6 @@ import PasswordScreen from "./Login_Flow/PasswordScreen";
 import { navigationRef } from "./Login_Flow/RootNavigation";
 import CurrentPassword from "./Login_Flow/CurrentPassword";
 import ChangePassword from "./Login_Flow/ChangePassword";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Inbox from "./Login_Flow/HelpScreen/Inbox";
 import Page1 from "./HomePage-Flow/HomeScreen/Components/Detail/Page1";
 import Page2 from "./HomePage-Flow/HomeScreen/Components/Detail/Page2";
