@@ -10,7 +10,6 @@ import {
 } from "react-native";
 import images from "../../../Common/images";
 import colors from "../../../colors";
-
 const brands = [
   {
     image: images.logo_urbox,
@@ -34,7 +33,6 @@ const brands = [
   },
   { image: images.logo_dienmayxanh, name: "Điện máy xanh" }
 ];
-
 function Item({ item }) {
   return (
     <TouchableOpacity style={styles.scrollStyle}>
@@ -52,21 +50,24 @@ function Item({ item }) {
           style={{ borderRadius: 38 }}
         />
       </View>
-      <Text
-        adjustsFontSizeToFit={true}
-        allowFontScaling={true}
+      <View
         style={{
-          top: -40,
-          textAlign: "left",
-          fontSize: 12,
-          fontWeight: "500",
-          lineHeight: 16
+          width: (110 / 414) * Dimensions.get("screen").width,
+          justifyContent: "center",
+          marginTop: -45,
+          marginBottom: 10
         }}>
-        {item.name}
-      </Text>
+        <Text
+          adjustsFontSizeToFit={true}
+          allowFontScaling={true}
+          style={styles.icon_name}>
+          {item.name}
+        </Text>
+      </View>
     </TouchableOpacity>
   );
 }
+
 export default function FavoriteBrands() {
   return (
     <View style={styles.container}>
@@ -78,7 +79,7 @@ export default function FavoriteBrands() {
         data={brands}
         renderItem={Item}
         style={{
-          paddingBottom : 5
+          paddingBottom: 5
         }}
         keyExtractor={(item, index) => index.toString()}
       />
@@ -101,7 +102,7 @@ const styles = StyleSheet.create({
     shadowRadius: 10,
     shadowOpacity: 1,
     alignItems: "center",
-    marginRight: 3,
+    marginLeft : 5
   },
   logo_icon: {
     width: 72,
@@ -129,5 +130,12 @@ const styles = StyleSheet.create({
     textAlign: "left",
     color: colors.velvet,
     marginLeft: 16
+  },
+  icon_name: {
+    textAlign: "center",
+    fontSize: 12,
+    fontWeight: "500",
+    lineHeight: 16,
+    paddingLeft: 5
   }
 });

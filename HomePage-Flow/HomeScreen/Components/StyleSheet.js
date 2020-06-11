@@ -5,14 +5,14 @@ const screenWidth = Dimensions.get("window").width;
 const styles = StyleSheet.create({
   container: {
     alignItems: "center",
-    justifyContent : "space-around",
+    justifyContent: "space-around"
   },
   searchField: {
     marginTop: 30,
     flexDirection: "row",
-    alignItems: 'center',
+    alignItems: "center",
     alignSelf: "center",
-    top : 10
+    top: 10
   },
   TextInput: {
     width: "90%",
@@ -32,8 +32,8 @@ const styles = StyleSheet.create({
   },
   iconBalanceWitness: {
     marginLeft: 16,
-    marginTop: 20,
-    flexDirection: "row", top : 10
+
+    flexDirection: "row"
   },
   bigWitness: {
     width: 32,
@@ -52,35 +52,30 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center"
   },
-  viewBalance: {
+  textBalance: {
+    fontSize: (32 / 736) * Dimensions.get("screen").height,
+    fontWeight: "bold",
+    fontStyle: "normal",
+    lineHeight: (36 / 736) * Dimensions.get("screen").height,
+    letterSpacing: 0,
+    textAlign: "left",
+    color: colors.golden,
     marginLeft: 8,
-    height: 38,
     alignItems: "center",
     justifyContent: "center"
   },
-  textBalance: {
-    fontSize: 32,
-    fontWeight: "bold",
-    fontStyle: "normal",
-    lineHeight: 32,
-    letterSpacing: 0,
-    textAlign: "left",
-    alignItems: "center",
-    justifyContent: "center",
-    color: colors.golden
-  },
   viewAddCardTouch: {
-    height: 32,
+    height: (32 / 736) * Dimensions.get("screen").height,
     borderRadius: 16,
     backgroundColor: "rgba(247, 190, 0, 0.2)",
     borderStyle: "solid",
     borderWidth: 1,
     borderColor: colors.golden,
-    marginTop: 20,
+
     marginRight: 16,
     alignItems: "center",
     justifyContent: "center",
-    top: 10
+    marginLeft: 10
   },
   buttonAddCardTouch: {
     flexDirection: "row",
@@ -102,8 +97,7 @@ const styles = StyleSheet.create({
     width: (screenWidth * 382) / 414,
     height: 150,
     borderRadius: 12,
-    top: -70,
-
+    top: -70
   },
   searchIcon: { width: 15, height: 15, position: "absolute", margin: 8 }
 });

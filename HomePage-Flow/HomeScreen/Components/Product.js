@@ -5,7 +5,8 @@ import {
   Text,
   Image,
   FlatList,
-  TouchableOpacity
+  TouchableOpacity,
+  Dimensions
 } from "react-native";
 import images from "../../../Common/images";
 import colors from "../../../colors";
@@ -34,13 +35,12 @@ const proData = [
 function Item({ item }) {
   return (
     <TouchableOpacity style={styles.itemProduct}>
-      <Image source={item.image} />
+      <Image source={item.image} style={{ alignSelf: "center" }} />
       <Text style={styles.desc}>{item.desc}</Text>
       <View
         style={{
           flexDirection: "row",
-          justifyContent: "space-between",
-          alignItems: "center"
+          justifyContent: "space-between"
         }}>
         <Text style={styles.price}>{item.price}</Text>
         <TouchableOpacity style={styles.plus}>
@@ -57,8 +57,7 @@ export default function Product() {
       <View
         style={{
           flexDirection: "row",
-          justifyContent: "space-between",
-          alignItems: "center"
+          justifyContent: "space-around"
         }}>
         <Text style={styles.title}>Mua sắm với UrBox</Text>
         <Text style={styles.xemTtC}>Xem tất cả</Text>
@@ -82,24 +81,23 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 24,
-    left: 16,
     fontWeight: "normal",
     fontStyle: "normal",
     lineHeight: 30,
     letterSpacing: 0,
     textAlign: "left",
-    color: colors.velvet
+    color: colors.velvet,
+    justifyContent: "center"
   },
   itemProduct: {
-    alignItems: "center",
     justifyContent: "center",
     top: 10,
-    width: 174,
-    height: 264,
+    width: (174 / 414) * Dimensions.get("screen").width,
+    height: (264 / 736) * Dimensions.get("screen").height,
     paddingTop: 17,
-    marginHorizontal: 17,
+    marginLeft: 16,
     borderRadius: 12,
-    backgroundColor: "#ffffff",
+    backgroundColor: "white",
     shadowColor: "rgba(22, 60, 132, 0.16)",
     shadowOffset: {
       width: 0,
@@ -110,32 +108,36 @@ const styles = StyleSheet.create({
     elevation: 5
   },
   desc: {
-    fontSize: 15,
-    lineHeight: 20,
+    fontSize: (15 / 736) * Dimensions.get("screen").height,
+    lineHeight: (18 / 736) * Dimensions.get("screen").height,
     letterSpacing: 0,
-    padding: 15,
+    padding: 12,
     textAlign: "left",
+    justifyContent: "center",
     color: colors.greyishBrown
   },
   price: {
+    flex: 1,
+    alignItems: "center",
+    backgroundColor: "white",
     fontSize: 17,
     fontWeight: "500",
     fontStyle: "normal",
-    lineHeight: 18,
-
+    lineHeight: 17,
+    paddingLeft: 12,
+    paddingTop: 10,
     color: colors.velvet
   },
   xemTtC: {
     fontSize: 15,
     fontWeight: "normal",
     fontStyle: "normal",
-    lineHeight: 16,
-    right: 16,
-    color: colors.deepSkyBlue
+    lineHeight: 30,
+    color: colors.deepSkyBlue,
+    textAlign: "center"
   },
   plus: {
     padding: 13,
-    left: 30,
     backgroundColor: colors.tangerine,
     borderTopLeftRadius: 12,
     borderBottomRightRadius: 12
