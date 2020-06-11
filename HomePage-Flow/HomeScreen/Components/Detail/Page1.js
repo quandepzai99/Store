@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {View, StyleSheet, Image, TouchableOpacity, Text} from "react-native";
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
 import images from "../../../../Common/images";
-import {colors} from "../../../../Styles";
+import colors from "../../../../colors";
 import {navigationRef} from "../../../../Login_Flow/RootNavigation";
 
 function navigation(name,id) {
