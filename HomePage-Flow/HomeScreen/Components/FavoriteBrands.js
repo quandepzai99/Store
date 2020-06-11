@@ -89,7 +89,7 @@ export default function FavoriteBrands() {
 
 const styles = StyleSheet.create({
   container: {
-    top: 30,
+    top: 15,
   },
   scrollStyle: {
     marginTop: 20,
