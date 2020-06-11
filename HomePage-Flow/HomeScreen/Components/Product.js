@@ -57,8 +57,7 @@ export default function Product() {
       <View
         style={{
           flexDirection: "row",
-          justifyContent: "space-between",
-          alignItems: "center"
+          justifyContent: "space-around"
         }}>
         <Text style={styles.title}>Mua sắm với UrBox</Text>
         <Text style={styles.xemTtC}>Xem tất cả</Text>
@@ -82,13 +81,13 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 24,
-    left: 16,
     fontWeight: "normal",
     fontStyle: "normal",
     lineHeight: 30,
     letterSpacing: 0,
     textAlign: "left",
-    color: colors.velvet
+    color: colors.velvet,
+    justifyContent: "center"
   },
   itemProduct: {
     justifyContent: "center",
@@ -126,16 +125,16 @@ const styles = StyleSheet.create({
     fontStyle: "normal",
     lineHeight: 17,
     paddingLeft: 12,
-    paddingTop : 10,
+    paddingTop: 10,
     color: colors.velvet
   },
   xemTtC: {
     fontSize: 15,
     fontWeight: "normal",
     fontStyle: "normal",
-    lineHeight: 16,
-    right: 16,
-    color: colors.deepSkyBlue
+    lineHeight: 30,
+    color: colors.deepSkyBlue,
+    textAlign: "center"
   },
   plus: {
     padding: 13,
