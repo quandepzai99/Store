@@ -13,7 +13,6 @@ import {
 import ScrollableTabView, {
   ScrollableTabBar
 } from "react-native-scrollable-tab-view";
-
 import images from "../../../Common/images";
 
 const brands = [
