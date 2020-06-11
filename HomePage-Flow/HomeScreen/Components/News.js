@@ -161,7 +161,7 @@ const styles = StyleSheet.create({
     fontWeight: "500",
     fontStyle: "normal",
     textAlign: "left",
-    color: colors.blueyGrey
+    color: colors.blueGrey
   },
   divider: {
     paddingTop: 5,

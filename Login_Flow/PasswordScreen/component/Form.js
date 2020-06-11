@@ -149,6 +149,6 @@ const styles = StyleSheet.create({
     lineHeight: 24,
     letterSpacing: 0,
     textAlign: "left",
-    color: colors.blueyGrey
+    color: colors.blueGrey
   }
 });

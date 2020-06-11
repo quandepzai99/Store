@@ -2,6 +2,8 @@ import React from "react";
 import { StyleSheet, View } from "react-native";
 import SmoothPinCodeInput from "react-native-smooth-pincode-input";
 import { navigationRef } from "../../RootNavigation";
+import colors from "../../../colors"
+
 
 function navigation(name) {
   navigationRef.current && navigationRef.current.navigate(name);
