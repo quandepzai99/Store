@@ -35,13 +35,12 @@ const proData = [
 function Item({ item }) {
   return (
     <TouchableOpacity style={styles.itemProduct}>
-      <Image source={item.image} />
+      <Image source={item.image} style={{ alignSelf: "center" }} />
       <Text style={styles.desc}>{item.desc}</Text>
       <View
         style={{
           flexDirection: "row",
-          justifyContent: "space-between",
-          alignItems: "center"
+          justifyContent: "space-between"
         }}>
         <Text style={styles.price}>{item.price}</Text>
         <TouchableOpacity style={styles.plus}>
@@ -92,7 +91,6 @@ const styles = StyleSheet.create({
     color: colors.velvet
   },
   itemProduct: {
-    alignItems: "center",
     justifyContent: "center",
     top: 10,
     width: (174 / 414) * Dimensions.get("screen").width,
@@ -100,7 +98,7 @@ const styles = StyleSheet.create({
     paddingTop: 17,
     marginHorizontal: 17,
     borderRadius: 12,
-    backgroundColor: "red",
+    backgroundColor: "white",
     shadowColor: "rgba(22, 60, 132, 0.16)",
     shadowOffset: {
       width: 0,
@@ -111,20 +109,24 @@ const styles = StyleSheet.create({
     elevation: 5
   },
   desc: {
-    fontSize: 15,
-    lineHeight: 15,
+    fontSize: (15 / 736) * Dimensions.get("screen").height,
+    lineHeight: (18 / 736) * Dimensions.get("screen").height,
     letterSpacing: 0,
-    padding: 10,
+    padding: 12,
     textAlign: "left",
     justifyContent: "center",
     color: colors.greyishBrown
   },
   price: {
+    flex: 1,
+    alignItems: "center",
+    backgroundColor: "white",
     fontSize: 17,
     fontWeight: "500",
     fontStyle: "normal",
     lineHeight: 17,
-
+    paddingLeft: 12,
+    paddingTop : 10,
     color: colors.velvet
   },
   xemTtC: {
@@ -137,7 +139,6 @@ const styles = StyleSheet.create({
   },
   plus: {
     padding: 13,
-    left: 30,
     backgroundColor: colors.tangerine,
     borderTopLeftRadius: 12,
     borderBottomRightRadius: 12
