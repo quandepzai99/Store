@@ -37,11 +37,7 @@ function Item({ item }) {
     <TouchableOpacity style={styles.itemProduct}>
       <Image source={item.image} style={{ alignSelf: "center" }} />
       <Text style={styles.desc}>{item.desc}</Text>
-      <View style={{
-              flexDirection: "row",
-              justifyContent: "space-between",
-              top: 13,
-        }}>
+      <View style={styles.box}>
         <Text style={styles.price}>{item.price}</Text>
         <TouchableOpacity style={styles.plus}>
           <Image source={item.plus} />
@@ -118,9 +114,7 @@ const styles = StyleSheet.create({
     color: colors.greyishBrown
   },
   price: {
-    flex: 1,
     alignItems: "center",
-    backgroundColor: "white",
     fontSize: 17,
     fontWeight: "500",
     fontStyle: "normal",
@@ -136,6 +130,13 @@ const styles = StyleSheet.create({
     lineHeight: 30,
     color: colors.deepSkyBlue,
     textAlign: "center"
+  },
+  box: {
+    borderBottomLeftRadius: 12,
+    borderBottomRightRadius: 12,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    top: 13,
   },
   plus: {
     padding: 13,
