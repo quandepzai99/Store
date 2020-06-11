@@ -65,7 +65,7 @@ export default function Product() {
         <Text style={styles.title}>Mua sắm với UrBox</Text>
         <Text style={styles.xemTtC}>Xem tất cả</Text>
       </View>
-      <View style={{ height: 300 }}>
+      <View style={{ height: 300/736*Dimensions.get("screen").height }}>
         <FlatList
           data={proData}
           renderItem={Item}
