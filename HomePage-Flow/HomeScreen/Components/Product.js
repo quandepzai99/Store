@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
     marginLeft: 16
   },
   itemProduct: {
-    justifyContent: "center",
+    justifyContent: "space-between",
     top: 10,
     width: (180 / 414) * Dimensions.get("screen").width,
     height: (264 / 736) * Dimensions.get("screen").height,
