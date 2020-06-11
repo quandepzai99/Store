@@ -56,8 +56,7 @@ export default class News extends Component {
   //   this.props.navigation.navigate(id)
   // }
 
-  _renderItem = ({ item, onSelect, id }) => {
-    const { date } = this.state;
+  _renderItem = ({ item }) => {
     return (
       <TouchableOpacity
         style={styles.btnBanner}
@@ -149,7 +148,8 @@ const styles = StyleSheet.create({
   desc: {
     paddingVertical: 10,
     fontSize: 15,
-    left: 12,
+    paddingRight: 30,
+    padding: 10,
     fontWeight: "500",
     fontStyle: "normal",
     lineHeight: 20,

@@ -74,8 +74,16 @@ function Item({ item }) {
   );
 }
 
+function News() {
+  return(
+    <View>
+      <Text>aaa</Text>
+    </View>
+  )
+}
 function ItemList() {
   return (
+    <View style={{height: 300}}>
     <FlatList
       horizontal={true}
       data={brands}
@@ -85,6 +93,7 @@ function ItemList() {
       }}
       keyExtractor={(item, index) => index.toString()}
     />
+    </View>
   );
 }
 
@@ -92,23 +101,13 @@ export default function BottomTabView() {
   return (
     <ScrollableTabView
       initialPage={0}
+      scrollWithoutAnimation={true}
       renderTabBar={() => <ScrollableTabBar />}
-      style={{ marginTop: 20 }}>
-      <ScrollView tabLabel="Nổi bật" style={styles.tabView}>
-        <ItemList />
-      </ScrollView>
-      <ScrollView tabLabel="Ăn uống" style={styles.tabView}>
-        <ItemList />
-      </ScrollView>
-      <ScrollView tabLabel="Mua sắm" style={styles.tabView}>
-        <ItemList />
-      </ScrollView>
-      <ScrollView tabLabel="Du Lịch" style={styles.tabView}>
-        <ItemList />
-      </ScrollView>
-      <ScrollView tabLabel="Something" style={styles.tabView}>
-        <ItemList />
-      </ScrollView>
+      style={{ height: 250, top: 10,}}
+      >
+      <ItemList tabLabel='Tab #1' />
+      <Text tabLabel='Tab #2'>favorite</Text>
+      <Text tabLabel='Tab #3'>project</Text>
     </ScrollableTabView>
   );
 }

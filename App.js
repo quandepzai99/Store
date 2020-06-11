@@ -16,7 +16,6 @@ import Bottom from "./HomePage-Flow/Bottom";
 // const navigationRef = React.createRef();
 
 const Stack = createStackNavigator();
-const Tab = createBottomTabNavigator();
 
 export default class App extends Component {
   render() {
