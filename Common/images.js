@@ -26,7 +26,7 @@ const images = {
   frame_item : require('../Picture/Frame_Item.png'),
   pro1: require('../Picture/product/pro1.png'),
   pro2: require('../Picture/product/pro2.png'),
-  pro3: require('../Picture/product/pro1.png'),
+  pro3: require('../Picture/product/pro2.png'),
   plus1: require('../Picture/plus.png')
 };
 
