@@ -34,23 +34,16 @@ const proData = [
 
 function Item({ item }) {
   return (
-    <View style={{ overflow: "hidden", padding: 5 }}>
-      <TouchableOpacity style={styles.itemProduct}>
-        <Image
-          source={item.image}
-          style={{
-            alignSelf: "center"
-          }}
-        />
-        <Text style={styles.desc}>{item.desc}</Text>
-        <View style={styles.box}>
-          <Text style={styles.price}>{item.price}</Text>
-          <TouchableOpacity style={styles.plus}>
-            <Image source={item.plus} />
-          </TouchableOpacity>
-        </View>
-      </TouchableOpacity>
-    </View>
+    <TouchableOpacity style={styles.itemProduct}>
+      <Image source={item.image} style={{ alignSelf: "center" }} />
+      <Text style={styles.desc}>{item.desc}</Text>
+      <View style={styles.box}>
+        <Text style={styles.price}>{item.price}</Text>
+        <TouchableOpacity style={styles.plus}>
+          <Image source={item.plus} />
+        </TouchableOpacity>
+      </View>
+    </TouchableOpacity>
   );
 }
 
@@ -60,12 +53,12 @@ export default function Product() {
       <View
         style={{
           flexDirection: "row",
-          justifyContent: "space-between"
+          justifyContent: "space-around"
         }}>
         <Text style={styles.title}>Mua sắm với UrBox</Text>
         <Text style={styles.xemTtC}>Xem tất cả</Text>
       </View>
-      <View style={{ height: (300 / 736) * Dimensions.get("screen").height }}>
+      <View style={{ height: 300 }}>
         <FlatList
           data={proData}
           renderItem={Item}
@@ -90,11 +83,10 @@ const styles = StyleSheet.create({
     letterSpacing: 0,
     textAlign: "left",
     color: colors.velvet,
-    justifyContent: "center",
-    marginLeft: 16
+    justifyContent: "center"
   },
   itemProduct: {
-    justifyContent: "center",
+    justifyContent: "space-between",
     top: 10,
     width: (180 / 414) * Dimensions.get("screen").width,
     height: (264 / 736) * Dimensions.get("screen").height,
@@ -108,14 +100,14 @@ const styles = StyleSheet.create({
       height: 3
     },
     shadowRadius: 10,
-    shadowOpacity: 1
+    shadowOpacity: 1,
+    elevation: 5
   },
   desc: {
     fontSize: (15 / 736) * Dimensions.get("screen").height,
     lineHeight: (18 / 736) * Dimensions.get("screen").height,
     letterSpacing: 0,
-    paddingTop: 15,
-    paddingBottom: 15,
+    paddingTop: 20,
     paddingLeft: 10,
     textAlign: "left",
     justifyContent: "center",
@@ -137,18 +129,13 @@ const styles = StyleSheet.create({
     fontStyle: "normal",
     lineHeight: 30,
     color: colors.deepSkyBlue,
-    textAlign: "center",
-    marginRight: 16
+    textAlign: "center"
   },
   box: {
     borderBottomLeftRadius: 12,
     borderBottomRightRadius: 12,
     flexDirection: "row",
     justifyContent: "space-between",
-    alignContent: "center",
-    backgroundColor: "white",
-
-    marginBottom: 5
   },
   plus: {
     padding: 13,
