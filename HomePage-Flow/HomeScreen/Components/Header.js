@@ -28,7 +28,7 @@ export default function Header() {
         <View
           style={{
             flexDirection: "row",
-            justifyContent: "space-between",
+            justifyContent: "center",
             marginTop: 25
           }}>
           <TouchableOpacity style={styles.iconBalanceWitness}>
@@ -37,7 +37,6 @@ export default function Header() {
                 <Image source={images.witness} />
               </View>
             </View>
-
             <Text style={styles.textBalance}>2.400.000đ</Text>
           </TouchableOpacity>
           <View style={styles.viewAddCardTouch}>

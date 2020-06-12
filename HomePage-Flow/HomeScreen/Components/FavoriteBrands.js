@@ -75,18 +75,16 @@ export default function FavoriteBrands() {
         Thương hiệu yêu thích của bạn
       </Text>
       <FlatList
+        showsHorizontalScrollIndicator={false}
         horizontal={true}
         data={brands}
         renderItem={Item}
-        style={{
-          paddingBottom: 5
-        }}
+        style={{height: (130 / 414) * Dimensions.get('screen').width}}
         keyExtractor={(item, index) => index.toString()}
       />
     </View>
   );
 }
-
 const styles = StyleSheet.create({
   container: {
     top: 15,
