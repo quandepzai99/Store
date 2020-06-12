@@ -28,7 +28,7 @@ export default function Header() {
         <View
           style={{
             flexDirection: "row",
-            justifyContent: "center",
+            justifyContent: "space-between",
             marginTop: 25
           }}>
           <TouchableOpacity style={styles.iconBalanceWitness}>
