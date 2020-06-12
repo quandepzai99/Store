@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     fontSize: (32 / 736) * Dimensions.get("screen").height,
     fontWeight: "bold",
     fontStyle: "normal",
-    lineHeight: (36 / 736) * Dimensions.get("screen").height,
+    lineHeight: 32,
     letterSpacing: 0,
     textAlign: "left",
     color: colors.golden,
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
     justifyContent: "center"
   },
   viewAddCardTouch: {
-    height: (32 / 736) * Dimensions.get("screen").height,
+    height: 32,
     borderRadius: 16,
     backgroundColor: "rgba(247, 190, 0, 0.2)",
     borderStyle: "solid",
