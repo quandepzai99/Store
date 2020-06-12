@@ -32,7 +32,6 @@ const styles = StyleSheet.create({
   },
   iconBalanceWitness: {
     marginLeft: 16,
-
     flexDirection: "row"
   },
   bigWitness: {
@@ -60,7 +59,7 @@ const styles = StyleSheet.create({
     letterSpacing: 0,
     textAlign: "left",
     color: colors.golden,
-    marginLeft: 8,
+    marginLeft: 4,
     alignItems: "center",
     justifyContent: "center"
   },
@@ -91,7 +90,7 @@ const styles = StyleSheet.create({
     letterSpacing: 0,
     textAlign: "left",
     color: colors.golden,
-    padding: 5
+    padding: 6
   },
   banner: {
     width: (screenWidth * 382) / 414,

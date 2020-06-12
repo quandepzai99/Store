@@ -21,7 +21,7 @@ export default class CategoryIcon extends Component {
         </TouchableOpacity>
         <TouchableOpacity style={styles.category}>
           <Image source={images.icon1} />
-          <Text style={styles.text}>du lịch và nghỉ dưỡng</Text>
+          <Text style={styles.text}>Du lịch và nghỉ dưỡng</Text>
         </TouchableOpacity>
       </View>
     );

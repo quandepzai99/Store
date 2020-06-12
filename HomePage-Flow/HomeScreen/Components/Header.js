@@ -37,7 +37,6 @@ export default function Header() {
                 <Image source={images.witness} />
               </View>
             </View>
-
             <Text style={styles.textBalance}>2.400.000đ</Text>
           </TouchableOpacity>
           <View style={styles.viewAddCardTouch}>
