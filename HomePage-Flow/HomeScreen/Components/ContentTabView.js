@@ -47,7 +47,7 @@ function Item({ item }) {
         source={images.frame_item}
         style={{
           width: (110 / 414) * Dimensions.get("screen").width,
-          height: 112,
+          height: 112
         }}
       />
       <View style={styles.logo_icon}>
@@ -75,13 +75,6 @@ function Item({ item }) {
   );
 }
 
-function News() {
-  return (
-    <View>
-      <Text>aaa</Text>
-    </View>
-  );
-}
 function ItemList() {
   return (
     <View style={{ height: 300 }}>
