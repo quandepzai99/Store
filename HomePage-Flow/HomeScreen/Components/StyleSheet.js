@@ -30,8 +30,9 @@ const styles = StyleSheet.create({
     left: 8
   },
   iconBalanceWitness: {
+    alignItems: 'center',
     marginLeft: 16,
-
+    justifyContent: 'center',
     flexDirection: "row"
   },
   bigWitness: {
@@ -55,41 +56,32 @@ const styles = StyleSheet.create({
     fontSize: (32 / 736) * Dimensions.get("screen").height,
     fontWeight: "bold",
     fontStyle: "normal",
-    lineHeight: (36 / 736) * Dimensions.get("screen").height,
-    letterSpacing: 0,
+    lineHeight: (38 / 736) * Dimensions.get("screen").height,
     textAlign: "left",
+    paddingLeft: 8,
     color: colors.golden,
-    marginLeft: 8,
     alignItems: "center",
     justifyContent: "center"
   },
-  viewAddCardTouch: {
-    height: (32 / 736) * Dimensions.get("screen").height,
-    borderRadius: 16,
+  buttonAddCardTouch: {
+    borderRadius: 18,
     backgroundColor: "rgba(247, 190, 0, 0.2)",
     borderStyle: "solid",
     borderWidth: 1,
-    borderColor: colors.golden,
     marginRight: 16,
-    alignItems: "center",
-    justifyContent: "center",
-    marginLeft: 10
-  },
-  buttonAddCardTouch: {
-    flexDirection: "row",
-    marginTop: 0,
     padding: 6,
+    borderColor: colors.golden,
+    flexDirection: "row",
     alignItems: "center",
-    justifyContent: "center"
   },
   textAddCard: {
     fontSize: 12,
     fontStyle: "normal",
-    lineHeight: 12,
-    letterSpacing: 0,
+    paddingRight: 6,
+    paddingLeft: 6,
     textAlign: "left",
     color: colors.golden,
-    padding: 5
+
   },
   banner: {
     width: (screenWidth * 382) / 414,

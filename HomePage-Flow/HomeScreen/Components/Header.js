@@ -28,6 +28,7 @@ export default function Header() {
         <View
           style={{
             flexDirection: "row",
+            alignItems: 'center',
             justifyContent: "space-between",
             marginTop: 25
           }}>
@@ -39,12 +40,11 @@ export default function Header() {
             </View>
             <Text style={styles.textBalance}>2.400.000đ</Text>
           </TouchableOpacity>
-          <View style={styles.viewAddCardTouch}>
+
             <TouchableOpacity style={styles.buttonAddCardTouch}>
-              <Image source={images.cross} />
+              <Image source={images.cross}/>
               <Text style={styles.textAddCard}>Nạp thẻ Urbox</Text>
             </TouchableOpacity>
-          </View>
         </View>
       </ImageBackground>
       <Image
